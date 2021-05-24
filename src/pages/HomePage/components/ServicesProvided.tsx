@@ -84,7 +84,7 @@ const ServicesProvided = () => {
 export default ServicesProvided
 
 const Container = styled.div `
-    padding: 0vw 5vw;
+    padding: 0vw 5vw 5vw 5vw;
     background-color: #1c1c8b;
 
     > h2 {
@@ -99,6 +99,7 @@ const Container = styled.div `
 const CardContainer = styled.div `
     display: flex;
     justify-content: space-between;
+    height: 47vw;
 `
 
 const CardColumn = styled.div `

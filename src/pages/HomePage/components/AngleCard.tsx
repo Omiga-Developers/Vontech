@@ -70,7 +70,7 @@ const Container = styled.div<ContainerProps> `
 
     ${({ isFirst }) => (
         isFirst && `
-        clip-path: polygon(0 0, 70% 0%, 100% 15%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
+            clip-path: polygon(0 0, 70% 0%, 100% 15%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
         `
     )}
 
@@ -105,7 +105,11 @@ const Container = styled.div<ContainerProps> `
 
 const FirstAdditionalContainer = styled.div `
     > p {
-        margin: 1vw 0 1.2vw 2vw;
+        margin: 0vw 0 1.2vw 2vw;
         font-size: 1.1vw;
+    }
+
+    > p:last-child {
+        margin: 0vw 0 0vw 2vw;
     }
 `
