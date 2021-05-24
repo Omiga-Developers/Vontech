@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
+import AboutUs from "./components/AboutUs"
 import ServicesProvided from "./components/ServicesProvided"
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
             <TopbarContactUs />
             <Banner />
             <ServicesProvided />
+            <AboutUs />
         </Container>
     )
 }
