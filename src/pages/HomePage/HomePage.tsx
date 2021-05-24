@@ -3,6 +3,7 @@ import Banner from "../../shared-components/Banner/Banner"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
 import AboutUs from "./components/AboutUs"
 import ServicesProvided from "./components/ServicesProvided"
+// import Sponsor from "./components/Sponsor"
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <Banner />
             <ServicesProvided />
             <AboutUs />
+            {/* <Sponsor /> */}
         </Container>
     )
 }
