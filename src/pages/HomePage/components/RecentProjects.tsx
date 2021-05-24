@@ -6,7 +6,7 @@ const RecentProjects = () => {
             <h2>Recent Projects</h2>
             <div>
                 <p>This page is</p>
-                <h2>currenly under</h2>
+                <h2>currently under</h2>
                 <h2>construction.</h2>
             </div>
         </Container>
