@@ -43,7 +43,7 @@ const Container = styled.div `
     justify-content: space-around;
     color: white;
     background-color: #44f;
-    padding: 1vw 4vw 1vw 1vw;
+    padding: 2vw 4vw 3vw 1vw;
 
     p {
         font-size: 1.25vw;
