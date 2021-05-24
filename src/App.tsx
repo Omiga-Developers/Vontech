@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import HomePage from './pages/HomePage/HomePage';
+import TopbarContactUs from './shared-components/TopbarContactUs';
 
 function App() {
   return (
     <Container>
-      <HomePage />
+      <TopbarContactUs />
     </Container>
   );
 }

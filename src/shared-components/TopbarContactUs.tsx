@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import CancelIcon from '@material-ui/icons/Cancel';
-import { IconButton } from '@material-ui/core';
-import React from 'react';
 
 const TopbarContactUs = () => {
     return (
@@ -34,9 +31,9 @@ const TopbarContactUs = () => {
                     </div>
                 </AddressContainer>
                 <CrossContainer>
-                    <IconButton>
-                        <CancelIcon />
-                    </IconButton>
+                    <div>
+                        x
+                    </div>
                 </CrossContainer>
             </ContainerRight>
         </Container>
@@ -47,15 +44,22 @@ export default TopbarContactUs
 
 const Container = styled.div `
     display: flex;
-    padding: 2vw;
-    background-color: red;
+    padding: 2vw 4vw;
+    background-color: #ccc;
     justify-content: space-between;
+    color: #44f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1vw;
 `
 
 const ContainerLeft = styled.div `
     display: flex;
     align-items: center;
     flex: 0.6;
+
+    > p {
+        font-weight: bold;
+    }
 `
 
 const ContainerRight = styled.div `
@@ -73,6 +77,13 @@ const TelNumContainer = styled.div `
         align-items: flex-end;
         padding-bottom: 0.4vw;
     }
+
+    > div:last-child {
+        > p:first-child {
+            font-size: 0.9vw;
+            margin-bottom: 0.3vw;
+        }
+    }
 ` 
 
 const AddressContainer = styled.div `
@@ -84,7 +95,23 @@ const AddressContainer = styled.div `
         align-items: flex-end;
         padding-bottom: 0.4vw;
     }
+
+    > div:last-child {
+        > p:first-child {
+            font-size: 0.9vw;
+            margin-bottom: 0.3vw;
+        }
+    }
 `
 
 const CrossContainer = styled.div `
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    color: white;
+
+    > div {
+        background-color: #44f;
+        padding: 0vw 0.5vw;
+    }
 `
