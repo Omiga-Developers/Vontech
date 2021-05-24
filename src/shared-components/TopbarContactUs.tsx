@@ -48,7 +48,6 @@ const Container = styled.div `
     background-color: #ccc;
     justify-content: space-between;
     color: #44f;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1vw;
 `
 
