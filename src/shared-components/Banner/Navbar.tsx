@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 
 const Navbar = () => {
@@ -24,7 +23,7 @@ const Navbar = () => {
 export default Navbar
 
 const Container = styled.div `
-    padding: 2.5vw 8vw 1vw 3vw;
+    padding: 2.5vw 8vw 1vw 5vw;
 `
 
 const ContainerLeft = styled.div `
@@ -39,6 +38,7 @@ const NavbarLinks = styled.ul `
     float: right;
 
     > ul li {
+        color: white;
         display: inline-block;
         padding: 1vw;
         font-size: 1vw;

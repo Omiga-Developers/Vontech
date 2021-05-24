@@ -44,8 +44,7 @@ export default TopbarContactUs
 
 const Container = styled.div `
     display: flex;
-    padding: 2vw 4vw;
-    background-color: #ccc;
+    padding: 1vw 4vw;
     justify-content: space-between;
     color: #44f;
     font-size: 1.1vw;

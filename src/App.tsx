@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import Navbar from './shared-components/Navbar';
-import TopbarContactUs from './shared-components/TopbarContactUs';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
     <Container>
-      <TopbarContactUs />
-      <Navbar />
+      <HomePage />
     </Container>
   );
 }
