@@ -15,6 +15,7 @@ const ContactUs = () => {
                 </div>
                 <MapContainer>
                     <iframe
+                        title="Location embed"
                         width="580"
                         height="300"
                         style={{ border:0 }}

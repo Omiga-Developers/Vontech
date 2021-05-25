@@ -31,23 +31,29 @@ const AngledButton = styled.button<angledButtonProps> `
         padding: 0.2vw 0.5vw;
         margin: 1vw 2vw 0 0;
         clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        color: white;
+        color: #44f;
 
-        background-color: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background-color: white;
+        border: 1px solid white;
+        /* background-color: rgba(255, 255, 255, 0.05); */
+        /* border: 1px solid rgba(255, 255, 255, 0.05); */
         transition: 0.2s ease;
 
         :hover {
             background-color: #44f;
             border-color: #44f;
+            color: white;
             cursor: pointer;
         }
 
         ${({ isBlue }) => (
             isBlue && `
+                color: white;
+                border-color: #44f;
                 background-color: #44f;
                 :hover {
-                    background-color: rgba(255, 255, 255, 0.05);;
+                    color: #44f;
+                    background-color: white;
                     border-color: white;
                 }
             `

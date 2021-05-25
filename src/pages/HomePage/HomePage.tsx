@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs"
 import ContactUs from "./components/ContactUs"
 import OurProducts from "./components/OurProducts/OurProducts"
 import RecentProjects from "./components/RecentProjects"
+import RequestQuote from "./components/RequestQuote"
 import ServicesProvided from "./components/ServicesProvided/ServicesProvided"
 import Sponsor from "./components/Sponsor"
 
@@ -19,6 +20,7 @@ const HomePage = () => {
             <RecentProjects />
             <OurProducts />
             <ContactUs />
+            <RequestQuote />
         </Container>
     )
 }
