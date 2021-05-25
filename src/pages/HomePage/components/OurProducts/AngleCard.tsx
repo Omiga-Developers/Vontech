@@ -70,6 +70,12 @@ const RightButton = styled.button `
     color: white;
     border: none;
     padding: 1vw 7vw 1vw 1vw;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     margin-bottom: 1vw;
+    transition: 0.2s ease;
+
+    :hover {
+        background-color: black;
+        cursor: pointer;
+    }
 `

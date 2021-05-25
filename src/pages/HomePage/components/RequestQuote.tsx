@@ -114,4 +114,11 @@ const AngleButton = styled.button `
     width: 25%;
     font-size: 1.4vw;
     margin-top: 0.5vw;
+    transition: 0.2s ease;
+
+    :hover {
+        cursor: pointer;
+        color: #44f;
+        background-color: white;
+    }
 `
