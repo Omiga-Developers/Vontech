@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
 import AboutUs from "./components/AboutUs"
+import ContactUs from "./components/ContactUs"
 import OurProducts from "./components/OurProducts/OurProducts"
 import RecentProjects from "./components/RecentProjects"
 import ServicesProvided from "./components/ServicesProvided/ServicesProvided"
@@ -17,6 +18,7 @@ const HomePage = () => {
             <Sponsor />
             <RecentProjects />
             <OurProducts />
+            <ContactUs />
         </Container>
     )
 }
