@@ -11,8 +11,8 @@ const RequestQuote = () => {
                 </RowContainer>
                 <RowContainer>
                     <TextInput placeholder="Phone Number" />
-                    <OptionInput>
-                        <option value="" disabled selected hidden>Service</option>
+                    <OptionInput defaultValue="Service">
+                        <option selected disabled hidden>Service</option>
                         <option disabled>&nbsp;</option>
                         <option>Design and construction</option>
                         <option disabled>&nbsp;</option>
