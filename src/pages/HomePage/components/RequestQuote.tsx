@@ -36,6 +36,9 @@ const RequestQuote = () => {
                     <TextfieldInput rows={8} placeholder="Write a message" />
                 </RowContainer>
             </div>
+            <div>
+                <AngleButton>Request quote</AngleButton>
+            </div>
         </Container>
     )
 }
@@ -48,7 +51,7 @@ const Container = styled.div `
 
     > h2 {
         color: white;
-        margin-bottom: 4vw;
+        margin-bottom: 3vw;
     }   
 
     > div {
@@ -99,4 +102,16 @@ const TextfieldInput = styled.textarea `
     padding: 1.2vw;
     resize: none;
     clip-path: polygon(0 0, 96% 0, 100% 14%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+`
+
+const AngleButton = styled.button `
+    clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+    background-color: #44f;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 1.3vw 0;
+    width: 25%;
+    font-size: 1.4vw;
+    margin-top: 0.5vw;
 `
