@@ -10,31 +10,19 @@ declare type AngleCardProps = {
 const AngleCard = ({ type, title, image } : AngleCardProps) => {
     const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
 
-    // const tempFun = () => {
-    //     setIsHoveredOver(!isHoveredOver);
-    //     console.log(isHoveredOver);
-    // }
-
     return (
         <ShadowContainer>
             <Container 
-                // onMouseEnter={tempFun}
-                // onMouseLeave={tempFun}
                 onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
                 onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
-                isHoveredOver
+                isHoveredOver={isHoveredOver}
             >
                 <p>{type}</p>
                 <p>{title}</p>
                 <img src={image} alt="card-img" />
 
                 <div>
-                    <button
-                        // onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
-                        // onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
-                    >
-                        Read more
-                    </button>
+                    <button>Read more</button>
                 </div>
             </Container>
         </ShadowContainer>
@@ -61,6 +49,7 @@ const Container = styled.div<AngleCardContainerProps> `
     justify-content: space-between;
     height: 18vw;
     background-color: white;
+    transition: 0.4s ease;
 
     > p {
         font-weight: bold;
@@ -87,9 +76,10 @@ const Container = styled.div<AngleCardContainerProps> `
         }
     }
 
-    /* ${({ isHoveredOver }) => (
+    ${({ isHoveredOver }) => (
         isHoveredOver && `
             && {
+                transform: scale(1.05);
                 background-color: #44f;
                 cursor: pointer;
 
@@ -105,5 +95,5 @@ const Container = styled.div<AngleCardContainerProps> `
                 }
             }
         `
-    )} */
+    )}
 `
