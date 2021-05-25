@@ -12,12 +12,20 @@ const RequestQuote = () => {
                 <RowContainer>
                     <TextInput placeholder="Phone Number" />
                     <OptionInput>
+                        <option value="" disabled selected hidden>Service</option>
+                        <option disabled>&nbsp;</option>
                         <option>Design and construction</option>
+                        <option disabled>&nbsp;</option>
                         <option>Concrete structures</option>
+                        <option disabled>&nbsp;</option>
                         <option>Waterproofing</option>
+                        <option disabled>&nbsp;</option>
                         <option>Concrete repairs</option>
+                        <option disabled>&nbsp;</option>
                         <option>Manufacturing & trading</option>
+                        <option disabled>&nbsp;</option>
                         <option>Other services.</option>
+                        <option disabled>&nbsp;</option>
                     </OptionInput>
                 </RowContainer>
                 <RowContainer>
@@ -58,6 +66,7 @@ const RowContainer = styled.div `
 
     > * {
         margin: 1.2vw 0;
+        clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
         outline: none;
         border: none;
         font-size: 1.1vw;
@@ -74,9 +83,20 @@ const TextInput = styled.input `
 
 const OptionInput = styled.select `
     padding: 1.2vw 12.5vw 1.2vw 1.2vw;
+    /* appearance: none; */
+
+    > option {
+        background-color: black;
+        color: white;
+        :hover {
+            background-color: red;
+        }
+    }
 `
 
 const TextfieldInput = styled.textarea `
     width: 100%;
     padding: 1.2vw;
+    resize: none;
+    clip-path: polygon(0 0, 96% 0, 100% 14%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
 `
