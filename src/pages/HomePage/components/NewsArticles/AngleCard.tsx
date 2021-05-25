@@ -24,7 +24,7 @@ const AngleCard = ({ type, title, image } : AngleCardProps) => {
                 onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
                 isHoveredOver
             >
-                {/* <p>{type}</p>
+                <p>{type}</p>
                 <p>{title}</p>
                 <img src={image} alt="card-img" />
 
@@ -35,7 +35,7 @@ const AngleCard = ({ type, title, image } : AngleCardProps) => {
                     >
                         Read more
                     </button>
-                </div> */}
+                </div>
             </Container>
         </ShadowContainer>
     )
@@ -54,13 +54,13 @@ const ShadowContainer = styled.div `
 `
 
 const Container = styled.div<AngleCardContainerProps> `
-    /* position: absolute; */
     clip-path: polygon(0 0, 80% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     padding: 2vw 2vw 1vw 2vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 18vw;
+    background-color: white;
 
     > p {
         font-weight: bold;
