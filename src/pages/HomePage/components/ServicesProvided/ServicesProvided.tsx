@@ -8,7 +8,7 @@ const ServicesProvided = () => {
             <CardContainer>
                 <CardColumn>
                     <AngleCard 
-                        id="01"
+                        stringId="01"
                         isFirst={true}
                         title="Design & Construction"
                         paragraph="Vontech provides you with construction
@@ -17,6 +17,7 @@ const ServicesProvided = () => {
                             of smart homes, sustainable buildings
                             and more. Our services also extend to
                             any type of renovation."
+                        bgImage="images/IMG_4152.jpg"
                     />
                     <AngleCard 
                         title="Other services?"
@@ -26,7 +27,7 @@ const ServicesProvided = () => {
                 <CardColumn>
                     <AngleCard 
                         isCommon={true}
-                        id="02"
+                        stringId="02"
                         title="Concrete structures"
                         paragraph="We flawlessly execute the design and
                             construction of any type of concrete
@@ -34,10 +35,11 @@ const ServicesProvided = () => {
                             Our services are inclusive of supplying
                             and installing formworks (plywood
                             shuttering, rebar and concrete). "
+                        bgImage="images/concrete structure.jpeg"
                     />
                     <AngleCard 
                         isCommon={true}
-                        id="04"
+                        stringId="04"
                         isConcreteRepair={true}
                         title="Concrete repair"
                         paragraph="We execute any type of concrete
@@ -47,12 +49,13 @@ const ServicesProvided = () => {
                             beams, columns, and more. Our
                             services further include repairing water
                             tanks, damaged on walls and so on."
+                        bgImage="images/concrete repair.jpeg"
                     />
                 </CardColumn>
                 <CardColumn>
                     <AngleCard 
                         isCommon={true}
-                        id="03"
+                        stringId="03"
                         title="Waterproofing & chemicals"
                         paragraph="We are authorized applicators for a
                             reputed waterproofing company M/s
@@ -62,10 +65,11 @@ const ServicesProvided = () => {
                             restrooms, balconies, exterior walls,
                             and so much more, with a ten-year
                             warranty period."
+                        bgImage="images/waterproofing.jpeg"
                     />
                     <AngleCard 
                         isCommon={true}
-                        id="05"
+                        stringId="05"
                         title="Manufacturing & trading"
                         paragraph="We are the reliable suppliers of
                             Cement, Steel for reinforcements and
@@ -74,6 +78,7 @@ const ServicesProvided = () => {
                             Nippolac paints, S-lon, Jat holdings,
                             National PVC, Kevilton, Kelani cables
                             and other general hardware."
+                        bgImage="images/manufacting & trading.jpeg"
                     />
                 </CardColumn>
             </CardContainer>

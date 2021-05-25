@@ -31,7 +31,7 @@ const AngleCard = ({ type, title, image } : AngleCardProps) => {
 
 export default AngleCard
 
-declare type AngleCardContainerProps = {
+declare type ContainerProps = {
     isHoveredOver: boolean;
 }
 
@@ -41,7 +41,7 @@ const ShadowContainer = styled.div `
     margin-right: 3vw;
 `
 
-const Container = styled.div<AngleCardContainerProps> `
+const Container = styled.div<ContainerProps> `
     clip-path: polygon(0 0, 80% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     padding: 2vw 2vw 1vw 2vw;
     display: flex;

@@ -1,27 +1,47 @@
+import { useState } from "react";
 import styled from "styled-components"
 
 declare type AngleCardProps = {
     isFirst?: boolean;
-    id?: string;
+    stringId?: string;
     title: string;
     isCommon?: boolean;
     isOtherServices?: boolean;
     paragraph?: string;
     isConcreteRepair?: boolean;
+    bgImage?: string;
 }
 
-const AngleCard = ({ id, title, paragraph, isFirst, isCommon, isOtherServices, isConcreteRepair } : AngleCardProps) => {
+const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isConcreteRepair, bgImage } : AngleCardProps) => {
+    const [toggleOtherServicesHover, setToggleOtherServicesHover] = useState<boolean>(false);
+    const [toggleBackgroundImageHover, setToggleBackgroundImageHover] = useState<boolean>(false);
+
     return (
-        <Container isConcreteRepair={isConcreteRepair} isFirst={isFirst} isCommon={isCommon} isOtherServices={isOtherServices}>
-            <div>
-                <p>{id}</p>
-                <h1>{title}</h1>
-            </div>
-            <div>
-                <p>{paragraph}</p>
-            </div>
+        <Container
+            style={toggleBackgroundImageHover ? stringId ? { backgroundImage: `url(${bgImage})` } : {} : {}}
+            isConcreteRepair={isConcreteRepair} 
+            isFirst={isFirst} 
+            isCommon={isCommon} 
+            isOtherServices={isOtherServices}
+            isBackgroundImageHovered={toggleBackgroundImageHover}
+            onMouseEnter={() => isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover)}
+            onMouseLeave={() => isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover)}
+        >
+            {!toggleBackgroundImageHover &&
+                <>
+                    <div>
+                        <p>{stringId}</p>
+                        <h1>
+                            {!toggleOtherServicesHover ? title : "Contact us now"}
+                        </h1>
+                    </div>
+                    <div>
+                        <p>{paragraph}</p>
+                    </div>
+                </>
+            }
             {
-                isFirst && 
+                isFirst && !toggleBackgroundImageHover &&
                     <FirstAdditionalContainer>
                         <p>Design & Build</p>
                         <p>Project managment</p>
@@ -42,6 +62,7 @@ declare type ContainerProps = {
     isOtherServices?: boolean;
     isFirst?: boolean;
     isConcreteRepair?: boolean;
+    isBackgroundImageHovered?: boolean;
 }
 
 const Container = styled.div<ContainerProps> `
@@ -54,6 +75,7 @@ const Container = styled.div<ContainerProps> `
     background-color: #3b3bff;
     color: white;
     width: 25vw;
+    transition: 0.3s ease;
 
     > div:first-child {
         border-bottom: 1px solid #fff;
@@ -71,6 +93,7 @@ const Container = styled.div<ContainerProps> `
     ${({ isFirst }) => (
         isFirst && `
             clip-path: polygon(0 0, 70% 0%, 100% 15%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
+            height: 35vw;
         `
     )}
 
@@ -98,6 +121,14 @@ const Container = styled.div<ContainerProps> `
 
             > div:first-child {
                 padding-bottom: 0;
+                border: none;
+            }
+
+            :hover {
+                &&& {
+                    background-color: black;
+                    color: white;
+                }
             }
         `
     )}
