@@ -79,7 +79,7 @@ const Container = styled.div<AngleCardContainerProps> `
     ${({ isHoveredOver }) => (
         isHoveredOver && `
             && {
-                transform: scale(1.05);
+                transform: scale(1.02);
                 background-color: #44f;
                 cursor: pointer;
 
