@@ -105,7 +105,7 @@ const AddressContainer = styled.div `
 const CrossContainer = styled.div `
     display: flex;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: white;
 
     > div {
