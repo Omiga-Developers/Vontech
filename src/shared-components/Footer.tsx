@@ -40,7 +40,7 @@ const Container = styled.div `
     align-items: center;
     justify-content: center;
     background-color: #262626;
-    height: 15vw;
+    height: 14vw;
 
     > div {
         display: flex;
@@ -51,6 +51,11 @@ const Container = styled.div `
 `
 
 const LeftContainer = styled.div `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,7 +63,12 @@ const LeftContainer = styled.div `
     flex: 0.7;
 
     > div {
+        > p {
+            font-family: Gilroy-Medium;
+        }
+
         > a {
+            font-family: Gilroy-Medium;
             font-size: 1vw;
             color: white;
             padding: 0vw 1vw;
