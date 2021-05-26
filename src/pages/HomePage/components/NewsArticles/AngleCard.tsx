@@ -13,8 +13,6 @@ const AngleCard = ({ type, title, image } : AngleCardProps) => {
     return (
         <ShadowContainer>
             <Container 
-                onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
-                onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
                 isHoveredOver={isHoveredOver}
             >
                 <p>{type}</p>
@@ -22,7 +20,12 @@ const AngleCard = ({ type, title, image } : AngleCardProps) => {
                 <img src={image} alt="card-img" />
 
                 <div>
-                    <button>Read more</button>
+                    <button
+                        onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
+                        onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
+                    >
+                        Read more
+                    </button>
                 </div>
             </Container>
         </ShadowContainer>
@@ -81,7 +84,6 @@ const Container = styled.div<ContainerProps> `
             && {
                 transform: scale(1.02);
                 background-color: #3E63EC;
-                cursor: pointer;
 
                 > p {
                     color:white;
@@ -89,6 +91,7 @@ const Container = styled.div<ContainerProps> `
 
                 > div {
                     > button {
+                        cursor: pointer;
                         background-color: #262626;
                         border-color: #262626;
                     }

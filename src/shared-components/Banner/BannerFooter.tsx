@@ -12,7 +12,7 @@ const BannerFooter = () => {
             </div>
             <div>
                 <img src="images/rics.png" alt="rics-logo" />
-                <img src="images/cabe.jpg" alt="cabe-logo" />
+                <img src="images/D9E58CBD.jpg" alt="cabe-logo" />
             </div>
         </Container>
     )

@@ -38,7 +38,7 @@ const Container = styled.div `
     > div {
         > img {
             height: 16vw;
-            width: 20vw;
+            width: 18vw;
         }
     }
 

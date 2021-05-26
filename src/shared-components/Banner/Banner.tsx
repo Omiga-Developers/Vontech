@@ -16,10 +16,10 @@ const Banner = () => {
 export default Banner
 
 const Container = styled.div `
-    background-image: url('images/roberto-nickson-so3wgJLwDxo-unsplash.jpg');
+    background-image: url('images/1AA556D1.jpg');
     display: flex;
     height: 45vw;
-    background-size: 100% 100%;
+    background-size: cover;
     flex-direction: column;
     justify-content: space-between;
 `

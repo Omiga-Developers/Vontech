@@ -20,6 +20,7 @@ export default BannerContent
 const Container = styled.div `
     color: white;
     padding-left: 6vw;
+    margin-top: 8vw;
 
     > h1 {
         font-size: 3vw;
