@@ -5,6 +5,7 @@ import Footer from "../../shared-components/Footer"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
 import AboutUs from "./components/AboutUs"
 import ContactUs from "./components/ContactUs"
+import JoinTeam from "./components/JoinTeam/JoinTeam"
 import Articles from "./components/NewsArticles/Articles"
 import OurProducts from "./components/OurProducts/OurProducts"
 import RecentProjects from "./components/RecentProjects"
@@ -27,6 +28,7 @@ const HomePage = () => {
             <OurProducts />
             <ContactUs />
             <RequestQuote />
+            <JoinTeam />
             <Footer />
         </Container>
     )
