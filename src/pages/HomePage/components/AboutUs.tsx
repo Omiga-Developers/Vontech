@@ -39,6 +39,11 @@ const AboutUs = () => {
 export default AboutUs
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     display: flex;
     justify-content: space-around;
     color: white;
@@ -46,7 +51,8 @@ const Container = styled.div `
     padding: 2vw 4vw 3vw 1vw;
 
     p {
-        font-size: 1.25vw;
+        font-size: 1.1vw;
+        font-family: Gilroy-Medium;
     }
 
     > div {
