@@ -18,7 +18,7 @@ export default RecentProjects
 const Container = styled.div `
     background-image: url("images/roberto-nickson-so3wgJLwDxo-unsplash.jpg");
     display: flex;
-    background-size: contain;
+    background-size: 100% 100%;
     height: 30vw;
     padding: 4vw 4vw 0 4vw;
     flex-direction: column;

@@ -19,7 +19,7 @@ const Container = styled.div `
     background-image: url('images/roberto-nickson-so3wgJLwDxo-unsplash.jpg');
     display: flex;
     height: 45vw;
-    background-size: contain;
+    background-size: 100% 100%;
     flex-direction: column;
     justify-content: space-between;
 `

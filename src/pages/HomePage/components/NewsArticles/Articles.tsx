@@ -8,42 +8,42 @@ const Articles = () => {
 
             <ArticlesContainer>
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />
                 <AngleCard
-                    image="images/concrete structure.jpeg"
+                    image="images/concrete_structure.jpeg"
                     type="News"
                     title="The new hardware store in town"
                 />

@@ -7,13 +7,13 @@ const OurProducts = () => {
             <h2>Our products</h2>
             <div>
                 <AngleCard 
-                    image="images/concrete repair.jpeg"
+                    image="images/concrete_repair.jpeg"
                     title="Cover block size"
                     unit="in mm"
                     dimension="20mm/25mm"
                 />
                 <AngleCard 
-                    image="images/concrete repair.jpeg"
+                    image="images/concrete_repair.jpeg"
                     title="Cover block size"
                     unit="in mm"
                     dimension="20mm/25mm/40mm"

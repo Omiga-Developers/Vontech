@@ -18,7 +18,7 @@ const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServi
 
     return (
         <Container
-            style={toggleBackgroundImageHover ? stringId ? { backgroundImage: `url(${bgImage})` } : {} : {}}
+            style={toggleBackgroundImageHover ? stringId ? { backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%' } : {} : {}}
             isConcreteRepair={isConcreteRepair} 
             isFirst={isFirst} 
             isCommon={isCommon} 

@@ -35,7 +35,7 @@ const ServicesProvided = () => {
                             Our services are inclusive of supplying
                             and installing formworks (plywood
                             shuttering, rebar and concrete). "
-                        bgImage="images/concrete structure.jpeg"
+                        bgImage="images/concrete_structure.jpeg"
                     />
                     <AngleCard 
                         isCommon={true}
@@ -49,7 +49,7 @@ const ServicesProvided = () => {
                             beams, columns, and more. Our
                             services further include repairing water
                             tanks, damaged on walls and so on."
-                        bgImage="images/concrete repair.jpeg"
+                        bgImage="images/concrete_repair.jpeg"
                     />
                 </CardColumn>
                 <CardColumn>
@@ -78,7 +78,7 @@ const ServicesProvided = () => {
                             Nippolac paints, S-lon, Jat holdings,
                             National PVC, Kevilton, Kelani cables
                             and other general hardware."
-                        bgImage="images/manufacting & trading.jpeg"
+                        bgImage="images/manufacting_trading.jpeg"
                     />
                 </CardColumn>
             </CardContainer>
