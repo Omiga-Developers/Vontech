@@ -75,10 +75,17 @@ const ContactUs = () => {
 export default ContactUs
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
     padding: 4vw;
 
     > h2 {
         color: #1C4193;
+        font-family: Gilroy-Bold;
+        font-size: 2.2vw;
     }
 
     > div {
@@ -106,6 +113,12 @@ const MapContainer = styled.div `
 `
 
 const AngleButton = styled.button<AngleButtonProps> `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
+    font-family: Gilroy-Medium;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
     color: white;
