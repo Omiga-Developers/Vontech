@@ -46,12 +46,19 @@ const RequestQuote = () => {
 export default RequestQuote
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
     padding: 4vw;
     background-color: #1C4193;
 
     > h2 {
         color: white;
         margin-bottom: 3vw;
+        font-family: Gilroy-Bold;
+        font-size: 2.2vw;
     }   
 
     > div {
@@ -81,16 +88,30 @@ const RowContainer = styled.div `
 `
 
 const TextInput = styled.input `
-    padding: 1.2vw 12vw 1.2vw 1.2vw;
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
+    font-family: Gilroy-Medium;
+    padding: 1.2vw 13vw 1.2vw 1.2vw;
 `
 
 const OptionInput = styled.select `
-    padding: 1.2vw 12.5vw 1.2vw 1.2vw;
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
+    font-family: Gilroy-Medium;
+    padding: 1.2vw 11.5vw 1.2vw 1.2vw;
     /* appearance: none; */
 
     > option {
+        font-family: Gilroy-Medium;
         background-color: #262626;
         color: white;
+
         :hover {
             background-color: red;
         }
@@ -98,6 +119,12 @@ const OptionInput = styled.select `
 `
 
 const TextfieldInput = styled.textarea `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
+    font-family: Gilroy-Medium;
     width: 100%;
     padding: 1.2vw;
     resize: none;
@@ -105,6 +132,12 @@ const TextfieldInput = styled.textarea `
 `
 
 const AngleButton = styled.button `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
+    font-family: Gilroy-Bold;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
     color: white;
