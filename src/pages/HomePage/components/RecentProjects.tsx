@@ -17,6 +17,15 @@ const RecentProjects = () => {
 export default RecentProjects
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     background-image: url("images/1AA556D6.jpg");
     display: flex;
     background-size: cover;
@@ -38,6 +47,8 @@ const Container = styled.div `
 
     > h2 {
         z-index: 1;
+        font-size: 2.2vw;
+        font-family: Gilroy-Bold;
     }
 
     > div:last-child {
@@ -50,6 +61,7 @@ const Container = styled.div `
 
         > h2, > p {
             font-size: 3vw;
+            font-family: Gilroy-Medium;
         }
 
         > p {
@@ -57,7 +69,8 @@ const Container = styled.div `
         }
 
         > h2 {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.6);
+            font-family: Gilroy-Bold;
         }
     }
 `
