@@ -13,14 +13,17 @@ const Trust = () => {
                             icon="images/Website-06.png"
                             sentenceOne="Qualified &"
                             sentenceTwo="experienced engineers"
+                            isFirstColumn={true}
                         />
                         <IconContent
                             icon="images/Website-07.png"
                             sentenceOne="Quality materials"
+                            isMiddle={true}
                         />
                         <IconContent
                             icon="images/Website-08.png"
                             sentenceOne="Affordable"
+                            isLast={true}
                         />
                     </RowContainer>
                 </RowContainerWrapper>
@@ -29,16 +32,19 @@ const Trust = () => {
                         <IconContent
                             icon="images/Website-09.png"
                             sentenceOne="Maintenance"
+                            isFirstColumn={true}
                         />
                         <IconContent
                             icon="images/Website-10.png"
                             sentenceOne="Premium support"
                             sentenceTwo="& consultation"
+                            isMiddle={true}
                         />
                         <IconContent
                             icon="images/Website-11.png"
                             sentenceOne="Supervised"
                             sentenceTwo="by professionals"
+                            isLast={true}
                         />
                     </RowContainer>
                 </RowContainerWrapper>
@@ -48,15 +54,18 @@ const Trust = () => {
                             icon="images/Website-12.png"
                             sentenceOne="Statutory approvals"
                             sentenceTwo="(local authority)"
+                            isFirstColumn={true}
                         />
                         <IconContent
                             icon="images/Website-13.png"
                             sentenceOne="Bank loans"
+                            isMiddle={true}
                         />
                         <IconContent
                             icon="images/Website-14.png"
                             sentenceOne="Sustainable &"
                             sentenceTwo="long lasting"
+                            isLast={true}
                         />
                     </RowContainer>
                 </RowContainerWrapper>

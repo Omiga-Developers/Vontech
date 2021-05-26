@@ -4,12 +4,15 @@ declare type IconContentProps = {
     icon: string;
     sentenceOne: string;
     sentenceTwo?: string;
+    isMiddle?: boolean;
+    isLast?: boolean;
+    isFirstColumn?: boolean;
 }
 
-const IconContent = ({ icon, sentenceOne, sentenceTwo } : IconContentProps) => {
+const IconContent = ({ icon, sentenceOne, sentenceTwo, isMiddle, isLast, isFirstColumn } : IconContentProps) => {
     return (
         <ContainerWrapper>
-            <Container>
+            <Container isMiddle={isMiddle} isLast={isLast} isFirstColumn={isFirstColumn}>
                 <div>
                     <img src={icon} alt="icon" />
                 </div>
@@ -26,10 +29,16 @@ export default IconContent
 
 const ContainerWrapper = styled.div `
     flex: 1;
-    width: 25vw;
+    width: 22vw;
 `
 
-const Container = styled.div `
+declare type ContainerProps = {
+    isMiddle?: boolean;
+    isLast?: boolean;
+    isFirstColumn?: boolean;
+}
+
+const Container = styled.div<ContainerProps> `
     @font-face {
         font-family: Gilroy-Medium;
         src: url(fonts/Gilroy-Medium.ttf);
@@ -50,7 +59,7 @@ const Container = styled.div `
         flex-direction: column;
         justify-content: center;
         padding: 1vw;
-        flex: 1;
+        width: 11vw;
 
         > p {
             font-family: Gilroy-Medium;
@@ -58,4 +67,26 @@ const Container = styled.div `
             color: white;
         }
     }
+
+    ${({ isMiddle }) => (
+        isMiddle && `
+            border-left: 1px solid #3E63EC;
+            border-right: 1px solid #3E63EC;
+            justify-content: center;
+        `
+    )}
+
+    ${({ isLast }) => (
+        isLast && `
+            justify-content: flex-end;
+        `
+    )}
+
+    ${({ isFirstColumn }) => (
+        isFirstColumn && `
+            > div:last-child {
+                width: 14vw;
+            }
+        `
+    )}
 `
