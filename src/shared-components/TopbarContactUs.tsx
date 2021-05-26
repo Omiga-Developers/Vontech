@@ -55,8 +55,14 @@ const ContainerLeft = styled.div `
     align-items: center;
     flex: 0.6;
 
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
     > p {
         font-weight: bold;
+        font-family: Gilroy-Bold;
     }
 `
 
@@ -64,6 +70,25 @@ const ContainerRight = styled.div `
     display: flex;
     justify-content: space-between;
     flex: 0.4;
+
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Regular;
+        src: url(fonts/Gilroy-Regular.ttf);
+    }
+
+    > div > div {
+        > p:first-child {
+            font-family: Gilroy-Regular;
+        }
+
+        > p {
+            font-family: Gilroy-Medium;
+        }
+    }
 `
 
 const TelNumContainer = styled.div `

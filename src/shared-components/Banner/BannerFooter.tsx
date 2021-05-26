@@ -21,6 +21,11 @@ const BannerFooter = () => {
 export default BannerFooter
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     display: flex;
     justify-content: space-between;
     padding: 0 3vw 2vw 6vw;
@@ -42,6 +47,7 @@ const Container = styled.div `
             color: white;
             padding: 0vw 1vw;
             text-decoration: none;
+            font-family: Gilroy-Medium;
         }
     }
     

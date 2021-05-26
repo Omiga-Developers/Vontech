@@ -37,10 +37,16 @@ const ContainerLeft = styled.div `
 const NavbarLinks = styled.ul `
     float: right;
 
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     > ul li {
         color: white;
         display: inline-block;
         padding: 1vw;
         font-size: 1vw;
+        font-family: Gilroy-Medium;
     }
 `
