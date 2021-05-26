@@ -45,6 +45,15 @@ const ShadowContainer = styled.div `
 `
 
 const Container = styled.div<ContainerProps> `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Light;
+        src: url(fonts/Gilroy-Light.ttf);
+    }
+
     clip-path: polygon(0 0, 80% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     padding: 2vw 2vw 1vw 2vw;
     display: flex;
@@ -56,6 +65,7 @@ const Container = styled.div<ContainerProps> `
 
     > p {
         font-weight: bold;
+        font-family: Gilroy-Bold;
     }
 
     > p:first-child {
@@ -76,6 +86,7 @@ const Container = styled.div<ContainerProps> `
             border: 1px solid #aaa;
             color: #aaa;
             padding: 0.5vw;
+            font-family: Gilroy-Light;
         }
     }
 
