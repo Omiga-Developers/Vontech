@@ -11,6 +11,7 @@ import RecentProjects from "./components/RecentProjects"
 import RequestQuote from "./components/RequestQuote"
 import ServicesProvided from "./components/ServicesProvided/ServicesProvided"
 import Sponsor from "./components/Sponsor"
+import Trust from "./components/Trust/Trust"
 
 const HomePage = () => {
     return (
@@ -18,6 +19,7 @@ const HomePage = () => {
             <TopbarContactUs />
             <Banner />
             <ServicesProvided />
+            <Trust />
             <AboutUs />
             <Sponsor />
             <RecentProjects />
