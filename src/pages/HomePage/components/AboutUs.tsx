@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const AboutUs = () => {
     return (
-        <Container>
+        <Container id="aboutUs">
             <div style={{ flex: 0.25 }}>
                 <img style={{ marginBottom: '0.8vw' }} src="images/rics.png" alt="rics-logo" />
                 <img src="images/D9E58CBD.jpg" alt="cabe-logo" />

@@ -8,12 +8,11 @@ const Navbar = () => {
             </ContainerLeft>
             <NavbarLinks>
                 <ul>
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>About us</li>
-                    <li>Projects</li>
-                    <li>Careers</li>
-                    <li>Contact us</li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#aboutUs">About us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contactUs">Contact us</a></li>
                 </ul>
             </NavbarLinks>
         </Container>
@@ -48,5 +47,15 @@ const NavbarLinks = styled.ul `
         padding: 1vw;
         font-size: 1vw;
         font-family: Gilroy-Medium;
+
+        > a {
+            text-decoration: none;
+            color: white;
+            transition: 0.2s ease;
+
+            :hover {
+                color: #3E63EC;
+            }
+        }
     }
 `

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const RecentProjects = () => {
     return (
-        <Container>
+        <Container id="projects">
             <div></div>
             <h2>Recent Projects</h2>
             <div>
