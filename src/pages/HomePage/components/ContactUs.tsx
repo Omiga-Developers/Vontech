@@ -10,7 +10,7 @@ const ContactUs = () => {
     const [toggleVisitUs, setToggleVisitUs] = useState<boolean>(false);
 
     return (
-        <Container>
+        <Container id="contactUs">
             <h2>Contact us</h2>
             <div>
                 <div>

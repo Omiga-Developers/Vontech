@@ -9,8 +9,8 @@ const BannerContent = () => {
         <Container>
             <h1>Providing effective</h1>
             <h1>construction solutions.</h1>
-            <AngledButton isBlue={true}>Request a quote</AngledButton>
-            <AngledButton isBlue={false}>Contact us</AngledButton>
+            <AngledButton isBlue={true}><a href="#requestQuote">Request a quote</a></AngledButton>
+            <AngledButton isBlue={false}><a href="#contactUs">Contact us</a></AngledButton>
         </Container>
     )
 }
@@ -45,6 +45,10 @@ const AngledButton = styled.button<angledButtonProps> `
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     color: #3E63EC;
 
+    > a {
+        text-decoration: none;
+    }
+
     background-color: white;
     border: 1px solid white;
     /* background-color: rgba(255, 255, 255, 0.05); */
@@ -59,14 +63,33 @@ const AngledButton = styled.button<angledButtonProps> `
     }
 
     ${({ isBlue }) => (
-        isBlue && `
+        isBlue ? `
             color: white;
             border-color: #3E63EC;
             background-color: #3E63EC;
+
+            > a {
+                color: white;
+            }
+
             :hover {
                 color: #3E63EC;
                 background-color: white;
                 border-color: white;
+
+                > a {
+                    color: #3E63EC;
+                }
+            }
+        ` : `
+            > a {
+                color: #3E63EC;
+            }
+
+            :hover {
+                > a {
+                    color: white;
+                }
             }
         `
     )}
