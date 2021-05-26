@@ -58,7 +58,7 @@ const Container = styled.div `
     padding: 4vw;
 
     > h2 {
-        color: #44f;
+        color: #3E63EC;
         margin-bottom: 3vw;
     }
 `

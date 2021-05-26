@@ -42,7 +42,7 @@ const Container = styled.div `
     display: flex;
     justify-content: space-around;
     color: white;
-    background-color: #44f;
+    background-color: #1C4193;
     padding: 2vw 4vw 3vw 1vw;
 
     p {

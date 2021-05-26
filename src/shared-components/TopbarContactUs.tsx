@@ -46,7 +46,7 @@ const Container = styled.div `
     display: flex;
     padding: 1vw 4vw;
     justify-content: space-between;
-    color: #44f;
+    color: #3E63EC;
     font-size: 1.1vw;
 `
 
@@ -109,7 +109,7 @@ const CrossContainer = styled.div `
     color: white;
 
     > div {
-        background-color: #44f;
+        background-color: #3E63EC;
         padding: 0vw 0.5vw;
     }
 `

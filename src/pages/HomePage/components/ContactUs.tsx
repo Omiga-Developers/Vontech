@@ -78,7 +78,7 @@ const Container = styled.div `
     padding: 4vw;
 
     > h2 {
-        color: #44f;
+        color: #1C4193;
     }
 
     > div {
@@ -107,7 +107,7 @@ const MapContainer = styled.div `
 
 const AngleButton = styled.button<AngleButtonProps> `
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-    background-color: #44f;
+    background-color: #3E63EC;
     color: white;
     border: none;
     /* padding: 2vw 4vw 2vw 1vw; */
@@ -125,7 +125,7 @@ const AngleButton = styled.button<AngleButtonProps> `
 
     ${({ toggled }) => (
         toggled && `
-            background-color: black;
+            background-color: #262626;
             color: white;
         `
     )}

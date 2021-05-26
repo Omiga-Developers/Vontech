@@ -36,7 +36,7 @@ declare type ContainerProps = {
 }
 
 const ShadowContainer = styled.div `
-    filter: drop-shadow(2px 2px 8px #44f);
+    filter: drop-shadow(2px 2px 8px #3E63EC);
     position: relative;
     margin-right: 3vw;
 `
@@ -56,7 +56,7 @@ const Container = styled.div<ContainerProps> `
     }
 
     > p:first-child {
-        color: #44f;
+        color: #3E63EC;
     }
 
     > img {
@@ -80,7 +80,7 @@ const Container = styled.div<ContainerProps> `
         isHoveredOver && `
             && {
                 transform: scale(1.02);
-                background-color: #44f;
+                background-color: #3E63EC;
                 cursor: pointer;
 
                 > p {
@@ -89,8 +89,8 @@ const Container = styled.div<ContainerProps> `
 
                 > div {
                     > button {
-                        background-color: black;
-                        border-color: black;
+                        background-color: #262626;
+                        border-color: #262626;
                     }
                 }
             }

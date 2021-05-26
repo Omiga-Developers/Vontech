@@ -72,7 +72,7 @@ const Container = styled.div<ContainerProps> `
 
     padding: 2vw;
     clip-path: polygon(0 0, 70% 0%, 100% 25%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
-    background-color: #3b3bff;
+    background-color: #3E63EC;
     color: white;
     width: 25vw;
     transition: 0.3s ease;
@@ -115,7 +115,7 @@ const Container = styled.div<ContainerProps> `
         isOtherServices && `
             clip-path: polygon(0 0, 70% 0%, 100% 60%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
             background-color: white;
-            color: #3b3bff; 
+            color: #3E63EC; 
             display: flex;
             align-items: center;
 
@@ -126,7 +126,7 @@ const Container = styled.div<ContainerProps> `
 
             :hover {
                 &&& {
-                    background-color: black;
+                    background-color: #262626;
                     color: white;
                 }
             }

@@ -90,7 +90,7 @@ export default ServicesProvided
 
 const Container = styled.div `
     padding: 0vw 5vw 5vw 5vw;
-    background-color: #1c1c8b;
+    background-color: #1C4193;
 
     > h2 {
         padding: 3vw;

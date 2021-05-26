@@ -27,7 +27,7 @@ export default OurProducts
 
 const Container = styled.div `
     padding: 4vw;
-    background-color: #44f;
+    background-color: #1C4193;
 
     > div {
         display: flex;

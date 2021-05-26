@@ -47,7 +47,7 @@ export default RequestQuote
 
 const Container = styled.div `
     padding: 4vw;
-    background-color: #1c1c8b;
+    background-color: #1C4193;
 
     > h2 {
         color: white;
@@ -75,7 +75,7 @@ const RowContainer = styled.div `
         font-size: 1.1vw;
 
         ::placeholder {
-            color: black;
+            color: #262626;
         }
     }
 `
@@ -89,7 +89,7 @@ const OptionInput = styled.select `
     /* appearance: none; */
 
     > option {
-        background-color: black;
+        background-color: #262626;
         color: white;
         :hover {
             background-color: red;
@@ -106,7 +106,7 @@ const TextfieldInput = styled.textarea `
 
 const AngleButton = styled.button `
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-    background-color: #44f;
+    background-color: #3E63EC;
     color: white;
     border: none;
     font-weight: bold;
@@ -118,7 +118,7 @@ const AngleButton = styled.button `
 
     :hover {
         cursor: pointer;
-        color: #44f;
+        color: #3E63EC;
         background-color: white;
     }
 `

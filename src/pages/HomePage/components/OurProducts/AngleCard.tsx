@@ -66,7 +66,7 @@ const RightTop = styled.div `
 
 const RightButton = styled.button `
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-    background-color: #44f;
+    background-color: #3E63EC;
     color: white;
     border: none;
     padding: 1vw 7vw 1vw 1vw;
@@ -75,7 +75,7 @@ const RightButton = styled.button `
     transition: 0.2s ease;
 
     :hover {
-        background-color: black;
+        background-color: #262626;
         cursor: pointer;
     }
 `
