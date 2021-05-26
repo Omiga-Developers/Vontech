@@ -66,8 +66,22 @@ declare type ContainerProps = {
 }
 
 const Container = styled.div<ContainerProps> `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Light;
+        src: url(fonts/Gilroy-Light.ttf);
+    }
+
     p {
         font-size: 1vw;
+        line-height: 1.5vw;
     }
 
     padding: 2vw;
@@ -83,23 +97,32 @@ const Container = styled.div<ContainerProps> `
 
         > p {
             font-size: 1.5vw;
+            font-family: Gilroy-Light;
+        }
+
+        > h1 {
+            font-family: Gilroy-Bold;
         }
     }
 
     > div:nth-child(2) {
         padding: 2vw 0;
+        
+        > p {
+            font-family: Gilroy-Medium;
+        }
     }
 
     ${({ isFirst }) => (
         isFirst && `
             clip-path: polygon(0 0, 70% 0%, 100% 15%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
-            height: 35vw;
+            height: 39vw;
         `
     )}
 
     ${({ isCommon }) => (
         isCommon && `
-            height: 21vw;
+            height: 24vw;
         `
     )}
 
@@ -138,6 +161,7 @@ const FirstAdditionalContainer = styled.div `
     > p {
         margin: 0vw 0 1.2vw 2vw;
         font-size: 1.1vw;
+        font-family: Gilroy-Medium;
     }
 
     > p:last-child {

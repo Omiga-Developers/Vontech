@@ -92,8 +92,14 @@ const Container = styled.div `
     padding: 0vw 5vw 5vw 5vw;
     background-color: #1C4193;
 
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
     > h2 {
         padding: 3vw;
+        font-family: Gilroy-Bold;
         color: white;
         display: flex;
         font-size: 2.2vw;
@@ -104,7 +110,7 @@ const Container = styled.div `
 const CardContainer = styled.div `
     display: flex;
     justify-content: space-between;
-    height: 47vw;
+    height: 50vw;
 `
 
 const CardColumn = styled.div `
