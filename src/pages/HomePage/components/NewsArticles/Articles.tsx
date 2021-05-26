@@ -55,9 +55,16 @@ const Articles = () => {
 export default Articles
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
     padding: 4vw;
 
     > h2 {
+        font-family: Gilroy-Bold;
+        font-size: 2.2vw;
         color: #3E63EC;
         margin-bottom: 3vw;
     }
