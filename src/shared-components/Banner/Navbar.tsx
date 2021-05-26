@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <Container>
             <ContainerLeft>
-                <img src="images/jatlog-241x128-46.png" alt="logo" />
+                <img src="images/logo.png" alt="logo" />
             </ContainerLeft>
             <NavbarLinks>
                 <ul>
@@ -28,7 +28,7 @@ const Container = styled.div `
 const ContainerLeft = styled.div `
     > img {
         float: left;
-        height: 3vw;
+        height: 5vw;
         object-fit: contain;
     }
 `

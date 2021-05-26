@@ -19,7 +19,7 @@ const Footer = () => {
                 </LeftContainer>
                 <RightContainer>
                     <div>
-                        <img src="images/download (1).png" alt="vontech-logo" />
+                        <img src="images/logo_2.png" alt="vontech-logo" />
                     </div>
                     <div></div>
                     <div>
