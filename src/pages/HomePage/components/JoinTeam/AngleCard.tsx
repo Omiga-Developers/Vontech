@@ -63,11 +63,28 @@ const Container = styled.div `
 `
 
 const TopHalf = styled.div `
-    padding: 2vw 2vw 1vw 2vw;
+    padding: 1.5vw 2vw;
     background-color: #3E63EC;
     flex: 0.4;
     display: flex;
     flex-direction: column;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        color: white;
+
+        > p:first-child {
+            font-family: Gilroy-Light;
+        }
+
+        > p:last-child {
+            font-family: Gilroy-Light;
+            font-size: 1.5vw;
+        }
+    }
 `
 
 const BottomHalf = styled.div `
@@ -77,24 +94,36 @@ const BottomHalf = styled.div `
     justify-content: space-between;
     flex: 0.6;
 
+    > div:first-child {
+        > p {
+            font-family: Gilroy-Medium;
+            color: #3E63EC;   
+            font-size: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        > p:last-child {
+            font-size: 0.8vw;
+        }
+    }
+
     > div:last-child {
         display: flex;
         justify-content: flex-end;
 
         > button {
-            clip-path: polygon(0 0, 84% 0, 100% 30%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-
-
             background: transparent;
             border: 1px solid #3E63EC;
-            color: white;
-            background-color: #3E63EC;
+            color: #3E63EC;
             padding: 0.5vw;
             font-family: Gilroy-Light;
             transition: 0.2s ease;
 
             :hover {
                 background-color: #282828;
+                border-color: #282828;
+                color: white;
+                cursor: pointer;
             }
         }
     }
