@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components"
 
 declare type AngleCardProps = {
@@ -8,8 +9,12 @@ declare type AngleCardProps = {
 }
 
 const AngleCard = ({ image, title, unit, dimension } : AngleCardProps) => {
+    const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
+
     return (
-        <Container>
+        <Container
+            isHoveredOver={isHoveredOver}
+        >
             <div>
                 <img alt="product" src={image} />
             </div>
@@ -19,7 +24,10 @@ const AngleCard = ({ image, title, unit, dimension } : AngleCardProps) => {
                     <p>{unit}</p>
                     <p>{dimension}</p>
                 </RightTop>
-                <RightButton>
+                <RightButton
+                    onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
+                    onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
+                >
                     Place your order now
                 </RightButton>
             </div>
@@ -29,7 +37,11 @@ const AngleCard = ({ image, title, unit, dimension } : AngleCardProps) => {
 
 export default AngleCard
 
-const Container = styled.div `
+declare type ContainerProps = {
+    isHoveredOver: boolean;
+}
+
+const Container = styled.div<ContainerProps> `
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
@@ -43,6 +55,7 @@ const Container = styled.div `
     display: flex;
     justify-content: center;
     background-color: white;
+    transition: 0.4s ease;
 
     > div {
         > img {
@@ -57,6 +70,12 @@ const Container = styled.div `
         justify-content: space-between;
         padding: 1vw 1vw 0 0.5vw;
     }
+
+    ${({ isHoveredOver }) => (
+        isHoveredOver && `
+            transform: scale(1.02);
+        `
+    )}
 `
 
 

@@ -39,12 +39,13 @@ const Container = styled.div `
 const AngledButton = styled.button<angledButtonProps> `
     font-family: Gilroy-Medium;
     font-size: 1.2vw;
-    padding: 0.2vw 0.5vw;
+    padding: 0.2vw 0.5vw 0.3vw 0.5vw;
     margin: 1vw 2vw 0 0;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     color: #3E63EC;
 
     > a {
+        font-family: Gilroy-Medium;
         text-decoration: none;
     }
 
@@ -61,6 +62,7 @@ const AngledButton = styled.button<angledButtonProps> `
 
     ${({ isBlue }) => (
         isBlue ? `
+            padding: 0.2vw 1vw 0.3vw 1vw;
             color: white;
             border-color: #3E63EC;
             background-color: #3E63EC;

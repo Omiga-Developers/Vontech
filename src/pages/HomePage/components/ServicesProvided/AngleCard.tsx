@@ -116,7 +116,7 @@ const Container = styled.div<ContainerProps> `
     ${({ isFirst }) => (
         isFirst && `
             clip-path: polygon(0 0, 70% 0%, 100% 15%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
-            height: 39vw;
+            height: 37.5vw;
         `
     )}
 
