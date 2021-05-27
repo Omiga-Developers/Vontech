@@ -8,7 +8,7 @@ const TopbarContactUs = () => {
     const [show, setShow] = useState<boolean>(true);
 
     return (
-        <Container show={show}>
+        <Container style={ !show ? { backgroundColor: '#3E63EC' } : {} } show={show}>
             <ContainerLeft>
                 <p>Professionals in contruction & maintance, always at your disposal.</p>
             </ContainerLeft>
