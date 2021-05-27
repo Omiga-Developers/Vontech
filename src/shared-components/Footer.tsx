@@ -35,6 +35,11 @@ const Footer = () => {
 export default Footer
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,11 +56,6 @@ const Container = styled.div `
 `
 
 const LeftContainer = styled.div `
-    @font-face {
-        font-family: Gilroy-Medium;
-        src: url(fonts/Gilroy-Medium.ttf);
-    }
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;

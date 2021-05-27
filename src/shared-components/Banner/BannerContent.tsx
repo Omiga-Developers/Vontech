@@ -18,14 +18,18 @@ const BannerContent = () => {
 export default BannerContent
 
 const Container = styled.div `
-    color: white;
-    padding-left: 6vw;
-    margin-top: 8vw;
-
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
     }
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
+    color: white;
+    padding-left: 6vw;
+    margin-top: 8vw;
 
     > h1 {
         font-size: 3vw;
@@ -33,11 +37,6 @@ const Container = styled.div `
 `  
 
 const AngledButton = styled.button<angledButtonProps> `
-    @font-face {
-        font-family: Gilroy-Medium;
-        src: url(fonts/Gilroy-Medium.ttf);
-    }
-
     font-family: Gilroy-Medium;
     font-size: 1.2vw;
     padding: 0.2vw 0.5vw;
@@ -51,8 +50,6 @@ const AngledButton = styled.button<angledButtonProps> `
 
     background-color: white;
     border: 1px solid white;
-    /* background-color: rgba(255, 255, 255, 0.05); */
-    /* border: 1px solid rgba(255, 255, 255, 0.05); */
     transition: 0.2s ease;
 
     :hover {

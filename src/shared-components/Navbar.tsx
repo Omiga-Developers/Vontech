@@ -22,6 +22,11 @@ const Navbar = () => {
 export default Navbar
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     padding: 2.5vw 8vw 1vw 5vw;
 `
 
@@ -35,11 +40,6 @@ const ContainerLeft = styled.div `
 
 const NavbarLinks = styled.ul `
     float: right;
-
-    @font-face {
-        font-family: Gilroy-Medium;
-        src: url(fonts/Gilroy-Medium.ttf);
-    }
 
     > ul li {
         color: white;

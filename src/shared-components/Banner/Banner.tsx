@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import BannerContent from "./BannerContent"
 import BannerFooter from "./BannerFooter"
-import Navbar from "./Navbar"
+import Navbar from "../Navbar"
 
 const Banner = () => {
     return (

@@ -43,6 +43,19 @@ const TopbarContactUs = () => {
 export default TopbarContactUs
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Regular;
+        src: url(fonts/Gilroy-Regular.ttf);
+    }
+
     display: flex;
     padding: 1vw 4vw;
     justify-content: space-between;
@@ -55,11 +68,6 @@ const ContainerLeft = styled.div `
     align-items: center;
     flex: 0.6;
 
-    @font-face {
-        font-family: Gilroy-Bold;
-        src: url(fonts/Gilroy-Bold.ttf);
-    }
-
     > p {
         font-weight: bold;
         font-family: Gilroy-Bold;
@@ -70,15 +78,6 @@ const ContainerRight = styled.div `
     display: flex;
     justify-content: space-between;
     flex: 0.4;
-
-    @font-face {
-        font-family: Gilroy-Medium;
-        src: url(fonts/Gilroy-Medium.ttf);
-    }
-    @font-face {
-        font-family: Gilroy-Regular;
-        src: url(fonts/Gilroy-Regular.ttf);
-    }
 
     > div > div {
         > p:first-child {
