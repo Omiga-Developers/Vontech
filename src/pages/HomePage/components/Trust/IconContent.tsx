@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 declare type IconContentProps = {
@@ -7,14 +8,23 @@ declare type IconContentProps = {
     isMiddle?: boolean;
     isLast?: boolean;
     isFirstColumn?: boolean;
+    hoveredIcon: string;
 }
 
-const IconContent = ({ icon, sentenceOne, sentenceTwo, isMiddle, isLast, isFirstColumn } : IconContentProps) => {
+const IconContent = ({ icon, sentenceOne, sentenceTwo, isMiddle, isLast, isFirstColumn, hoveredIcon } : IconContentProps) => {
+    const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
+
     return (
         <ContainerWrapper>
             <Container isMiddle={isMiddle} isLast={isLast} isFirstColumn={isFirstColumn}>
-                <div>
-                    <img src={icon} alt="icon" />
+                <div
+                    onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
+                    onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
+                >
+                    <img
+                        src={isHoveredOver ? hoveredIcon : icon} 
+                        alt="icon" 
+                    />
                 </div>
                 <div>
                     <p>{sentenceOne}</p>

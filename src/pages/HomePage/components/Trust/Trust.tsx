@@ -13,16 +13,19 @@ const Trust = () => {
                             sentenceOne="Qualified &"
                             sentenceTwo="experienced engineers"
                             isFirstColumn={true}
+                            hoveredIcon="images/Website-06-1.png"
                         />
                         <IconContent
                             icon="images/Website-07.png"
                             sentenceOne="Quality materials"
                             isMiddle={true}
+                            hoveredIcon="images/Website-07-1.png"
                         />
                         <IconContent
                             icon="images/Website-08.png"
                             sentenceOne="Affordable"
                             isLast={true}
+                            hoveredIcon="images/Website-08-1.png"
                         />
                     </RowContainer>
                 </RowContainerWrapper>
@@ -32,18 +35,21 @@ const Trust = () => {
                             icon="images/Website-09.png"
                             sentenceOne="Maintenance"
                             isFirstColumn={true}
+                            hoveredIcon="images/Website-09-1.png"
                         />
                         <IconContent
                             icon="images/Website-10.png"
                             sentenceOne="Premium support"
                             sentenceTwo="& consultation"
                             isMiddle={true}
+                            hoveredIcon="images/Website-10-1.png"
                         />
                         <IconContent
                             icon="images/Website-11.png"
                             sentenceOne="Supervised"
                             sentenceTwo="by professionals"
                             isLast={true}
+                            hoveredIcon="images/Website-11-1.png"
                         />
                     </RowContainer>
                 </RowContainerWrapper>
@@ -54,17 +60,20 @@ const Trust = () => {
                             sentenceOne="Statutory approvals"
                             sentenceTwo="(local authority)"
                             isFirstColumn={true}
+                            hoveredIcon="images/Website-12-1.png"
                         />
                         <IconContent
                             icon="images/Website-13.png"
                             sentenceOne="Bank loans"
                             isMiddle={true}
+                            hoveredIcon="images/Website-13-1.png"
                         />
                         <IconContent
                             icon="images/Website-14.png"
                             sentenceOne="Sustainable &"
                             sentenceTwo="long lasting"
                             isLast={true}
+                            hoveredIcon="images/Website-14-1.png"
                         />
                     </RowContainer>
                 </RowContainerWrapper>
