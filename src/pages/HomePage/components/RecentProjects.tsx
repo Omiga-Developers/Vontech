@@ -60,7 +60,7 @@ const Container = styled.div `
         justify-content: center;
 
         > h2, > p {
-            font-size: 3vw;
+            font-size: 2.7vw;
             font-family: Gilroy-Medium;
         }
 

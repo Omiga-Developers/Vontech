@@ -74,7 +74,7 @@ const Container = styled.div `
 const ArticlesContainer = styled.div `
     display: flex;
     overflow-x: scroll;
-    height: 20vw;
+    height: 25vw;
     padding: 1vw;
 
     ::-webkit-scrollbar {
