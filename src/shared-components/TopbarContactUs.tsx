@@ -63,7 +63,7 @@ const Container = styled.div<ContainerProps> `
         src: url(fonts/Gilroy-Regular.ttf);
     }
 
-    transition: 0.3s ease;
+    transition: 0.5s ease;
     display: flex;
     padding: 1vw 4vw;
     justify-content: space-between;
@@ -72,7 +72,10 @@ const Container = styled.div<ContainerProps> `
 
     ${({ show }) => (
         !show && `
-            display: none;
+            visibility:hidden;
+            overflow: hidden;
+            height: 0;
+            padding: 0;
         `
     )}
 `
