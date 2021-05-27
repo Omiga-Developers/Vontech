@@ -1,8 +1,7 @@
-import React from "react"
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import Footer from "../../shared-components/Footer"
-import Navbar from "../../shared-components/Navbar"
+import Navbar from "../../shared-components/Navbar.jsx"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
 import AboutUs from "./components/AboutUs"
 import ContactUs from "./components/ContactUs"
@@ -39,4 +38,5 @@ const HomePage = () => {
 export default HomePage
 
 const Container = styled.div `
+    background-color: rgba(0, 0, 0, 0.8)
 `

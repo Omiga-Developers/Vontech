@@ -38,6 +38,7 @@ const Container = styled.div `
     }
 
     padding: 4vw 8vw;
+    background-color: white;
 
     > h2 {
         font-family: Gilroy-Bold;

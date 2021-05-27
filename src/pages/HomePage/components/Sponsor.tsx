@@ -13,6 +13,7 @@ export default Sponsor
 const Container = styled.div `
     overflow-x: scroll;
     padding: 2vw 0vw;
+    background-color: white;
 
     ::-webkit-scrollbar {
         display: none;

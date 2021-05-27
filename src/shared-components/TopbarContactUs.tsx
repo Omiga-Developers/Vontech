@@ -63,6 +63,7 @@ const Container = styled.div<ContainerProps> `
         src: url(fonts/Gilroy-Regular.ttf);
     }
 
+    background-color: white;
     transition: 0.5s ease;
     display: flex;
     padding: 1vw 4vw;

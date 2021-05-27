@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const Navbar = () => {
+    const [scrollY, setScrollY] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            console.log(window.scrollY);
+            if(window.scrollY > 50) {
+                setScrollY(true);
+            } else setScrollY(false);
+        });
+        return () => {
+            window.removeEventListener("scroll");
+        };
+    }, []);
+
     return (
-        <Container>
+        <Container style={!scrollY ? { backgroundImage: 'url(images/navbg.jpg)' } : { backgroundColor: 'rgba(0,0,0,0.8)' } }>
             <ContainerLeft>
                 <img src="images/logo.png" alt="logo" />
             </ContainerLeft>
@@ -34,7 +49,7 @@ const Container = styled.div `
     width: 100%;
     top: 0;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 1);
+    background-size: cover;
     padding: 1vw 8vw 1vw 5vw;
 `
 
@@ -54,12 +69,13 @@ const NavbarLinks = styled.ul `
         display: inline-block;
         padding: 1vw;
         font-size: 1vw;
-        font-family: Gilroy-Medium;
+        
 
         > a {
             text-decoration: none;
             color: white;
             transition: 0.2s ease;
+            font-family: Gilroy-Medium;
 
             :hover {
                 color: #3E63EC;

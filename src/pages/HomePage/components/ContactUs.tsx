@@ -85,6 +85,7 @@ const Container = styled.div `
     }
 
     padding: 4vw;
+    background-color: white;
 
     > h2 {
         color: #1C4193;
