@@ -64,7 +64,7 @@ const ContactUs = () => {
                         loading="lazy"
                         allowFullScreen
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDbRnyFhozUndKrGdnOvkzOf10rx6cUBa0
-                            &q=Nagoda+Kandana">
+                            &q=215+Colombo+-+Kandy+Rd">
                     </iframe>
                 </MapContainer>
             </div>
