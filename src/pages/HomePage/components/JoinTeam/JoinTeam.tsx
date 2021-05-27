@@ -20,6 +20,10 @@ const JoinTeam = () => {
                     title="Site Engineer (Full time)"
                     qualification="NDT or equivalent 2 years experience"
                 />
+                <AngleCard
+                    title="Site Engineer (Full time)"
+                    qualification="NDT or equivalent 2 years experience"
+                />
             </JobContainer>
         </Container>
     )
@@ -28,19 +32,25 @@ const JoinTeam = () => {
 export default JoinTeam
 
 const Container = styled.div `
-    padding: 4vw;
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+
+    padding: 4vw 8vw;
 
     > h2 {
+        font-family: Gilroy-Bold;
         color: #1C4193;
         font-size: 2.2vw;
         border-bottom: 1px solid #1C4193;
+        margin-bottom: 3vw;
     }
 `
 
 const JobContainer = styled.div `
     display: flex;
     overflow-x: scroll;
-    height: 20vw;
     padding: 1vw;
 
     ::-webkit-scrollbar {
