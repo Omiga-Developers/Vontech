@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components"
 
 declare type AngleCardProps = {
@@ -7,9 +8,11 @@ declare type AngleCardProps = {
 }
 
 const AngleCard = ({ title, age, qualification } : AngleCardProps) => {
+    const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
+
     return (
         <ShadowContainer>
-            <Container>
+            <Container isHoveredOver={isHoveredOver}>
                 <TopHalf>
                     <div>
                         <p>Job posting</p>
@@ -23,7 +26,12 @@ const AngleCard = ({ title, age, qualification } : AngleCardProps) => {
                         <p>Send your CV to vontechengineering@gmail.com</p>
                     </div>
                     <div>
-                        <button>Apply now!</button>
+                        <button
+                            onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
+                            onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
+                        >
+                            Apply now!
+                        </button>
                     </div>
                 </BottomHalf>
             </Container>
@@ -39,7 +47,11 @@ const ShadowContainer = styled.div `
     margin-right: 3vw;
 `
 
-const Container = styled.div `
+declare type ContainerProps = {
+    isHoveredOver: boolean;
+}
+
+const Container = styled.div<ContainerProps> `
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
@@ -60,6 +72,12 @@ const Container = styled.div `
     flex-direction: column;
     background-color: white;
     transition: 0.4s ease;
+
+    ${({ isHoveredOver }) => (
+        isHoveredOver && `
+        transform: scale(1.02);
+        `
+    )}
 `
 
 const TopHalf = styled.div `
