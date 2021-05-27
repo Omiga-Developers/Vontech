@@ -2,10 +2,13 @@ import styled from 'styled-components';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { useState } from 'react';
 
 const TopbarContactUs = () => {
+    const [show, setShow] = useState<boolean>(true);
+
     return (
-        <Container>
+        <Container show={show}>
             <ContainerLeft>
                 <p>Professionals in contruction & maintance, always at your disposal.</p>
             </ContainerLeft>
@@ -30,7 +33,7 @@ const TopbarContactUs = () => {
                         <p>215/E, Colombo road, Nagoda, Kandana</p>
                     </div>
                 </AddressContainer>
-                <CrossContainer>
+                <CrossContainer onClick={() => setShow(false)}>
                     <div>
                         x
                     </div>
@@ -42,7 +45,11 @@ const TopbarContactUs = () => {
 
 export default TopbarContactUs
 
-const Container = styled.div `
+declare type ContainerProps = {
+    show: boolean;
+}
+
+const Container = styled.div<ContainerProps> `
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
@@ -56,11 +63,18 @@ const Container = styled.div `
         src: url(fonts/Gilroy-Regular.ttf);
     }
 
+    transition: 0.3s ease;
     display: flex;
     padding: 1vw 4vw;
     justify-content: space-between;
     color: #3E63EC;
     font-size: 1.1vw;
+
+    ${({ show }) => (
+        !show && `
+            display: none;
+        `
+    )}
 `
 
 const ContainerLeft = styled.div `
@@ -135,5 +149,9 @@ const CrossContainer = styled.div `
     > div {
         background-color: #3E63EC;
         padding: 0vw 0.5vw;
+    }
+
+    :hover {
+        cursor: pointer;
     }
 `

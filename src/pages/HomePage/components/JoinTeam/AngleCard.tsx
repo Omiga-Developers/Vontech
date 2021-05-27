@@ -23,7 +23,7 @@ const AngleCard = ({ title, age, qualification } : AngleCardProps) => {
                     <div>
                         {age && <p>{age}</p>}
                         {qualification && <p>{qualification}</p>}
-                        <p>Send your CV to vontechengineering@gmail.com</p>
+                        <p><a href="mailto:vontechengineering@gmail.com">Send your CV to vontechengineering@gmail.com</a></p>
                     </div>
                     <div>
                         <button
@@ -122,6 +122,12 @@ const BottomHalf = styled.div `
 
         > p:last-child {
             font-size: 0.8vw;
+
+            > a {
+                font-family: Gilroy-Medium;
+                text-decoration: none;
+                color: #3E63EC;
+            }
         }
     }
 
