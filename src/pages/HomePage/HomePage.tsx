@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import Footer from "../../shared-components/Footer"

@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 import IconContent from "./IconContent"
 
@@ -77,13 +76,13 @@ const Trust = () => {
 export default Trust
 
 const Container = styled.div `
-    padding-bottom: 5vw;
-    background-color: #282828;
-
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
     }
+
+    padding-bottom: 5vw;
+    background-color: #282828;
 
     > h2 {
         padding: 3vw;
@@ -104,7 +103,6 @@ const IconContainer = styled.div `
 `
 
 const RowContainerWrapper = styled.div `
-    /* width: 100%; */
 `
 
 declare type RowContainerProps = {

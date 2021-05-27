@@ -79,6 +79,10 @@ const Container = styled.div `
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
     }
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
 
     padding: 4vw;
 
@@ -113,24 +117,17 @@ const MapContainer = styled.div `
 `
 
 const AngleButton = styled.button<AngleButtonProps> `
-    @font-face {
-        font-family: Gilroy-Medium;
-        src: url(fonts/Gilroy-Medium.ttf);
-    }
-
     font-family: Gilroy-Medium;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
     color: white;
     border: none;
-    /* padding: 2vw 4vw 2vw 1vw; */
     padding: 0 4vw 0 1vw;
     height: 5.6vw;
     width: 60%;
     text-align: left;
     font-size: 1.4vw;
     transition: 0.3s ease;
-    /* margin-bottom: 1vw; */
 
     :hover {
         cursor: pointer;

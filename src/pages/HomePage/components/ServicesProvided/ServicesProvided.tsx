@@ -89,13 +89,13 @@ const ServicesProvided = () => {
 export default ServicesProvided
 
 const Container = styled.div `
-    padding: 0vw 5vw 5vw 5vw;
-    background-color: #1C4193;
-
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
     }
+
+    padding: 0vw 5vw 5vw 5vw;
+    background-color: #1C4193;
 
     > h2 {
         padding: 3vw;
