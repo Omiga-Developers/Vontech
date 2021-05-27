@@ -1,6 +1,8 @@
+import React from "react"
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import Footer from "../../shared-components/Footer"
+import Navbar from "../../shared-components/Navbar"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
 import AboutUs from "./components/AboutUs"
 import ContactUs from "./components/ContactUs"
@@ -17,6 +19,7 @@ const HomePage = () => {
     return (
         <Container>
             <TopbarContactUs />
+            <Navbar />
             <Banner />
             <ServicesProvided />
             <Trust />

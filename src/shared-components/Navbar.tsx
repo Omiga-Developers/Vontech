@@ -27,7 +27,15 @@ const Container = styled.div `
         src: url(fonts/Gilroy-Medium.ttf);
     }
 
-    padding: 2.5vw 8vw 1vw 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 1vw 8vw 1vw 5vw;
 `
 
 const ContainerLeft = styled.div `

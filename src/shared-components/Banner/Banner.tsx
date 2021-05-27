@@ -1,12 +1,10 @@
 import styled from "styled-components"
 import BannerContent from "./BannerContent"
 import BannerFooter from "./BannerFooter"
-import Navbar from "../Navbar"
 
 const Banner = () => {
     return (
         <Container>
-            <Navbar />
             <BannerContent />
             <BannerFooter />
         </Container>
@@ -22,4 +20,5 @@ const Container = styled.div `
     background-size: cover;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 `
