@@ -1,43 +1,78 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components"
+import emailjs from "emailjs-com";
+import{ init } from 'emailjs-com';
 
 const RequestQuote = () => {
+    const [name, setName] = useState<string>();
+    const [email, setEmail] = useState<string>();
+    const [phone, setPhone] = useState<string>();
+    const [service, setService] = useState<string>();
+    const [budget, setBudget] = useState<string>();
+    const [location, setLocation] = useState<string>();
+    const [message, setMessage] = useState<string>();
+
+    useEffect(() => {
+        init("user_ktwd7JvhbZ4wVGiRb3sDq");
+    }, [])
+
+    const handleSubmit = (e : any) => {
+        e.preventDefault();
+        if (name && email && phone && service && budget && location && message) {
+            let templateParams = {
+                from_name: name,
+                email,
+                tel_num: phone,
+                budget,
+                service,
+                location,
+                message
+            };
+            emailjs.send('service_q0765ni', 'vontech_contact_us', templateParams)
+                .then(response => alert("We have received your email successfully!"))
+                .catch(e => alert("something went wrong!"));
+        } else {
+            alert("Please fill in all the fields")
+        }
+    }
+
     return (
         <Container id="requestQuote">
             <h2>Or request a quote</h2>
             <div>
                 <RowContainer>
-                    <TextInput placeholder="Your Name" />
-                    <TextInput placeholder="Email Address" />
+                    <TextInput name="from_name" onChange={e => setName(e.target.value)} value={name} placeholder="Your Name" />
+                    <TextInput name="email" onChange={e => setEmail(e.target.value)}  value={email} placeholder="Email Address" />
                 </RowContainer>
                 <RowContainer>
-                    <TextInput placeholder="Phone Number" />
-                    <OptionInput defaultValue="Service">
+                    <TextInput name="tel_num" onChange={e => setPhone(e.target.value)}  value={phone} placeholder="Phone Number" />
+                    <OptionInput name="service" value={service} onChange={e => setService(e.target.value)} defaultValue="Service">
                         <option selected disabled hidden>Service</option>
                         <option disabled>&nbsp;</option>
-                        <option>Design and construction</option>
+                        <option value="Design and construction">Design and construction</option>
                         <option disabled>&nbsp;</option>
-                        <option>Concrete structures</option>
+                        <option value="Concrete structures">Concrete structures</option>
                         <option disabled>&nbsp;</option>
-                        <option>Waterproofing</option>
+                        <option value="Waterproofing">Waterproofing</option>
                         <option disabled>&nbsp;</option>
-                        <option>Concrete repairs</option>
+                        <option value="Concrete repairs">Concrete repairs</option>
                         <option disabled>&nbsp;</option>
-                        <option>Manufacturing & trading</option>
+                        <option value="Manufacturing & trading">Manufacturing & trading</option>
                         <option disabled>&nbsp;</option>
-                        <option>Other services.</option>
+                        <option value="Other services.">Other services.</option>
                         <option disabled>&nbsp;</option>
                     </OptionInput>
                 </RowContainer>
                 <RowContainer>
-                    <TextInput placeholder="Your Budget" />
-                    <TextInput placeholder="Location of site" />
+                    <TextInput name="budget" onChange={e => setBudget(e.target.value)}  value={budget} placeholder="Your Budget" />
+                    <TextInput name="location" onChange={e => setLocation(e.target.value)}  value={location} placeholder="Location of site" />
                 </RowContainer>
                 <RowContainer>
-                    <TextfieldInput rows={8} placeholder="Write a message" />
+                    <TextfieldInput name="message" onChange={e => setMessage(e.target.value)}  value={message} rows={8} placeholder="Write a message" />
                 </RowContainer>
             </div>
             <div>
-                <AngleButton>Request quote</AngleButton>
+                <AngleButton onClick={handleSubmit}>Request quote</AngleButton>
             </div>
         </Container>
     )
