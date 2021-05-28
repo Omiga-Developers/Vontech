@@ -55,7 +55,7 @@ const Container = styled.div `
 const ContainerLeft = styled.div `
     > img {
         float: left;
-        height: 4vw;
+        height: 3.8vw;
         object-fit: contain;
     }
 `

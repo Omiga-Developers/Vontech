@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <Container id="aboutUs">
             <div style={{ flex: 0.25 }}>
-                <img style={{ marginBottom: '0.8vw' }} src="images/rics.png" alt="rics-logo" />
+                <img style={{ marginBottom: '0.8vw' }} src="images/rics-blue.png" alt="rics-logo" />
                 <img src="images/cabe.png" alt="cabe-logo" />
             </div>
             <div style={{ flex: 0.35}}>

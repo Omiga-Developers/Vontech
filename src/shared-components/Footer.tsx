@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                     <div></div>
                     <div>
-                        <img src="images/rics.png" alt="rics-logo" />
+                        <img src="images/rics-grey.png" alt="rics-logo" />
                         <img src="images/cabe.png" alt="cabe-logo" />
                     </div>
                 </RightContainer>
