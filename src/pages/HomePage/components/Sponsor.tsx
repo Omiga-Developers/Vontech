@@ -22,7 +22,7 @@ export default Sponsor
 
 const Container = styled.div `
     overflow-x: scroll;
-    padding: 1vw 0vw;
+    padding: 1.5vw 0vw;
     background-color: white;
 
     ::-webkit-scrollbar {
@@ -31,7 +31,8 @@ const Container = styled.div `
 
     img {
         /* width: 15vw;
-        padding: 2vw 0vw;
-        height: 8vw; */
+        padding: 2vw 0vw; */
+        height: 5vw;
+        object-fit: contain;
     }
 `

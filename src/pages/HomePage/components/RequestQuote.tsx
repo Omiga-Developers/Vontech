@@ -128,12 +128,16 @@ const RowContainer = styled.div `
 
 const TextInput = styled.input `
     font-family: Gilroy-Medium;
-    padding: 1.2vw 13vw 1.2vw 1.2vw;
+    padding: 1.2vw 0.5vw;
+    flex: 1;
+    max-width: 48%;
 `
 
 const OptionInput = styled.select `
     font-family: Gilroy-Medium;
-    padding: 1.2vw 11.5vw 1.2vw 1.2vw;
+    padding: 1.2vw 0.5vw;
+    flex: 1;
+    max-width: 48%;
 
     > option {
         font-family: Gilroy-Medium;
