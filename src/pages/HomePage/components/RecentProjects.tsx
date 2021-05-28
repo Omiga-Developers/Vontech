@@ -29,6 +29,7 @@ const Container = styled.div `
     background-image: url("images/1AA556D6.jpg");
     display: flex;
     background-size: cover;
+    background-attachment: fixed;
     height: 30vw;
     padding: 4vw 4vw 0 4vw;
     flex-direction: column;
