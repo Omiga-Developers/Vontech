@@ -44,7 +44,7 @@ export default AngleCard
 const ShadowContainer = styled.div `
     filter: drop-shadow(2px 2px 8px #3E63EC);
     height: 22.5vw;
-    margin-right: 3vw;
+    margin-right: 5vw;
 `
 
 declare type ContainerProps = {

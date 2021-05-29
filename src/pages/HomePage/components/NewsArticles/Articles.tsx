@@ -9,8 +9,8 @@ const Articles = () => {
                 <h2>News and articles</h2>
             </Fade>
 
-            <Fade direction="left" triggerOnce duration={2500}>
                 <ArticlesContainer>
+                    <Fade direction="left" triggerOnce duration={1500}>
                     <AngleCard
                         image="images/concrete_structure.jpeg"
                         type="News"
@@ -51,8 +51,8 @@ const Articles = () => {
                         type="News"
                         title="The new hardware store in town"
                     />
+                    </Fade>
                 </ArticlesContainer>
-            </Fade>
         </Container>
     )
 }
@@ -79,8 +79,8 @@ const Container = styled.div `
 const ArticlesContainer = styled.div `
     display: flex;
     overflow-x: scroll;
-    height: 25vw;
-    padding: 1vw;
+    /* height: 25vw; */
+    padding: 1vw 0.5vw;
 
     ::-webkit-scrollbar {
         display: none;

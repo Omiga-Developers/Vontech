@@ -9,8 +9,8 @@ const JoinTeam = () => {
                 <h2>Join the team!</h2>
             </Fade>
 
-            <Fade direction="left" triggerOnce duration={2500}>
                 <JobContainer>
+                    <Fade direction="left" triggerOnce duration={1500}>
                     <AngleCard
                         title="Sales Representative (trainee)"
                         age="18 to 24 years of age"
@@ -28,8 +28,24 @@ const JoinTeam = () => {
                         title="Site Engineer (Full time)"
                         qualification="NDT or equivalent 2 years experience"
                     />
+                    <AngleCard
+                        title="Site Engineer (Full time)"
+                        qualification="NDT or equivalent 2 years experience"
+                    />
+                    <AngleCard
+                        title="Site Engineer (Full time)"
+                        qualification="NDT or equivalent 2 years experience"
+                    />
+                    <AngleCard
+                        title="Site Engineer (Full time)"
+                        qualification="NDT or equivalent 2 years experience"
+                    />
+                    <AngleCard
+                        title="Site Engineer (Full time)"
+                        qualification="NDT or equivalent 2 years experience"
+                    />
+                    </Fade>
                 </JobContainer>
-            </Fade>
         </Container>
     )
 }
@@ -42,7 +58,7 @@ const Container = styled.div `
         src: url(fonts/Gilroy-Bold.ttf);
     }
 
-    padding: 4vw 8vw;
+    padding: 4vw;
     background-color: white;
 
     > div > h2 {
@@ -57,7 +73,7 @@ const Container = styled.div `
 const JobContainer = styled.div `
     display: flex;
     overflow-x: scroll;
-    padding: 1vw;
+    padding: 1vw 0.5vw;
 
     ::-webkit-scrollbar {
         display: none;
