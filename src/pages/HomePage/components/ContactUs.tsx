@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 import styled from "styled-components"
 
 declare type AngleButtonProps = {
@@ -11,61 +12,64 @@ const ContactUs = () => {
 
     return (
         <Container id="contactUs">
-            <h2>Contact us</h2>
+            <Fade direction="left" triggerOnce duration={1500}>
+                <h2>Contact us</h2>
+            </Fade>
+
             <div>
                 <div>
-                    <ButtonContainer>
+                    <Fade cascade direction="up" triggerOnce duration={2000}>
+                        <ButtonContainer>
+                            {
+                                !toggleCall ? 
+                                    <AngleButton 
+                                        toggled={toggleCall} 
+                                        onClick={() => setToggleCall(!toggleCall)} 
+                                    >
+                                        Call now
+                                    </AngleButton>
+                                :
+                                    <AngleButton 
+                                        toggled={toggleCall} 
+                                        onClick={() => setToggleCall(!toggleCall)} 
+                                    >
+                                        +94 773398875 <br />+94 701864939
+                                    </AngleButton>
+                            }
+                        </ButtonContainer>
+                        <ButtonContainer>
                         {
-                            !toggleCall ? 
-                                <AngleButton 
-                                    toggled={toggleCall} 
-                                    onClick={() => setToggleCall(!toggleCall)} 
-                                    // onMouseEnter={() => setToggleCall(!toggleCall)}
+                            !toggleVisitUs ? 
+                                <AngleButton
+                                    toggled={toggleVisitUs}
+                                    onClick={() => setToggleVisitUs(!toggleVisitUs)} 
                                 >
-                                    Call now
+                                    Visit us
                                 </AngleButton>
                             :
-                                <AngleButton 
-                                    toggled={toggleCall} 
-                                    onClick={() => setToggleCall(!toggleCall)} 
-                                    // onMouseEnter={() => setToggleCall(!toggleCall)}
+                                <AngleButton
+                                    toggled={toggleVisitUs}
+                                    onClick={() => setToggleVisitUs(!toggleVisitUs)} 
                                 >
-                                    +94 773398875 <br />+94 701864939
+                                    215/E, Colombo road, <br /> Nagoda, Kandana
                                 </AngleButton>
                         }
-                    </ButtonContainer>
-                    <ButtonContainer>
-                    {
-                        !toggleVisitUs ? 
-                            <AngleButton
-                                toggled={toggleVisitUs}
-                                onClick={() => setToggleVisitUs(!toggleVisitUs)} 
-                                // onMouseEnter={() => setToggleVisitUs(!toggleVisitUs)}
-                            >
-                                Visit us
-                            </AngleButton>
-                        :
-                            <AngleButton
-                                toggled={toggleVisitUs}
-                                onClick={() => setToggleVisitUs(!toggleVisitUs)} 
-                                // onMouseEnter={() => setToggleVisitUs(!toggleVisitUs)}
-                            >
-                                215/E, Colombo road, <br /> Nagoda, Kandana
-                            </AngleButton>
-                    }
-                    </ButtonContainer>
+                        </ButtonContainer>
+                    </Fade>
                 </div>
                 <MapContainer>
-                    <iframe
-                        title="Location embed"
-                        width="580"
-                        height="300"
-                        style={{ border:0 }}
-                        loading="lazy"
-                        allowFullScreen
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDbRnyFhozUndKrGdnOvkzOf10rx6cUBa0
-                            &q=215+Colombo+-+Kandy+Rd">
-                    </iframe>
+                    <Fade direction="right" triggerOnce duration={1500}>
+                        <iframe
+                            title="Location embed"
+                            width="580"
+                            height="300"
+                            style={{ border:0 }}
+                            loading="lazy"
+                            allowFullScreen
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDbRnyFhozUndKrGdnOvkzOf10rx6cUBa0
+                                &q=215+Colombo+-+Kandy+Rd">
+                        </iframe>
+                    </Fade>
                 </MapContainer>
             </div>
         </Container>
@@ -87,7 +91,7 @@ const Container = styled.div `
     padding: 4vw;
     background-color: white;
 
-    > h2 {
+    > div > h2 {
         color: #1C4193;
         font-family: Gilroy-Bold;
         font-size: 2.2vw;
