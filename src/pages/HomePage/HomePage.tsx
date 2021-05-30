@@ -1,3 +1,4 @@
+import { Route, Switch } from "react-router"
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import Footer from "../../shared-components/Footer"
@@ -16,22 +17,33 @@ import Trust from "./components/Trust/Trust"
 
 const HomePage = () => {
     return (
-        <Container>
-            <TopbarContactUs />
-            <Navbar />
-            <Banner />
-            <ServicesProvided />
-            <Trust />
-            <AboutUs />
-            <Sponsor />
-            <RecentProjects />
-            <Articles />
-            <OurProducts />
-            <ContactUs />
-            <RequestQuote />
-            <JoinTeam />
-            <Footer />
-        </Container>
+        <Switch>
+            <Route exact path="/careers">
+                <Container style={{ backgroundColor: '#1C4193' }}>
+                    <Navbar isDifferent={true} />
+                    <JoinTeam />
+                    <Footer />
+                </Container>
+            </Route>
+            <Route path="/">
+                <Container>
+                    <TopbarContactUs />
+                    <Navbar isDifferent={false} />
+                    <Banner />
+                    <ServicesProvided />
+                    <Trust />
+                    <AboutUs />
+                    <Sponsor />
+                    <RecentProjects />
+                    <Articles />
+                    <OurProducts />
+                    <ContactUs />
+                    <RequestQuote />
+                    {/* <JoinTeam /> */}
+                    <Footer />
+                </Container>
+            </Route>
+        </Switch>
     )
 }
 

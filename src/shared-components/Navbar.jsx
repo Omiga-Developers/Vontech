@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 
-const Navbar = () => {
+const Navbar = ({ isDifferent }) => {
     const [scrollY, setScrollY] = useState(false);
 
     useEffect(() => {
@@ -16,17 +16,17 @@ const Navbar = () => {
     }, []);
 
     return (
-        <Container style={!scrollY ? { backgroundImage: 'url(images/navbg.jpg)' } : { backgroundColor: 'rgba(0,0,0,0.8)' } }>
+        <Container style={isDifferent ?  !scrollY ? { background: 'transparent' } : { backgroundColor: 'rgba(0,0,0,0.8)' } : !scrollY ? { backgroundImage: 'url(images/navbg.jpg)' } : { backgroundColor: 'rgba(0,0,0,0.8)' } }>
             <ContainerLeft>
                 <img src="images/logo.png" alt="logo" />
             </ContainerLeft>
             <NavbarLinks>
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#trust">About us</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                    <li><a href="#contactUs">Contact us</a></li>
+                    <li><a href={isDifferent ? "/#services" : "#services"}>Services</a></li>
+                    <li><a href={isDifferent ? "/#trust" : "#trust"}>About us</a></li>
+                    <li><a href={isDifferent ? "/#projects" : "#projects"}>Projects</a></li>
+                    <li><a href={isDifferent ? "/#careers" : "/careers"}>Careers</a></li>
+                    <li><a href={isDifferent ? "/#contactUs" : "#contactUs"}>Contact us</a></li>
                 </ul>
             </NavbarLinks>
         </Container>

@@ -59,13 +59,15 @@ const Container = styled.div `
     }
 
     padding: 4vw;
-    background-color: white;
+    /* background-color: white; */
 
     > div > h2 {
         font-family: Gilroy-Bold;
-        color: #1C4193;
+        /* color: #1C4193; */
+        color: white;
         font-size: 2.2vw;
-        border-bottom: 1px solid #1C4193;
+        /* border-bottom: 1px solid #1C4193; */
+        border-bottom: 1px solid white;
         margin-bottom: 3vw;
     }
 `
