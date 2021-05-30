@@ -25,7 +25,7 @@ const Navbar = ({ isDifferent }) => {
                     <li><a href={isDifferent ? "/#services" : "#services"}>Services</a></li>
                     <li><a href={isDifferent ? "/#trust" : "#trust"}>About us</a></li>
                     <li><a href={isDifferent ? "/#projects" : "#projects"}>Projects</a></li>
-                    <li><a href={isDifferent ? "/careers" : "/careers"}>Careers</a></li>
+                    <li><a href="/careers">Careers</a></li>
                     <li><a href={isDifferent ? "/#contactUs" : "#contactUs"}>Contact us</a></li>
                 </ul>
             </NavbarLinks>
