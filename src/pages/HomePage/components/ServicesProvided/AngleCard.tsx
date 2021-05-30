@@ -85,7 +85,7 @@ const Container = styled.div<ContainerProps> `
     }
 
     padding: 2vw;
-    clip-path: polygon(0 0, 70% 0%, 100% 25%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
+    clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
     color: white;
     width: 25vw;
@@ -101,7 +101,8 @@ const Container = styled.div<ContainerProps> `
         }
 
         > h1 {
-            font-family: Gilroy-Bold;
+            font-family: Gilroy-Medium;
+            font-weight: normal;
         }
     }
 
@@ -115,7 +116,7 @@ const Container = styled.div<ContainerProps> `
 
     ${({ isFirst }) => (
         isFirst && `
-            clip-path: polygon(0 0, 70% 0%, 100% 15%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
+            clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
             height: 37.5vw;
         `
     )}
@@ -136,10 +137,12 @@ const Container = styled.div<ContainerProps> `
 
     ${({ isOtherServices }) => (
         isOtherServices && `
-            clip-path: polygon(0 0, 70% 0%, 100% 60%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 30%);
+        clip-path: polygon(0 0, 79% 0, 100% 54%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+
             background-color: white;
             color: #3E63EC; 
             display: flex;
+            height: 11vw;
             align-items: center;
 
             > div:first-child {

@@ -60,7 +60,7 @@ const ServicesProvided = () => {
                         <AngleCard 
                             isCommon={true}
                             stringId="03"
-                            title="Waterproofing & chemicals"
+                            title="Waterproofing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & chemicals"
                             paragraph="We are authorized applicators for a
                                 reputed waterproofing company M/s
                                 HE Engineering (Pvt). We commit to
@@ -74,7 +74,7 @@ const ServicesProvided = () => {
                         <AngleCard 
                             isCommon={true}
                             stringId="05"
-                            title="Manufacturing & trading"
+                            title="Manufacturing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & trading"
                             paragraph="We are the reliable suppliers of
                                 Cement, Steel for reinforcements and
                                 Re-bar cover blocks. We are
