@@ -32,6 +32,7 @@ const ServicesProvided = () => {
                         <AngleCard 
                             isCommon={true}
                             stringId="02"
+                            isSecond={true}
                             title="Concrete structures"
                             paragraph="We flawlessly execute the design and
                                 construction of any type of concrete
@@ -44,7 +45,7 @@ const ServicesProvided = () => {
                         <AngleCard 
                             isCommon={true}
                             stringId="04"
-                            isConcreteRepair={true}
+                            isFourth={true}
                             title="Concrete repair"
                             paragraph="We execute any type of concrete
                                 repairing or masonry work, as well as

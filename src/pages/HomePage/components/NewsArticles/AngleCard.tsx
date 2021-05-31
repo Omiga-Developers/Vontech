@@ -41,8 +41,8 @@ declare type ContainerProps = {
 const ShadowContainer = styled.div `
     filter: drop-shadow(3px 4px 10px rgba(62, 99, 236, 0.5));
     position: relative;
-    margin-right: 5vw;
-    height: 21vw;
+    margin-right: 7vw;
+    height: 23vw;
 `
 
 const Container = styled.div<ContainerProps> `
@@ -59,7 +59,7 @@ const Container = styled.div<ContainerProps> `
     padding: 2vw 2vw 1vw 2vw;
     display: flex;
     height: 100%;
-    width: 21vw;
+    width: 23vw;
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
@@ -76,8 +76,8 @@ const Container = styled.div<ContainerProps> `
     }
 
     > img {
-        width: 17vw;
-        height: 9vw;
+        width: 19vw;
+        height: 10vw;
     }
 
     > div {

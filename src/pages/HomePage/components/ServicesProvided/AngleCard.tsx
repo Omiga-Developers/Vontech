@@ -8,18 +8,19 @@ declare type AngleCardProps = {
     isCommon?: boolean;
     isOtherServices?: boolean;
     paragraph?: string;
-    isConcreteRepair?: boolean;
+    isFourth?: boolean;
+    isSecond?: boolean;
     bgImage?: string;
 }
 
-const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isConcreteRepair, bgImage } : AngleCardProps) => {
+const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isFourth, isSecond, bgImage } : AngleCardProps) => {
     const [toggleOtherServicesHover, setToggleOtherServicesHover] = useState<boolean>(false);
     const [toggleBackgroundImageHover, setToggleBackgroundImageHover] = useState<boolean>(false);
 
     return (
         <Container
-            style={toggleBackgroundImageHover ? stringId ? { backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%' } : {} : {}}
-            isConcreteRepair={isConcreteRepair} 
+            style={toggleBackgroundImageHover ? stringId ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition:  isFirst || isSecond ? 'left center' : 'center center' } : {} : {}}
+            isFourth={isFourth} 
             isFirst={isFirst} 
             isCommon={isCommon} 
             isOtherServices={isOtherServices}
@@ -61,7 +62,7 @@ declare type ContainerProps = {
     isCommon?: boolean;
     isOtherServices?: boolean;
     isFirst?: boolean;
-    isConcreteRepair?: boolean;
+    isFourth?: boolean;
     isBackgroundImageHovered?: boolean;
 }
 
@@ -89,7 +90,6 @@ const Container = styled.div<ContainerProps> `
     background-color: #3E63EC;
     color: white;
     width: 25vw;
-    transition: 0.3s ease;
 
     > div:first-child {
         border-bottom: 1px solid #fff;
@@ -127,8 +127,8 @@ const Container = styled.div<ContainerProps> `
         `
     )}
 
-    ${({ isConcreteRepair }) => (
-        isConcreteRepair && `
+    ${({ isFourth }) => (
+        isFourth && `
             h1 {
                 padding-bottom: 2.7vw;
             }

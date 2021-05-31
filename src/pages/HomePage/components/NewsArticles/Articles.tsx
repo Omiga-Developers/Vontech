@@ -65,7 +65,7 @@ const Container = styled.div `
         src: url(fonts/Gilroy-Bold.ttf);
     }
 
-    padding: 4vw;
+    padding: 4.5vw;
     background-color: white;
 
     > div > h2 {
