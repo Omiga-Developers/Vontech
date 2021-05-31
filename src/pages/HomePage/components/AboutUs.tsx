@@ -50,18 +50,23 @@ const Container = styled.div `
     }
 
     display: flex;
-    justify-content: space-around;
     color: white;
     background-color: #1C4193;
-    padding: 2vw 4vw 2vw 1vw;
+    padding: 1vw 4vw 2vw 1vw;
 
     p {
         font-size: 1.1vw;
         font-family: Gilroy-Medium;
+        width: 25.2vw;
+    }
+
+    > div {
+        flex: 1;
     }
 
     > div > div {
         display: flex;
+        justify-content: space-around;
     }
 
     > div > div > div {
