@@ -1,22 +1,23 @@
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const Navbar = ({ isDifferent }) => {
-    const [scrollY, setScrollY] = useState(false);
+    // const [scrollY, setScrollY] = useState(false);
 
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 50) {
-                setScrollY(true);
-            } else setScrollY(false);
-        });
-        return () => {
-            window.removeEventListener("scroll");
-        };
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', () => {
+    //         if(window.scrollY > 50) {
+    //             setScrollY(true);
+    //         } else setScrollY(false);
+    //     });
+    //     return () => {
+    //         window.removeEventListener("scroll");
+    //     };
+    // }, []);
 
     return (
-        <Container style={isDifferent ?  !scrollY ? { background: 'transparent' } : { backgroundColor: 'rgba(0,0,0,0.8)' } : !scrollY ? { backgroundImage: 'url(images/navbg.jpg)' } : { backgroundColor: 'rgba(0,0,0,0.8)' } }>
+        <Container style={{ backgroundColor: 'rgb(32,38,48)' }}>
+        {/* <Container style={isDifferent ?  !scrollY ? { background: 'transparent' } : { backgroundColor: 'rgba(0,0,0,0.8)' } : !scrollY ? { backgroundImage: 'url(images/navbg.jpg)' } : { backgroundColor: 'rgba(0,0,0,0.8)' } }> */}
             <ContainerLeft>
                 <img src="images/logo.png" alt="logo" />
             </ContainerLeft>

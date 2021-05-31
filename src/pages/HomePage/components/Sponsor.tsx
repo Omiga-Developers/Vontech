@@ -12,7 +12,6 @@ const Sponsor = () => {
                 <img alt="sponsor" src="images/5.png" />
                 <img alt="sponsor" src="images/6.png" />
                 <img alt="sponsor" src="images/7.png" />
-                {/* <img alt="sponsor" src="images/8.png" /> */}
             </Marquee>
         </Container>
     )
@@ -32,7 +31,7 @@ const Container = styled.div `
     img {
         /* width: 15vw;
         padding: 2vw 0vw; */
-        height: 5vw;
+        height: 4vw;
         object-fit: contain;
     }
 `
