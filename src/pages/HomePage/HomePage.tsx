@@ -1,4 +1,4 @@
-import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Input, TextField } from "@material-ui/core"
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import { Route, Switch } from "react-router"
 import styled from "styled-components"
@@ -113,7 +113,7 @@ const AngledButton = styled.button `
     font-size: 1.5vw;
     padding: 0.5vw 2vw;
     margin: 2vw 0 1.5vw 0;
-    clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+    clip-path: polygon(0 0, 86% 0, 100% 44%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     color: white;
 
     background-color: #3E63EC;

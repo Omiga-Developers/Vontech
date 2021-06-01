@@ -1,6 +1,7 @@
 .MuiDialog-paper {
-    max-width: 750px;
-    min-width: 750px;
+    max-width: 55vw;
+    min-width: 55vw;
+    clip-path: polygon(0 0, 93% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
 }
 
 .MuiDialog-paper > .MuiDialogTitle-root {
@@ -46,4 +47,9 @@
 
 .MuiDialogContent-root > div > .MuiTextField-root > div::before, .MuiDialogContent-root > div > .MuiTextField-root > div::after {
     border-color: #3E63EC !important;
+}
+
+.MuiDialogContent-root > div > .MuiTextField-root > label {
+    color: black !important;
+    font-family: Gilroy-Medium;
 }
