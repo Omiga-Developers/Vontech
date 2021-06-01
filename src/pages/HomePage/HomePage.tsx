@@ -1,4 +1,4 @@
-import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@material-ui/core"
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Input, TextField } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import { Route, Switch } from "react-router"
 import styled from "styled-components"
@@ -19,7 +19,11 @@ import Trust from "./components/Trust/Trust"
 import './dialog.css'
 
 const HomePage = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
+    const [fullName, setFullName] = useState<string>();
+    const [city, setCity] = useState<string>();
+    const [telNum, setTelNum] = useState<string>();
+    const [email, setEmail] = useState<string>();
 
     useEffect(() => {
         setOpen(true);
@@ -47,10 +51,14 @@ const HomePage = () => {
                 >
                     <DialogTitle id="alert-dialog-title">Stay updated with our services, offers and projects!</DialogTitle>
                     <DialogContent>
-                        <DialogContentText id="alert-dialog-description">
-                            Let Google help apps determine location. This means sending anonymous location data to
-                            Google, even when no apps are running.
-                        </DialogContentText>
+                        <div>
+                            <TextField label="Full Name" onChange={e => setFullName(e.target.value)} value={fullName} />
+                            <TextField label="City" onChange={e => setCity(e.target.value)} value={city} />
+                        </div>
+                        <div>
+                            <TextField label="Phone Number" onChange={e => setTelNum(e.target.value)} value={telNum} />
+                            <TextField label="Email" onChange={e => setEmail(e.target.value)} value={email} />
+                        </div>
                     </DialogContent>
                     <DialogActions>
                         <AngledButton onClick={subscribe}>Subscribe</AngledButton>
@@ -104,7 +112,7 @@ const AngledButton = styled.button `
     font-family: Gilroy-Bold;
     font-size: 1.5vw;
     padding: 0.5vw 2vw;
-    margin: 0 0 1vw 0;
+    margin: 2vw 0 1.5vw 0;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     color: white;
 

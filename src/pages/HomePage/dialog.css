@@ -1,3 +1,8 @@
+.MuiDialog-paper {
+    max-width: 750px;
+    min-width: 750px;
+}
+
 .MuiDialog-paper > .MuiDialogTitle-root {
     display: flex;
     justify-content: center;
@@ -7,9 +12,9 @@
     color: #3E63EC;
     font-family: Gilroy-Bold;
     text-align: center;
-    font-size: 2vw;
-    width: 70%;
-    line-height: 1.8vw;
+    font-size: 2.3vw;
+    width: 65%;
+    line-height: 2.8vw;
 }
 
 .MuiDialogActions-root { 
@@ -27,4 +32,18 @@
     padding: 0vw 1vw;
     text-decoration: none;
     font-family: Gilroy-Medium;
+}
+
+.MuiDialogContent-root > div {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5vw;
+}
+
+.MuiDialogContent-root > div > .MuiTextField-root {
+    width: 18vw;
+}
+
+.MuiDialogContent-root > div > .MuiTextField-root > div::before, .MuiDialogContent-root > div > .MuiTextField-root > div::after {
+    border-color: #3E63EC !important;
 }
