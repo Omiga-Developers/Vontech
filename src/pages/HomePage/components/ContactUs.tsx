@@ -66,7 +66,7 @@ const ContactUs = () => {
                             style={{ border:0 }}
                             loading="lazy"
                             allowFullScreen
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDbRnyFhozUndKrGdnOvkzOf10rx6cUBa0
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCKn4wpIguXCpZ6fI3-aZl9D2bMaMW0gTg
                                 &q=215+Colombo+-+Kandy+Rd">
                         </iframe>
                     </Fade>
