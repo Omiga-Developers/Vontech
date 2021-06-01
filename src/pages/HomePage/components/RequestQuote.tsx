@@ -13,7 +13,7 @@ const RequestQuote = () => {
     const [message, setMessage] = useState<string>();
 
     useEffect(() => {
-        init("user_ktwd7JvhbZ4wVGiRb3sDq");
+        init("user_guvhQe6JcKughJlaIbWSi");
     }, [])
 
     const handleSubmit = (e : any) => {
@@ -28,8 +28,8 @@ const RequestQuote = () => {
                 location,
                 message
             };
-            emailjs.send('service_q0765ni', 'vontech_contact_us', templateParams)
-                .then(response => alert("We have received your email successfully!"))
+            emailjs.send('service_ub8rd4d', 'template_f1l11pl', templateParams)
+                .then(response => alert("We have received your email!"))
                 .catch(e => alert("something went wrong!"));
         } else {
             alert("Please fill in all the fields")
@@ -166,6 +166,7 @@ const TextfieldInput = styled.textarea `
     background-color: #3E63EC;
     width: 100%;
     padding: 1.2vw;
+    color: white;
     resize: none;
     clip-path: polygon(0 0, 96% 0, 100% 14%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
 `

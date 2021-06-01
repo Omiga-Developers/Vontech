@@ -1,4 +1,6 @@
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from "@material-ui/core"
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com"
 import { useEffect, useState } from "react"
 import { Route, Switch } from "react-router"
 import styled from "styled-components"
@@ -28,13 +30,26 @@ const HomePage = () => {
 
     useEffect(() => {
         setOpen(true);
+        init("user_Kjrv3nyR7yswbaw4aIWxg");
     }, [])
 
     const subscribe = () => {
+        if (fullName && city && telNum && email) {
+            let templateParams = {
+                full_name: fullName,
+                email,
+                city,
+                tel_num: telNum,
+            };
+            emailjs.send('service_ks24z68', 'template_5nqw5tb', templateParams)
+            .then(response => alert("We have received your email!"))
+            .catch(e => alert("something went wrong!"));
 
-
-        setSubscribed(true);
-        setOpen(false);
+            setSubscribed(true);
+            setOpen(false);
+        } else {
+            alert("Please fill in all the fields")
+        }
     }
 
     return (
