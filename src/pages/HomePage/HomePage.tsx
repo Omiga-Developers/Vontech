@@ -20,6 +20,7 @@ import './dialog.css'
 
 const HomePage = () => {
     const [open, setOpen] = useState<boolean>(false);
+    const [subscribed, setSubscribed] = useState<boolean>(false);
     const [fullName, setFullName] = useState<string>();
     const [city, setCity] = useState<string>();
     const [telNum, setTelNum] = useState<string>();
@@ -31,6 +32,9 @@ const HomePage = () => {
 
     const subscribe = () => {
 
+
+        setSubscribed(true);
+        setOpen(false);
     }
 
     return (
@@ -44,12 +48,30 @@ const HomePage = () => {
             </Route>
             <Route path="/">
                 <Dialog
+                    open={subscribed}
+                    onClose={() => setSubscribed(false)}
+                    aria-labelledby="alert-dialog-title-sub"
+                    aria-describedby="alert-dialog-description"
+                    id="alert-dialog-background-color"
+                    PaperProps={{
+                        style: {
+                            backgroundColor: '#282828',
+                        }
+                    }}
+                >
+                    <DialogTitle style={{ color: 'white', flex: '1', display: 'flex', alignItems: 'center' }} id="alert-dialog-title-sub">
+                        Thank you! <br />for subscribing
+                    </DialogTitle>
+                </Dialog>
+                <Dialog
                     open={open}
                     onClose={() => setOpen(false)}
                     aria-labelledby="alert-dialog-title"
                     aria-describedby="alert-dialog-description"
                 >
-                    <DialogTitle id="alert-dialog-title">Stay updated with our services, offers and projects!</DialogTitle>
+                    <DialogTitle style={{ color: '#3E63EC' }} id="alert-dialog-title">
+                        Stay updated with our services, offers and projects!
+                    </DialogTitle>
                     <DialogContent>
                         <div>
                             <TextField label="Full Name" onChange={e => setFullName(e.target.value)} value={fullName} />
