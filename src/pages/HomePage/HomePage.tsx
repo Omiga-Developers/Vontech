@@ -55,6 +55,15 @@ const HomePage = () => {
                     <DialogActions>
                         <AngledButton onClick={subscribe}>Subscribe</AngledButton>
                     </DialogActions>
+                    <DialogContent>
+                        <DialogContentText>
+                            <a href="https://google.lk">Instagram</a>
+                            |
+                            <a href="https://google.lk">Facebook</a>
+                            |
+                            <a href="https://google.lk">Linkedin</a>
+                        </DialogContentText>
+                    </DialogContent>
                 </Dialog>
                 <Container>
                     <TopbarContactUs />
@@ -95,7 +104,7 @@ const AngledButton = styled.button `
     font-family: Gilroy-Bold;
     font-size: 1.5vw;
     padding: 0.5vw 2vw;
-    margin: 1vw 2vw 0 0;
+    margin: 0 0 1vw 0;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     color: white;
 
@@ -104,7 +113,7 @@ const AngledButton = styled.button `
     transition: 0.2s ease;
 
     :hover {
-        background-color: white;
+        background-color: #fafafa;
         border-color: white;
         color: #3E63EC;
         cursor: pointer;

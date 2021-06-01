@@ -1,7 +1,30 @@
-.MuiDialog-paper > div > h2 {
+.MuiDialog-paper > .MuiDialogTitle-root {
+    display: flex;
+    justify-content: center;
+}
+
+.MuiDialog-paper > .MuiDialogTitle-root > h2 {
     color: #3E63EC;
+    font-family: Gilroy-Bold;
+    text-align: center;
+    font-size: 2vw;
+    width: 70%;
+    line-height: 1.8vw;
 }
 
 .MuiDialogActions-root { 
     justify-content: center !important;
+}
+
+.MuiDialogContent-root > p {
+    text-align: center;
+    color: #3E63EC;
+}
+
+.MuiDialogContent-root > p > a {
+    font-size: 1vw;
+    color: #3E63EC;
+    padding: 0vw 1vw;
+    text-decoration: none;
+    font-family: Gilroy-Medium;
 }
