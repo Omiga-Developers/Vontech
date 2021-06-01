@@ -1,0 +1,7 @@
+.MuiDialog-paper > div > h2 {
+    color: #3E63EC;
+}
+
+.MuiDialogActions-root { 
+    justify-content: center !important;
+}

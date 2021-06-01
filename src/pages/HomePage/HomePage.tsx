@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@material-ui/core"
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import { Route, Switch } from "react-router"
 import styled from "styled-components"
@@ -16,6 +16,7 @@ import RequestQuote from "./components/RequestQuote"
 import ServicesProvided from "./components/ServicesProvided/ServicesProvided"
 import Sponsor from "./components/Sponsor"
 import Trust from "./components/Trust/Trust"
+import './dialog.css'
 
 const HomePage = () => {
     const [open, setOpen] = useState(false);
@@ -23,6 +24,10 @@ const HomePage = () => {
     useEffect(() => {
         setOpen(true);
     }, [])
+
+    const subscribe = () => {
+
+    }
 
     return (
         <Switch>
@@ -48,9 +53,7 @@ const HomePage = () => {
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={() => setOpen(false)} color="primary" autoFocus>
-                            Subscribe
-                        </Button>
+                        <AngledButton onClick={subscribe}>Subscribe</AngledButton>
                     </DialogActions>
                 </Dialog>
                 <Container>
@@ -66,7 +69,6 @@ const HomePage = () => {
                     <OurProducts />
                     <ContactUs />
                     <RequestQuote />
-                    {/* <JoinTeam /> */}
                     <Footer />
                 </Container>
             </Route>
@@ -77,5 +79,34 @@ const HomePage = () => {
 export default HomePage
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Bold;
+        src: url(fonts/Gilroy-Bold.ttf);
+    }
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     background-color: rgba(0, 0, 0, 0.8)
+`
+
+const AngledButton = styled.button `
+    font-family: Gilroy-Bold;
+    font-size: 1.5vw;
+    padding: 0.5vw 2vw;
+    margin: 1vw 2vw 0 0;
+    clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+    color: white;
+
+    background-color: #3E63EC;
+    border: 1px solid #3E63EC;
+    transition: 0.2s ease;
+
+    :hover {
+        background-color: white;
+        border-color: white;
+        color: #3E63EC;
+        cursor: pointer;
+    }
 `
