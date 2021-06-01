@@ -59,7 +59,7 @@ const Container = styled.div<ContainerProps> `
 
     > div {
         > img {
-            height: 6vw;
+            height: 4vw;
             object-fit: contain;
         }
     }
