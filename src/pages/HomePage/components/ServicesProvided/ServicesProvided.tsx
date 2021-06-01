@@ -101,7 +101,7 @@ const Container = styled.div `
     }
 
     padding: 0vw 5vw 5vw 5vw;
-    background-color: #1C4193;
+    background-color: #282828;
 
     > div > h2 {
         padding: 3vw;

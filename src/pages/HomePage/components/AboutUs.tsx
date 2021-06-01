@@ -7,7 +7,7 @@ const AboutUs = () => {
             <Fade direction="up" triggerOnce duration={1500}>
                 <div>
                     <div style={{ flex: 0.25 }}>
-                        <img style={{ marginBottom: '0.8vw' }} src="images/rics-blue.png" alt="rics-logo" />
+                        <img style={{ marginBottom: '0.8vw' }} src="images/rics-grey.png" alt="rics-logo" />
                         <img src="images/cabe.png" alt="cabe-logo" />
                     </div>
                     <div style={{ flex: 0.35}}>
@@ -51,7 +51,7 @@ const Container = styled.div `
 
     display: flex;
     color: white;
-    background-color: #1C4193;
+    background-color: #282828;
     padding: 1vw 4vw 2vw 1vw;
 
     p {

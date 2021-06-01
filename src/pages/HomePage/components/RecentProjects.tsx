@@ -42,8 +42,8 @@ const Container = styled.div `
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #3E63EC;
-        opacity: 0.6;
+        background-color: #282828;
+        opacity: 0.85;
     }
 
     > h2 {
@@ -66,11 +66,11 @@ const Container = styled.div `
         }
 
         > p {
-            color: rgba(255, 255, 255, 0.6);
+            color: white;
         }
 
         > h2 {
-            color: rgba(255, 255, 255, 0.6);
+            color: white;
             font-family: Gilroy-Bold;
         }
     }

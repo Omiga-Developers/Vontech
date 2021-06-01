@@ -97,12 +97,12 @@ const Container = styled.div `
     }
 
     padding-bottom: 5vw;
-    background-color: #282828;
+    background-color: white;
 
     > div > h2 {
         padding: 3vw;
         font-family: Gilroy-Bold;
-        color: white;
+        color: #282828;
         display: flex;
         font-size: 2.2vw;
         justify-content: center;
@@ -130,7 +130,7 @@ const RowContainer = styled.div<RowContainerProps> `
     
     ${({ isLast }) => (
         !isLast && `
-            border-bottom: 1px solid #3E63EC;
+            // border-bottom: 1px solid #3E63EC;
         `
     )}
 `

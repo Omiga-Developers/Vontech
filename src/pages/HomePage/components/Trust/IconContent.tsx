@@ -72,16 +72,16 @@ const Container = styled.div<ContainerProps> `
         width: 11vw;
 
         > p {
-            font-family: Gilroy-Medium;
+            font-family: Gilroy-Bold;
             font-size: 1.1vw;
-            color: white;
+            color: #282828;
         }
     }
 
     ${({ isMiddle }) => (
         isMiddle && `
-            border-left: 1px solid #3E63EC;
-            border-right: 1px solid #3E63EC;
+            // border-left: 1px solid #3E63EC;
+            // border-right: 1px solid #3E63EC;
             justify-content: center;
         `
     )}
