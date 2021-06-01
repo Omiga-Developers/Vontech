@@ -91,7 +91,7 @@ const Container = styled.div `
     }
 
     padding: 4vw;
-    background-color: #1C4193;
+    background-color: #202630;
 
     > h2 {
         color: white;
@@ -122,6 +122,7 @@ const RowContainer = styled.div `
 
         ::placeholder {
             color: #262626;
+            color: white;
         }
     }
 `
@@ -130,7 +131,9 @@ const TextInput = styled.input `
     font-family: Gilroy-Medium;
     padding: 1.2vw 0.5vw;
     flex: 1;
+    background-color: #3E63EC;
     max-width: 48%;
+    color: white;
 `
 
 const OptionInput = styled.select `
@@ -138,8 +141,10 @@ const OptionInput = styled.select `
     /* background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+); */
     background-repeat: no-repeat;
     background-position: 93%;
+    background-color: #3E63EC;
+    color: white;
     background-size: 5%;
-    font-family: Gilroy-Medium;
+    font-family: Gilroy-Regular;
     padding: 1.2vw 0.5vw;
     appearance: none;
     flex: 1;
@@ -158,6 +163,7 @@ const OptionInput = styled.select `
 
 const TextfieldInput = styled.textarea `
     font-family: Gilroy-Medium;
+    background-color: #3E63EC;
     width: 100%;
     padding: 1.2vw;
     resize: none;
@@ -167,8 +173,8 @@ const TextfieldInput = styled.textarea `
 const AngleButton = styled.button `
     font-family: Gilroy-Bold;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-    background-color: #3E63EC;
-    color: white;
+    color: #3E63EC;
+    background-color: white;
     border: none;
     font-weight: bold;
     padding: 1.3vw 0;
@@ -179,7 +185,7 @@ const AngleButton = styled.button `
 
     :hover {
         cursor: pointer;
-        color: #3E63EC;
-        background-color: white;
+        background-color: #3E63EC;
+        color: white;
     }
 `
