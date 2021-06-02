@@ -57,4 +57,37 @@ const Container = styled.div `
             object-fit: contain;
         }
     }
+
+    @media screen and (max-width: 950px) and (min-width: 768px) {
+        padding: 0 1rem 1rem 2rem;
+
+        > div {
+            > img {
+                width: 5rem;
+            }
+
+            > a {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 1rem 1rem 2rem;
+
+        > div {
+            > img {
+                display: none;
+            }
+
+            > a {
+                font-size: 0.7rem;
+            }
+        }
+
+        > div:last-child {
+            font-size: 0.7rem;
+            margin-top: 4rem;
+        }
+    }
 `

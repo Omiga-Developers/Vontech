@@ -21,4 +21,12 @@ const Container = styled.div `
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+
+    @media screen and (max-width: 950px) and (min-width: 768px) {
+        height: 25rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 35rem;
+    }
 `

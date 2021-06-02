@@ -34,6 +34,32 @@ const Container = styled.div `
     > h1 {
         font-size: 3vw;
     }
+
+    @media screen and (max-width: 950px) and (min-width: 768px) {
+        padding-left: 2rem;
+        margin-top: 2.5rem;
+
+        > h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-left: 2rem;
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: flex-end;
+
+        > h1 {
+            font-size: 2rem;
+        }
+
+        h1:nth-child(2) {
+            margin-bottom: 3rem;
+        }
+    }
 `  
 
 const AngledButton = styled.button<angledButtonProps> `
@@ -92,4 +118,21 @@ const AngledButton = styled.button<angledButtonProps> `
             }
         `
     )}
+
+    @media screen and (max-width: 950px) and (min-width: 768px) {
+        font-size: 1rem;
+        padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+        margin: 0.5rem 1rem 0 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+        padding: 0.3rem 1rem 0.3rem 1rem;
+        margin: 0.5rem 1rem 0 0;
+        width: 10rem;
+
+        :last-child {
+            margin-top: 1.5rem;
+        }
+    }
 `
