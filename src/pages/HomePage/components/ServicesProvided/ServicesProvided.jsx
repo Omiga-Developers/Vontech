@@ -36,6 +36,7 @@ const ServicesProvided = () => {
                                     and more. Our services also extend to
                                     any type of renovation."
                                 bgImage="images/IMG_4152.jpg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard 
                                 title="Other services?"
@@ -55,6 +56,7 @@ const ServicesProvided = () => {
                                     and installing formworks (plywood
                                     shuttering, rebar and concrete). "
                                 bgImage="images/concrete_structure.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard 
                                 isCommon={true}
@@ -69,6 +71,7 @@ const ServicesProvided = () => {
                                     services further include repairing water
                                     tanks, damaged on walls and so on."
                                 bgImage="images/concrete_repair.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                         </CardColumn>
                         <CardColumn>
@@ -85,6 +88,7 @@ const ServicesProvided = () => {
                                     and so much more, with a ten-year
                                     warranty period."
                                 bgImage="images/waterproofing.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard 
                                 isCommon={true}
@@ -98,6 +102,7 @@ const ServicesProvided = () => {
                                     National PVC, Kevilton, Kelani cables
                                     and other general hardware."
                                 bgImage="images/manufacting_trading.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                         </CardColumn>
                     </>
@@ -114,6 +119,7 @@ const ServicesProvided = () => {
                                     and more. Our services also extend to
                                     any type of renovation."
                                 bgImage="images/IMG_4152.jpg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard
                                 isCommon={true}
@@ -127,6 +133,7 @@ const ServicesProvided = () => {
                                     and installing formworks (plywood
                                     shuttering, rebar and concrete). "
                                 bgImage="images/concrete_structure.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard 
                                 isCommon={true}
@@ -141,6 +148,7 @@ const ServicesProvided = () => {
                                     services further include repairing water
                                     tanks, damaged on walls and so on."
                                 bgImage="images/concrete_repair.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard 
                                 isCommon={true}
@@ -155,6 +163,7 @@ const ServicesProvided = () => {
                                     and so much more, with a ten-year
                                     warranty period."
                                 bgImage="images/waterproofing.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                             <AngleCard 
                                 isCommon={true}
@@ -168,6 +177,7 @@ const ServicesProvided = () => {
                                     National PVC, Kevilton, Kelani cables
                                     and other general hardware."
                                 bgImage="images/manufacting_trading.jpeg"
+                                isMobile={width < 703 ? true : false}
                             />
                         </>
                     }

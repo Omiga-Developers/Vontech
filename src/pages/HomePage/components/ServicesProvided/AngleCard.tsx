@@ -11,22 +11,25 @@ declare type AngleCardProps = {
     isFourth?: boolean;
     isSecond?: boolean;
     bgImage?: string;
+    isMobile?: boolean;
 }
 
-const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isFourth, isSecond, bgImage } : AngleCardProps) => {
+const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isFourth, isSecond, bgImage, isMobile = false } : AngleCardProps) => {
     const [toggleOtherServicesHover, setToggleOtherServicesHover] = useState<boolean>(false);
     const [toggleBackgroundImageHover, setToggleBackgroundImageHover] = useState<boolean>(false);
 
+    console.log(isMobile);
+
     return (
         <Container
-            style={toggleBackgroundImageHover ? stringId ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition:  isFirst || isSecond ? 'left center' : 'center center' } : {} : {}}
+            style={toggleBackgroundImageHover ? stringId ? !isMobile ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition:  isFirst || isSecond ? 'left center' : 'center center' } : {} : {} : {}}
             isFourth={isFourth} 
             isFirst={isFirst} 
             isCommon={isCommon} 
             isOtherServices={isOtherServices}
             isBackgroundImageHovered={toggleBackgroundImageHover}
-            onMouseEnter={() => isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover)}
-            onMouseLeave={() => isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover)}
+            onMouseEnter={() => !isMobile ? isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover) : null}
+            onMouseLeave={() => !isMobile ? isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover) : null}
         >
             {!toggleBackgroundImageHover &&
                 <>
@@ -162,7 +165,7 @@ const Container = styled.div<ContainerProps> `
 
     @media screen and (max-width: 1250px) and (min-width: 800px) {
         clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        height: auto;
+        height: 20rem;
         margin-bottom: 2rem;
         min-width: 20rem;
         padding: 1.2rem;
@@ -193,7 +196,7 @@ const Container = styled.div<ContainerProps> `
 
     @media screen and (max-width: 800px) {
         clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        height: auto;
+        height: 22rem;
 
         p {
             font-size: 1rem;
@@ -227,6 +230,7 @@ const Container = styled.div<ContainerProps> `
     @media screen and (max-width: 703px) {
         clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
         width: 21rem;
+        height: 21rem;
 
         h1 { 
             font-size: 2.2rem;
@@ -235,7 +239,7 @@ const Container = styled.div<ContainerProps> `
         ${({ isFirst }) => (
         isFirst && `
             clip-path: polygon(0 0, 75% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-            height: 37rem;
+            height: 35rem;
         `
         )}
     }
