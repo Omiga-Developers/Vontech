@@ -8,7 +8,7 @@ import Banner from "../../shared-components/Banner/Banner"
 import Footer from "../../shared-components/Footer"
 import Navbar from "../../shared-components/Navbar.jsx"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
-import AboutUs from "./components/AboutUs"
+import AboutUs from "./components/AboutUs.jsx"
 import ContactUs from "./components/ContactUs"
 import JoinTeam from "./components/JoinTeam/JoinTeam"
 import Articles from "./components/NewsArticles/Articles"
@@ -133,6 +133,7 @@ const HomePage = () => {
 export default HomePage
 
 const Container = styled.div `
+    overflow-x: hidden;  /* uncomment in end */
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);

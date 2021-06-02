@@ -212,7 +212,7 @@ const Container = styled.div `
 
         > div > h2 {
             padding: 1rem;
-            font-size: 1.7rem;
+            font-size: 2rem;
         }
     }
 `
