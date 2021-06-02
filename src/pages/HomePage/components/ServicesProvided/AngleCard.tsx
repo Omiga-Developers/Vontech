@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import { useState } from "react";
 import styled from "styled-components"
 
@@ -14,11 +15,10 @@ declare type AngleCardProps = {
     isMobile?: boolean;
 }
 
-const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isFourth, isSecond, bgImage, isMobile = false } : AngleCardProps) => {
+const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServices, isFourth, isSecond, bgImage, isMobile } : AngleCardProps) => {
     const [toggleOtherServicesHover, setToggleOtherServicesHover] = useState<boolean>(false);
     const [toggleBackgroundImageHover, setToggleBackgroundImageHover] = useState<boolean>(false);
-
-    console.log(isMobile);
+    const [toggleDisplayContent, setToggleDisplayContent] = useState<boolean>(false);
 
     return (
         <Container
@@ -30,6 +30,8 @@ const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServi
             isBackgroundImageHovered={toggleBackgroundImageHover}
             onMouseEnter={() => !isMobile ? isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover) : null}
             onMouseLeave={() => !isMobile ? isOtherServices ? setToggleOtherServicesHover(!toggleOtherServicesHover) : setToggleBackgroundImageHover(!toggleBackgroundImageHover) : null}
+            isMobile={isMobile}
+            toggleDisplayContent={toggleDisplayContent}
         >
             {!toggleBackgroundImageHover &&
                 <>
@@ -39,13 +41,25 @@ const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServi
                             {!toggleOtherServicesHover ? title : "Contact us now"}
                         </h1>
                     </div>
-                    <div>
-                        <p>{paragraph}</p>
-                    </div>
+                    {
+                        !isMobile ?
+                            <div>
+                                <p>{paragraph}</p>
+                            </div>
+                            :
+                            toggleDisplayContent ?
+                                <div>
+                                    <p>{paragraph}</p>
+                                </div>
+                                :
+                                <ButtonContainer>
+                                    <Button onClick={() => setToggleDisplayContent(true)}>Read more</Button>
+                                </ButtonContainer>
+                    }
                 </>
             }
             {
-                isFirst && !toggleBackgroundImageHover &&
+                isFirst && !toggleBackgroundImageHover && !isMobile ?
                     <FirstAdditionalContainer>
                         <p>Design & Build</p>
                         <p>Project managment</p>
@@ -54,6 +68,16 @@ const AngleCard = ({ stringId, title, paragraph, isFirst, isCommon, isOtherServi
                         <p>Steel structures</p>
                         <p>Roofing services</p>
                     </FirstAdditionalContainer>
+                    :
+                    isFirst && !toggleBackgroundImageHover && toggleDisplayContent && isMobile &&
+                        <FirstAdditionalContainer>
+                            <p>Design & Build</p>
+                            <p>Project managment</p>
+                            <p>Residential & Smart homes</p>
+                            <p>Commerical & warehouse</p>
+                            <p>Steel structures</p>
+                            <p>Roofing services</p>
+                        </FirstAdditionalContainer>
             }
         </Container>
     )
@@ -67,6 +91,8 @@ declare type ContainerProps = {
     isFirst?: boolean;
     isFourth?: boolean;
     isBackgroundImageHovered?: boolean;
+    isMobile?: boolean;
+    toggleDisplayContent?: boolean;
 }
 
 const Container = styled.div<ContainerProps> `
@@ -141,8 +167,7 @@ const Container = styled.div<ContainerProps> `
 
     ${({ isOtherServices }) => (
         isOtherServices && `
-        clip-path: polygon(0 0, 79% 0, 100% 54%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-
+            clip-path: polygon(0 0, 79% 0, 100% 54%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
             background-color: white;
             color: #3E63EC; 
             display: flex;
@@ -165,7 +190,7 @@ const Container = styled.div<ContainerProps> `
 
     @media screen and (max-width: 1250px) and (min-width: 800px) {
         clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        height: 20rem;
+        height: 22.5rem;
         margin-bottom: 2rem;
         min-width: 20rem;
         padding: 1.2rem;
@@ -196,7 +221,7 @@ const Container = styled.div<ContainerProps> `
 
     @media screen and (max-width: 800px) {
         clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        height: 22rem;
+        height: 23rem;
 
         p {
             font-size: 1rem;
@@ -230,18 +255,39 @@ const Container = styled.div<ContainerProps> `
     @media screen and (max-width: 703px) {
         clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
         width: 21rem;
-        height: 21rem;
+        height: auto;
 
         h1 { 
             font-size: 2.2rem;
         }
 
-        ${({ isFirst }) => (
-        isFirst && `
-            clip-path: polygon(0 0, 75% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-            height: 35rem;
-        `
+        > div:first-child {
+            border: none;
+        }
+
+        ${({ isFirst, toggleDisplayContent }) => (
+            isFirst ? toggleDisplayContent ? `
+                clip-path: polygon(0 0, 75% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+            `
+            : `
+                clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+            `
+            : `
+                clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+            `
         )}
+    }
+`
+
+const ButtonContainer = styled.div `
+    justify-content: center;
+    display: flex;
+
+    > button {
+        flex: 1;
+        font-family: Gilroy-Medium !important;
+        background-color: white;
+        color: #3E63EC;
     }
 `
 
