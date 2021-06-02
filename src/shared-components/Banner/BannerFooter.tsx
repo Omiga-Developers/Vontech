@@ -73,7 +73,7 @@ const Container = styled.div `
     }
 
     @media screen and (max-width: 768px) {
-        padding: 0 1rem 1rem 2rem;
+        padding: 0 1rem 1rem 0.62rem;
 
         > div {
             > img {

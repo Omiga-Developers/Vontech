@@ -15,7 +15,7 @@ import Articles from "./components/NewsArticles/Articles"
 import OurProducts from "./components/OurProducts/OurProducts"
 import RecentProjects from "./components/RecentProjects"
 import RequestQuote from "./components/RequestQuote"
-import ServicesProvided from "./components/ServicesProvided/ServicesProvided"
+import ServicesProvided from "./components/ServicesProvided/ServicesProvided.jsx"
 import Sponsor from "./components/Sponsor"
 import Trust from "./components/Trust/Trust"
 import './dialog.css'

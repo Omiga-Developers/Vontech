@@ -89,7 +89,8 @@ const Container = styled.div<ContainerProps> `
     clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
     color: white;
-    width: 25vw;
+    width: 21rem;
+    margin: 1rem;
 
     > div:first-child {
         border-bottom: 1px solid #fff;
@@ -117,13 +118,13 @@ const Container = styled.div<ContainerProps> `
     ${({ isFirst }) => (
         isFirst && `
             clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-            height: 37.5vw;
+            height: 37rem;
         `
     )}
 
     ${({ isCommon }) => (
         isCommon && `
-            height: 24vw;
+            height: 22rem;
         `
     )}
 
@@ -158,6 +159,86 @@ const Container = styled.div<ContainerProps> `
             }
         `
     )}
+
+    @media screen and (max-width: 1250px) and (min-width: 800px) {
+        clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+        height: auto;
+        margin-bottom: 2rem;
+        min-width: 20rem;
+        padding: 1.2rem;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        > div:first-child { 
+            padding-bottom: 0.6rem;
+
+            > p {
+                font-size: 1rem;
+            }
+        }
+
+        > div:nth-child(2) {
+            padding-bottom: 1.2rem 0;
+        }
+
+        ${({ isOtherServices }) => (
+            isOtherServices && `
+                display: none;
+            `
+        )}
+    }
+
+    @media screen and (max-width: 800px) {
+        clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+        height: auto;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        > div:first-child { 
+            padding-bottom: 0.6rem;
+            
+            > p {
+                font-size: 1rem;
+            }
+        }
+
+        > div:nth-child(2) {
+            padding-bottom: 1.2rem 0;
+        }
+
+        ${({ isOtherServices }) => (
+            isOtherServices && `
+                display: none;
+            `
+        )}
+    }
+
+    @media screen and (max-width: 800px) and (min-width: 703px) {
+        min-width: 18rem;
+        width: 18rem;
+    }
+
+    @media screen and (max-width: 703px) {
+        clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+        width: 21rem;
+
+        h1 { 
+            font-size: 2.2rem;
+        }
+
+        ${({ isFirst }) => (
+        isFirst && `
+            clip-path: polygon(0 0, 75% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+            height: 37rem;
+        `
+        )}
+    }
 `
 
 const FirstAdditionalContainer = styled.div `
@@ -169,5 +250,20 @@ const FirstAdditionalContainer = styled.div `
 
     > p:last-child {
         margin: 0vw 0 0vw 2vw;
+    }
+
+    @media screen and (max-width: 1250px) and (min-width: 703px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 800px) {       
+        > p {
+            font-size: 1rem;
+            margin: 0 0 1rem 1.2rem;
+        }
+
+        > p:last-child {
+            margin: 0 0 0 1.2rem;
+        }
     }
 `
