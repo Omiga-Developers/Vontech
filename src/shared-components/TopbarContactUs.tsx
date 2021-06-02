@@ -79,6 +79,13 @@ const Container = styled.div<ContainerProps> `
             padding: 0;
         `
     )}
+
+    @media screen and (max-width: 950px) and (min-width: 800px) {
+        font-size: 0.6rem;
+    }
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `
 
 const ContainerLeft = styled.div `
@@ -122,6 +129,10 @@ const TelNumContainer = styled.div `
         > p:first-child {
             font-size: 0.9vw;
             margin-bottom: 0.3vw;
+
+            @media screen and (max-width: 950px) and (min-width: 800px) {
+                font-size: 0.5rem;
+            }
         }
     }
 ` 
@@ -140,6 +151,10 @@ const AddressContainer = styled.div `
         > p:first-child {
             font-size: 0.9vw;
             margin-bottom: 0.3vw;
+
+            @media screen and (max-width: 950px) and (min-width: 800px) {
+                font-size: 0.5rem;
+            }
         }
     }
 `
@@ -157,5 +172,9 @@ const CrossContainer = styled.div `
 
     :hover {
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 950px) and (min-width: 800px) {
+        font-size: 0.8rem;
     }
 `
