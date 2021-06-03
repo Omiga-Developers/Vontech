@@ -106,6 +106,23 @@ const Container = styled.div `
         align-items: center;
         justify-content: center;
     }
+
+    @media screen and (max-width: 1200px) {
+        > h2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 1.5rem;
+
+        > h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
 `
 
 const RowContainer = styled.div `
@@ -115,7 +132,6 @@ const RowContainer = styled.div `
 
     > * {
         margin: 1.2vw 0;
-        clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
         outline: none;
         border: none;
         font-size: 1.1vw;
@@ -124,6 +140,31 @@ const RowContainer = styled.div `
             color: #262626;
             color: white;
         }
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+
+        > * {
+            font-size: 0.8rem;
+            margin: 1rem 0;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        > * {
+            font-size: 0.8rem;
+            margin: 0.7rem 0;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 60%;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 80%;
     }
 `
 
@@ -134,11 +175,18 @@ const TextInput = styled.input `
     background-color: #3E63EC;
     max-width: 48%;
     color: white;
+    clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+
+    @media screen and (max-width: 700px) {
+        max-width: 100%;
+        padding: 0.7rem 0.4rem;
+        /* clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%); */
+    }
 `
 
 const OptionInput = styled.select `
     background-image: url(images/down-arrow.png);
-    /* background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+); */
+    clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-repeat: no-repeat;
     background-position: 93%;
     background-color: #3E63EC;
@@ -159,6 +207,12 @@ const OptionInput = styled.select `
             background-color: red;
         }
     }
+
+    @media screen and (max-width: 700px) {
+        max-width: 100%;
+        background-size: 4%;
+        padding: 0.7rem 0.4rem;
+    }
 `
 
 const TextfieldInput = styled.textarea `
@@ -169,6 +223,10 @@ const TextfieldInput = styled.textarea `
     color: white;
     resize: none;
     clip-path: polygon(0 0, 96% 0, 100% 14%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+
+    @media screen and (max-width: 700px) {
+        clip-path: polygon(0 0, 92% 0, 100% 12%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+    }
 `
 
 const AngleButton = styled.button `
@@ -188,5 +246,21 @@ const AngleButton = styled.button `
         cursor: pointer;
         background-color: #3E63EC;
         color: white;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 700px) {
+        clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+        margin: 0.7rem 0;
+        font-size: 1rem;
+        padding: 0.6rem;
+        width: 60%;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 80%;
     }
 `
