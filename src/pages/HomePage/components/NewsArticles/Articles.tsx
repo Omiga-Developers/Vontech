@@ -74,12 +74,25 @@ const Container = styled.div `
         color: #3E63EC;
         margin-bottom: 3vw;
     }
+
+    @media screen and (max-width: 1200px) {
+        > div > h2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        > div > h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
 `
 
 const ArticlesContainer = styled.div `
     display: flex;
     overflow-x: scroll;
-    /* height: 25vw; */
+    /* height: auto; */
     padding: 1vw 0.5vw;
 
     ::-webkit-scrollbar {

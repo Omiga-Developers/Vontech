@@ -43,6 +43,11 @@ const ShadowContainer = styled.div `
     position: relative;
     margin-right: 7vw;
     height: 23vw;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 4rem;
+        height: auto;
+    }
 `
 
 const Container = styled.div<ContainerProps> `
@@ -113,4 +118,23 @@ const Container = styled.div<ContainerProps> `
             }
         `
     )}
+    
+    @media screen and (max-width: 768px) {
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        width: 14rem;
+        height: 16rem;
+
+        > p {
+            font-size: 1rem;
+        }
+
+        > img {
+            width: 11rem;
+            height: 6rem;
+        }
+
+        > div > button {
+            padding: 0.5rem;
+        }
+    }
 `
