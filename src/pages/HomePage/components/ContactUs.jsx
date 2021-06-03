@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components"
 
-declare type AngleButtonProps = {
-    toggled?: boolean;
-}
-
 const ContactUs = () => {
-    const [toggleCall, setToggleCall] = useState<boolean>(false);
-    const [toggleVisitUs, setToggleVisitUs] = useState<boolean>(false);
+    const [toggleCall, setToggleCall] = useState(false);
+    const [toggleVisitUs, setToggleVisitUs] = useState(false);
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        const listener = window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+
+        return window.removeEventListener('resize', listener);
+    }, [width])
 
     return (
         <Container id="contactUs">
             <Fade direction="left" triggerOnce duration={1500}>
-                <h2>Contact us</h2>
+                <h2>{width > 600 ? "Contact us" :  "Get in touch with us now."}</h2>
             </Fade>
 
-            <div>
+            {width < 800 &&
+                <Fade direction="left" triggerOnce duration={1500}>
+                    <MobileParagraph>
+                        Every engagement at Vontech starts with a
+                        discovery call. We are a company that
+                        meets your construction needs. Always.
+                    </MobileParagraph>
+                </Fade>
+            }
+
+            <Content>
                 <div>
                     <Fade cascade direction="up" triggerOnce duration={2000}>
                         <ButtonContainer>
@@ -61,8 +77,6 @@ const ContactUs = () => {
                     <Fade direction="right" triggerOnce duration={1500}>
                         <iframe
                             title="Location embed"
-                            width="580"
-                            height="300"
                             style={{ border:0 }}
                             loading="lazy"
                             allowFullScreen
@@ -71,7 +85,7 @@ const ContactUs = () => {
                         </iframe>
                     </Fade>
                 </MapContainer>
-            </div>
+            </Content>
         </Container>
     )
 }
@@ -97,31 +111,84 @@ const Container = styled.div `
         font-size: 2.2vw;
     }
 
-    > div {
-        display: flex;
-        justify-content: space-between;
-
-        > div {
-            flex: 1;
+    @media screen and (max-width: 1200px) {
+        > div > h2 {
+            font-size: 2rem;
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 1.5rem;
+
+        > div > h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+`
+
+const Content = styled.div `
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+        flex: 1;
+    }
+
+    > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
 
         > div:first-child {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+            order: 2;
+            width: 100%;
+        }
+
+        > div:last-child {
+            width: 100%;
         }
     }
 `
 
 const ButtonContainer = styled.div `
+    @media screen and (max-width: 800px) {
+        justify-content: center;
+        display: flex;
+    }
 `
 
 const MapContainer = styled.div `
     display: flex;
     justify-content: flex-end;
+
+    > div > iframe {
+        width: 30rem;
+        height: 20rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+
+        > div {
+            width: 100%;
+        }
+
+        > div > iframe {
+        width: 100%;
+        height: 20rem;
+        }
+    }
 `
 
-const AngleButton = styled.button<AngleButtonProps> `
+const AngleButton = styled.button `
     font-family: Gilroy-Medium;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
@@ -144,4 +211,27 @@ const AngleButton = styled.button<AngleButtonProps> `
             color: white;
         `
     )}
+
+    @media screen and (max-width: 1200px) {
+        font-size: 1rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 50%;
+        height: 3rem;
+
+        :first-child {
+            margin: 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        width: 100%;
+    }
+`
+
+const MobileParagraph = styled.p `
+    color: #1C4193;
+    font-family: Gilroy-Medium;
+    margin: 1rem 0;
 `
