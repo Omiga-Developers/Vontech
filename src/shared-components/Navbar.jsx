@@ -51,6 +51,14 @@ const Container = styled.div `
     z-index: 999;
     background-size: cover;
     padding: 1vw 8vw 1vw 5vw;
+
+    @media screen and (max-width: 1200px) {
+        padding: 0.6rem 6rem 0.6rem 3rem;
+    }
+
+    @media screen and (max-width: 650px) {
+        padding: 1rem;
+    }
 `
 
 const ContainerLeft = styled.div `
@@ -58,6 +66,12 @@ const ContainerLeft = styled.div `
         float: left;
         height: 3.8vw;
         object-fit: contain;
+    }
+
+    @media screen and (max-width: 1200px) {
+        > img {
+            height: 3rem;
+        }
     }
 `
 
@@ -80,6 +94,13 @@ const NavbarLinks = styled.ul `
             :hover {
                 color: #3E63EC;
             }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        > ul li {
+            padding: 0.6rem;
+            font-size: 0.7rem;
         }
     }
 `
