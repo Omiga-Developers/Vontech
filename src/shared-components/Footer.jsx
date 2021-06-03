@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components"
 
 const Footer = () => {
-    return (
-        <Container>
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        const listener = window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+        return window.removeEventListener('resize', listener);
+    }, [width])
+
+    return width > 700 ?
+        <Container> 
             <div>
                 <LeftContainer>
                     <div>
@@ -29,7 +40,30 @@ const Footer = () => {
                 </RightContainer>
             </div>
         </Container>
-    )
+        :
+        <MobileContainer>
+            <div>
+                <a style={{ paddingLeft: '0' }} href="https://google.lk">Instagram</a>
+                |
+                <a href="https://google.lk">Facebook</a>
+                |
+                <a href="https://google.lk">Linkedin</a>
+            </div>
+
+            <div>
+                <div>
+                    <img style={{ width: '15rem' }} src="images/logo.png" alt="vontech-logo" />
+                </div>
+                <div>
+                    <img src="images/cabe.png" alt="cabe-logo" />
+                    <img src="images/rics-grey.png" alt="rics-logo" />
+                </div>
+            </div>
+            <div>
+                <p> © 2021 Vontech engineering & trading (PVT) LTD.</p>
+                <p>All rights reserved.</p>
+            </div>
+        </MobileContainer>
 }
 
 export default Footer
@@ -45,13 +79,17 @@ const Container = styled.div `
     align-items: center;
     justify-content: center;
     background-color: #262626;
-    height: 14vw;
+    padding: 2vw;
 
     > div {
         display: flex;
         width: 90%;
         height: 50%;
         justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 2rem;
     }
 `
 
@@ -73,6 +111,17 @@ const LeftContainer = styled.div `
             color: white;
             padding: 0vw 1vw;
             text-decoration: none;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        p {
+            font-size: 0.8rem;
+        }
+
+        > div > a {
+            font-size: 0.8rem;
+            padding: 0 0.8rem;
         }
     }
 `
@@ -103,5 +152,45 @@ const RightContainer = styled.div `
             width: 7vw;
             object-fit: contain;
         }
+    }
+`
+
+const MobileContainer = styled.div `
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    height: 20rem;
+    padding: 2rem;
+
+    p {
+        font-size: 0.8rem;
+        font-family: Gilroy-Medium;
+        text-align: center;
+    }
+
+    > div > a {
+        color: white;
+        font-size: 0.8rem;
+        padding: 0 0.8rem;
+        text-decoration: none;
+        font-family: Gilroy-Medium;
+    }
+
+    > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+
+        > div {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    img {
+        width: 6rem;
+        object-fit: contain;
     }
 `

@@ -10,7 +10,6 @@ const AboutUs = () => {
         const listener = window.addEventListener('resize', () => {
             setWidth(window.innerWidth);
         });
-        console.log(width);
         return window.removeEventListener('resize', listener);
     }, [width])
 
