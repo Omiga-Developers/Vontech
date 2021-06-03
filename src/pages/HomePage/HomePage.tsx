@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { Route, Switch } from "react-router"
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
+import DrawableSidebar from "../../shared-components/DrawableSidebar";
 import Footer from "../../shared-components/Footer.jsx"
 import Navbar from "../../shared-components/Navbar.jsx"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
@@ -56,6 +57,7 @@ const HomePage = () => {
         <Switch>
             <Route exact path="/careers">
                 <Container style={{ backgroundColor: '#1C4193' }}>
+                    <DrawableSidebar />
                     <Navbar isDifferent={true} />
                     <JoinTeam />
                     <Footer />
@@ -112,6 +114,7 @@ const HomePage = () => {
                 </Dialog>
                 <Container>
                     <TopbarContactUs />
+                    <DrawableSidebar />
                     <Navbar isDifferent={false} />
                     <Banner />
                     <ServicesProvided />
