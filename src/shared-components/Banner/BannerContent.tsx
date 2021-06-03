@@ -60,6 +60,12 @@ const Container = styled.div `
             margin-bottom: 3rem;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        > h1 {
+            font-size: 1.5rem;
+        }
+    }
 `  
 
 const AngledButton = styled.button<angledButtonProps> `
