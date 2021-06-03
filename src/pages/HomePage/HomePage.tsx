@@ -28,7 +28,7 @@ const HomePage = () => {
     const [city, setCity] = useState<string>();
     const [telNum, setTelNum] = useState<string>();
     const [email, setEmail] = useState<string>();
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState<number>(0);
 
     useEffect(() => {
         setWidth(window.innerWidth);
