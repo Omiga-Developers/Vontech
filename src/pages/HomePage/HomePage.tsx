@@ -7,7 +7,7 @@ import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import DrawableSidebar from "../../shared-components/DrawableSidebar";
 import Footer from "../../shared-components/Footer"
-import Navbar from "../../shared-components/Navbar.jsx"
+import Navbar from "../../shared-components/Navbar"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs"
