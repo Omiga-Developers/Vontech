@@ -158,4 +158,11 @@ const Container = styled.div `
             order: 2;
         }
     }
+
+    @media screen and (max-width: 380px) {
+        p {
+            font-size: 0.8rem;
+            width: 100%;
+        }
+    }
 `

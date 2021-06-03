@@ -50,7 +50,7 @@ const AngleCard = ({ image, title, unit, dimension, isMobile } : AngleCardProps)
                         </RightTop>
                     </Top>
                     <Button
-                            style={{backgroundColor: '#ccc', fontFamily: 'Gilroy-Medium', borderRadius: 'none'}}
+                            style={{backgroundColor: '#ccc', fontFamily: 'Gilroy-Medium', borderRadius: 'none', padding: '1rem'}}
                             onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
                             onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
                         >

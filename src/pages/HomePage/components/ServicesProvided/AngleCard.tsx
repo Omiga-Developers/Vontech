@@ -280,6 +280,10 @@ const Container = styled.div<ContainerProps> `
 
     @media screen and (max-width: 380px) {
         width: 80%;
+
+        h1 {
+            font-size: 1.8rem;
+        }
     }
 `
 
