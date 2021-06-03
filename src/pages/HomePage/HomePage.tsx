@@ -57,7 +57,7 @@ const HomePage = () => {
         <Switch>
             <Route exact path="/careers">
                 <Container style={{ backgroundColor: '#1C4193' }}>
-                    <DrawableSidebar />
+                    <DrawableSidebar isDifferent={true}  />
                     <Navbar isDifferent={true} />
                     <JoinTeam />
                     <Footer />
@@ -114,7 +114,7 @@ const HomePage = () => {
                 </Dialog>
                 <Container>
                     <TopbarContactUs />
-                    <DrawableSidebar />
+                    <DrawableSidebar isDifferent={false}  />
                     <Navbar isDifferent={false} />
                     <Banner />
                     <ServicesProvided />

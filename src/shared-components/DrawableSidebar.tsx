@@ -1,4 +1,4 @@
-import { Button, Divider, Drawer, List, ListItem, ListItemText, makeStyles } from "@material-ui/core";
+import { Button, Divider, List, ListItem, ListItemText, makeStyles, SwipeableDrawer } from "@material-ui/core";
 import React, { useState } from "react";
 import clsx from 'clsx';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -15,19 +15,25 @@ const useStyles = makeStyles({
 
 type Anchor = 'top';
 
-const DrawableSidebar = () => {
+declare type DrawableSidebarProps = {
+    isDifferent?: boolean;
+}
+
+const DrawableSidebar = ({ isDifferent } : DrawableSidebarProps) => {
     const classes = useStyles();
 	const [state, setState] = useState({
 		top: false,
 	});
 
     const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-		if (
-			event.type === 'keydown' &&
-			((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
-		) {
-			return;
-		}
+        try {
+            if (
+                event.type === 'keydown' &&
+                ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
+            ) {
+                return;
+            }
+        } catch(error) {}
 
 		setState({ ...state, [anchor]: open });
 	};
@@ -40,21 +46,21 @@ const DrawableSidebar = () => {
 			onKeyDown={toggleDrawer(anchor, false)}
 		>
             <StyledList>
-                <ListItem button key="Services">
-                    <ListItemText primary="Services" />
-                </ListItem>
-                <ListItem button key="About us">
-                    <ListItemText primary="About us" />
-                </ListItem>
-                <ListItem button key="Projects">
-                    <ListItemText primary="Projects" />
-                </ListItem>
-                <ListItem button key="Careers">
-                    <ListItemText primary="Careers" />
-                </ListItem>
-                <ListItem button key="Contact us">
-                    <ListItemText primary="Contact us" />
-                </ListItem>
+                <StyledListItem button key="Services">
+                    <a href={isDifferent ? "/#services" : "#services"}><ListItemText primary="Services" /></a>
+                </StyledListItem>
+                <StyledListItem button key="About us">
+                    <a href={isDifferent ? "/#trust" : "#trust"}><ListItemText primary="About us" /></a>
+                </StyledListItem>
+                <StyledListItem button key="Projects">
+                    <a href={isDifferent ? "/#projects" : "#projects"}><ListItemText primary="Projects" /></a>
+                </StyledListItem>
+                <StyledListItem button key="Careers">
+                    <a href="/careers"><ListItemText primary="Careers" /></a>
+                </StyledListItem>
+                <StyledListItem button key="Contact us">
+                    <a href={isDifferent ? "/#contactUs" : "#contactUs"}><ListItemText primary="Contact us" /></a>
+                </StyledListItem>
             </StyledList>
             <Divider />
 		</div>
@@ -70,9 +76,9 @@ const DrawableSidebar = () => {
                     <Button onClick={toggleDrawer('top', true)}>
                             <MenuIcon style={{ color: 'white' }} />
                     </Button>
-                    <Drawer anchor="top" open={state['top']} onClose={toggleDrawer('top', false)}>
+                    <SwipeableDrawer onOpen={toggleDrawer('top', true)} anchor="top" open={state['top']} onClose={toggleDrawer('top', false)}>
                         {list('top')}
-                    </Drawer>
+                    </SwipeableDrawer>
                 </React.Fragment>
             </div>
         </Container>
@@ -82,6 +88,11 @@ const DrawableSidebar = () => {
 export default DrawableSidebar
 
 const Container = styled.div `
+    @font-face {
+        font-family: Gilroy-Medium;
+        src: url(fonts/Gilroy-Medium.ttf);
+    }
+
     display: none;
     background-color: #282828;
     position: sticky;
@@ -107,4 +118,17 @@ const StyledList = styled(List) `
     background-color: #282828;
     width: 100vw;
     color: white;
+    font-family: Gilroy-Medium;
+`
+
+const StyledListItem = styled(ListItem) `
+    a  {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+    }
+    a > div > span {
+        font-family: Gilroy-Medium;
+    }
 `
