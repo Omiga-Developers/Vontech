@@ -1,20 +1,12 @@
-import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal"
 import styled from "styled-components"
 import AngleCard from "./AngleCard"
 
-const OurProducts = () => {
-    const [width, setWidth] = useState(0);
+declare type OurProductsProps = {
+    width: number;
+}
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-
-        return window.removeEventListener('resize', listener);
-    }, [width])
-
+const OurProducts = ({ width } : OurProductsProps) => {
     return (
         <Container>
             <Fade direction="up" triggerOnce duration={1500}>

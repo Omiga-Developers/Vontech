@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal"
 import styled from "styled-components"
 import IconContent from "./IconContent"
 
-const Trust = () => {
-    const [width, setWidth] = useState(0);
+declare type TrustProps = {
+    width: number;
+}
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-
-        return window.removeEventListener('resize', listener);
-    }, [width])
-
+const Trust = ({ width } : TrustProps) => {
     return (
         <Container id="trust">
             <Fade direction="left" triggerOnce duration={1500}>
@@ -229,15 +221,13 @@ const IconContainer = styled.div `
 const RowContainerWrapper = styled.div `
 `
 
-const RowContainer = styled.div `
+declare type RowContainerProps = {
+    isLast?: boolean;
+}
+
+const RowContainer = styled.div<RowContainerProps> `
     display: flex;
     padding: 1vw;
-    
-    ${({ isLast }) => (
-        !isLast && `
-            // border-bottom: 1px solid #3E63EC;
-        `
-    )}
 
     @media screen and (max-width: 450px) {
         flex-wrap: wrap;

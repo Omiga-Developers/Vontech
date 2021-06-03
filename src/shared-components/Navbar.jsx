@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const Navbar = ({ isDifferent }) => {
-    const [width, setWidth] = useState(0);
     // const [scrollY, setScrollY] = useState(false);
 
     // useEffect(() => {
@@ -15,15 +14,6 @@ const Navbar = ({ isDifferent }) => {
     //         window.removeEventListener("scroll");
     //     };
     // }, []);
-
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-
-        return window.removeEventListener('resize', listener);
-    }, [width])
 
     return (
         <Container style={{ backgroundColor: 'rgb(32,38,48)' }}>

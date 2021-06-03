@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components"
 
-const Footer = () => {
-    const [width, setWidth] = useState(0);
+declare type FooterPros = {
+    width: number;
+}
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-        return window.removeEventListener('resize', listener);
-    }, [width])
-
+const Footer = ({ width } : FooterPros) => {
     return width > 700 ?
         <Container> 
             <div>

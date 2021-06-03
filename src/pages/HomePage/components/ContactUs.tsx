@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from "styled-components"
 
-const ContactUs = () => {
+declare type ContactUsProps = {
+    width: number;
+}
+
+const ContactUs = ({ width } : ContactUsProps) => {
     const [toggleCall, setToggleCall] = useState(false);
     const [toggleVisitUs, setToggleVisitUs] = useState(false);
-    const [width, setWidth] = useState(0);
-
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-
-        return window.removeEventListener('resize', listener);
-    }, [width])
 
     return (
         <Container id="contactUs">
@@ -188,7 +182,11 @@ const MapContainer = styled.div `
     }
 `
 
-const AngleButton = styled.button `
+declare type AngleButtonProps = {
+    toggled: boolean;
+}
+
+const AngleButton = styled.button<AngleButtonProps> `
     font-family: Gilroy-Medium;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;

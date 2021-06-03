@@ -1,19 +1,12 @@
-import { useEffect, useState } from "react"
 import { Fade } from "react-awesome-reveal"
 import styled from "styled-components"
 import AngleCard from "./AngleCard"
 
-const ServicesProvided = () => {
-    const [width, setWidth] = useState(0);
+declare type ServicesProvidedProps = {
+    width: number;
+}
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-
-        return window.removeEventListener('resize', listener);
-    }, [width])
+const ServicesProvided = ({ width } : ServicesProvidedProps) => {
 
     return (
         <Container id="services">

@@ -6,19 +6,19 @@ import { Route, Switch } from "react-router"
 import styled from "styled-components"
 import Banner from "../../shared-components/Banner/Banner"
 import DrawableSidebar from "../../shared-components/DrawableSidebar";
-import Footer from "../../shared-components/Footer.jsx"
+import Footer from "../../shared-components/Footer"
 import Navbar from "../../shared-components/Navbar.jsx"
 import TopbarContactUs from "../../shared-components/TopbarContactUs"
-import AboutUs from "./components/AboutUs.jsx"
-import ContactUs from "./components/ContactUs.jsx"
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs"
 import JoinTeam from "./components/JoinTeam/JoinTeam"
 import Articles from "./components/NewsArticles/Articles"
-import OurProducts from "./components/OurProducts/OurProducts.jsx"
+import OurProducts from "./components/OurProducts/OurProducts"
 import RecentProjects from "./components/RecentProjects"
 import RequestQuote from "./components/RequestQuote"
-import ServicesProvided from "./components/ServicesProvided/ServicesProvided.jsx"
+import ServicesProvided from "./components/ServicesProvided/ServicesProvided"
 import Sponsor from "./components/Sponsor"
-import Trust from "./components/Trust/Trust.jsx"
+import Trust from "./components/Trust/Trust"
 import './dialog.css'
 
 const HomePage = () => {
@@ -70,7 +70,7 @@ const HomePage = () => {
                     <DrawableSidebar isDifferent={true}  />
                     <Navbar isDifferent={true} />
                     <JoinTeam />
-                    <Footer />
+                    <Footer width={width} />
                 </Container>
             </Route>
             <Route path="/">
@@ -131,16 +131,16 @@ const HomePage = () => {
                     <DrawableSidebar isDifferent={false}  />
                     <Navbar isDifferent={false} />
                     <Banner />
-                    <ServicesProvided />
-                    <Trust />
-                    <AboutUs />
+                    <ServicesProvided width={width} />
+                    <Trust width={width} />
+                    <AboutUs width={width} />
                     <Sponsor />
                     <RecentProjects />
                     <Articles />
-                    <OurProducts />
-                    <ContactUs />
+                    <OurProducts width={width} />
+                    <ContactUs width={width} />
                     <RequestQuote />
-                    <Footer />
+                    <Footer width={width} />
                 </Container>
             </Route>
         </Switch>

@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal"
 import styled from "styled-components"
 
-const AboutUs = () => {
-    const [width, setWidth] = useState(0);
+declare type AboutUsProps = {
+    width: number;
+}
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
-        return window.removeEventListener('resize', listener);
-    }, [width])
-
+const AboutUs = ({ width } : AboutUsProps) => {
     return (
         <Container id="aboutUs">
             <Fade direction="left" triggerOnce duration={1500}>
