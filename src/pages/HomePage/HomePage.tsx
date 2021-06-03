@@ -28,6 +28,16 @@ const HomePage = () => {
     const [city, setCity] = useState<string>();
     const [telNum, setTelNum] = useState<string>();
     const [email, setEmail] = useState<string>();
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        const listener : any = window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+
+        return window.removeEventListener('resize', listener);
+    }, [width])
 
     useEffect(() => {
         setOpen(true);
@@ -64,54 +74,58 @@ const HomePage = () => {
                 </Container>
             </Route>
             <Route path="/">
-                <Dialog
-                    open={subscribed}
-                    onClose={() => setSubscribed(false)}
-                    aria-labelledby="alert-dialog-title-sub"
-                    aria-describedby="alert-dialog-description"
-                    id="alert-dialog-background-color"
-                    PaperProps={{
-                        style: {
-                            backgroundColor: '#282828',
-                        }
-                    }}
-                >
-                    <DialogTitle style={{ color: 'white', flex: '1', display: 'flex', alignItems: 'center' }} id="alert-dialog-title-sub">
-                        Thank you! <br />for subscribing
-                    </DialogTitle>
-                </Dialog>
-                <Dialog
-                    open={open}
-                    onClose={() => setOpen(false)}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
-                    <DialogTitle style={{ color: '#3E63EC' }} id="alert-dialog-title">
-                        Stay updated with our services, offers and projects!
-                    </DialogTitle>
-                    <DialogContent>
-                        <div>
-                            <TextField label="Full Name" onChange={e => setFullName(e.target.value)} value={fullName} />
-                            <TextField label="City" onChange={e => setCity(e.target.value)} value={city} />
-                        </div>
-                        <div>
-                            <TextField label="Phone Number" onChange={e => setTelNum(e.target.value)} value={telNum} />
-                            <TextField label="Email" onChange={e => setEmail(e.target.value)} value={email} />
-                        </div>
-                    </DialogContent>
-                    <DialogActions>
-                        <AngledButton onClick={subscribe}>Subscribe</AngledButton>
-                    </DialogActions>
-                    <DialogContent>
-                        <DialogContentText>
-                            <a href="https://google.lk">Instagram</a>
-                            |
-                            <a href="https://google.lk">Facebook</a>
-                            |
-                            <a href="https://google.lk">Linkedin</a>
-                        </DialogContentText>
-                    </DialogContent>
-                </Dialog>
+                {width > 640 &&
+                    <>
+                        <Dialog
+                            open={subscribed}
+                            onClose={() => setSubscribed(false)}
+                            aria-labelledby="alert-dialog-title-sub"
+                            aria-describedby="alert-dialog-description"
+                            id="alert-dialog-background-color"
+                            PaperProps={{
+                                style: {
+                                    backgroundColor: '#282828',
+                                }
+                            }}
+                        >
+                            <DialogTitle style={{ color: 'white', flex: '1', display: 'flex', alignItems: 'center' }} id="alert-dialog-title-sub">
+                                Thank you! <br />for subscribing
+                            </DialogTitle>
+                        </Dialog>
+                        <Dialog
+                            open={open}
+                            onClose={() => setOpen(false)}
+                            aria-labelledby="alert-dialog-title"
+                            aria-describedby="alert-dialog-description"
+                        >
+                            <DialogTitle style={{ color: '#3E63EC' }} id="alert-dialog-title">
+                                Stay updated with our services, offers and projects!
+                            </DialogTitle>
+                            <DialogContent>
+                                <div>
+                                    <TextField label="Full Name" onChange={e => setFullName(e.target.value)} value={fullName} />
+                                    <TextField label="City" onChange={e => setCity(e.target.value)} value={city} />
+                                </div>
+                                <div>
+                                    <TextField label="Phone Number" onChange={e => setTelNum(e.target.value)} value={telNum} />
+                                    <TextField label="Email" onChange={e => setEmail(e.target.value)} value={email} />
+                                </div>
+                            </DialogContent>
+                            <DialogActions>
+                                <AngledButton onClick={subscribe}>Subscribe</AngledButton>
+                            </DialogActions>
+                            <DialogContent>
+                                <DialogContentText>
+                                    <a href="https://google.lk">Instagram</a>
+                                    |
+                                    <a href="https://google.lk">Facebook</a>
+                                    |
+                                    <a href="https://google.lk">Linkedin</a>
+                                </DialogContentText>
+                            </DialogContent>
+                        </Dialog>
+                    </>
+                }
                 <Container>
                     <TopbarContactUs />
                     <DrawableSidebar isDifferent={false}  />
@@ -165,5 +179,11 @@ const AngledButton = styled.button `
         border-color: white;
         color: #3E63EC;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 1.2rem;
+        padding: 0.3rem 1.7rem;
+        margin: 1.5rem 0 1rem 0;
     }
 `

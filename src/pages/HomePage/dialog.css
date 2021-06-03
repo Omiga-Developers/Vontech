@@ -53,3 +53,30 @@
     color: black !important;
     font-family: Gilroy-Medium;
 }
+
+@media screen and (max-width: 1200px) {
+    .MuiDialogContent-root > p > a {
+        font-size: 0.8rem;
+        padding: 0 0.7rem;
+    }
+
+    .MuiDialog-paper > .MuiDialogTitle-root > h2 {
+        font-size: 1.8rem;
+        width: 80%;
+        line-height: 2rem;
+    }
+
+    .MuiDialog-paper {
+        max-width: 20rem;
+        min-width: 20rem;
+        min-height: 22rem;
+    }
+
+    .MuiDialogContent-root > div {
+        padding: 0 3rem;    
+    }
+
+    .MuiDialogContent-root > div > .MuiTextField-root {
+        width: 13rem;
+    }
+}
