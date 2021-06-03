@@ -127,6 +127,10 @@ const Container = styled.div `
     }
 
     @media screen and (max-width: 600px) {
+        > div > h2 {
+            padding: 1rem;
+        }
+
         p {
             font-size: 1.1rem;
             width: 80%;

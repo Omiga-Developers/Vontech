@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import { useState } from "react";
 import styled from "styled-components"
 
@@ -6,31 +7,57 @@ declare type AngleCardProps = {
     title: string;
     unit: string;
     dimension: string;
+    isMobile?: boolean;
 }
 
-const AngleCard = ({ image, title, unit, dimension } : AngleCardProps) => {
+const AngleCard = ({ image, title, unit, dimension, isMobile } : AngleCardProps) => {
     const [isHoveredOver, setIsHoveredOver] = useState<boolean>(false);
 
     return (
         <Container
             isHoveredOver={isHoveredOver}
+            style={isMobile ? { flexDirection: 'column' } : {}}
         >
-            <div>
-                <img alt="product" src={image} />
-            </div>
-            <div>
-                <RightTop>
-                    <p>{title}</p>
-                    <p>{unit}</p>
-                    <p>{dimension}</p>
-                </RightTop>
-                <RightButton
-                    onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
-                    onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
-                >
-                    Place your order now
-                </RightButton>
-            </div>
+            {!isMobile ?
+                <>
+                    <div>
+                        <img alt="product" src={image} />
+                    </div>
+                    <div>
+                        <RightTop>
+                            <p>{title}</p>
+                            <p>{unit}</p>
+                            <p>{dimension}</p>
+                        </RightTop>
+                        <RightButton
+                            onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
+                            onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
+                        >
+                            Place order
+                        </RightButton>
+                    </div>
+                </>
+                :
+                <>
+                    <Top>
+                        <div>
+                            <img alt="product" src={image} />
+                        </div>
+                        <RightTop>
+                            <p>{title}</p>
+                            <p>{unit}</p>
+                            <p>{dimension}</p>
+                        </RightTop>
+                    </Top>
+                    <Button
+                            style={{backgroundColor: '#ccc', fontFamily: 'Gilroy-Medium', borderRadius: 'none'}}
+                            onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
+                            onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
+                        >
+                            Place order
+                    </Button>
+                </>
+            }
         </Container>
     )
 }
@@ -76,6 +103,25 @@ const Container = styled.div<ContainerProps> `
             transform: scale(1.02);
         `
     )}
+
+    @media screen and (max-width: 768px) {
+        width: 21rem;
+        margin-bottom: 2rem;
+
+        div > img {
+            height: 10rem;
+            width: 10rem;
+        }
+    }
+
+    @media screen and (max-width: 380px) {
+        width: 100%;
+
+        div > img {
+            height: 8rem;
+            width: 7rem;
+        }
+    }
 `
 
 
@@ -96,6 +142,13 @@ const RightTop = styled.div `
         font-family: Gilroy-Medium;
         margin-top: 0.6vw;
     }
+
+    @media screen and (max-width: 1200px) {
+        > p:nth-child(2) {
+            font-size: 0.7rem;
+            margin-top: 0.6rem;
+        }
+    }
 `
 
 const RightButton = styled.button `
@@ -113,4 +166,15 @@ const RightButton = styled.button `
         background-color: #262626;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 1200px) {
+        padding: 0.6rem 4rem 0.6rem 0.6rem;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+`
+
+const Top = styled.div `
+    display: flex;
+    align-items: center;
 `

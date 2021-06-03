@@ -82,7 +82,10 @@ const Container = styled.div `
     }
 
     @media screen and (max-width: 600px) {
+        padding: 1.5rem;
+
         > div > h2 {
+            margin-bottom: 1.5rem;
             font-size: 2rem;
             text-align: center;
         }

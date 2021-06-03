@@ -213,7 +213,13 @@ const Container = styled.div `
         > div > h2 {
             padding: 1rem;
             font-size: 2rem;
+            text-align: center;
         }
+    }
+
+    
+    @media screen and (max-width: 380px) {
+        padding: 0;
     }
 `
 
