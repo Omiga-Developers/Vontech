@@ -17,7 +17,7 @@ import RecentProjects from "./components/RecentProjects"
 import RequestQuote from "./components/RequestQuote"
 import ServicesProvided from "./components/ServicesProvided/ServicesProvided.jsx"
 import Sponsor from "./components/Sponsor"
-import Trust from "./components/Trust/Trust"
+import Trust from "./components/Trust/Trust.jsx"
 import './dialog.css'
 
 const HomePage = () => {

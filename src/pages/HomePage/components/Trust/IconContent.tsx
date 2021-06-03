@@ -40,6 +40,14 @@ export default IconContent
 const ContainerWrapper = styled.div `
     flex: 1;
     width: 22vw;
+
+    @media screen and (max-width: 1200px) {
+        width: 24vw;
+    }
+
+    @media screen and (max-width: 450px) {
+        min-width: 10rem;
+    }
 `
 
 declare type ContainerProps = {
@@ -99,4 +107,36 @@ const Container = styled.div<ContainerProps> `
             }
         `
     )}
+
+    @media screen and (max-width: 1200px) {
+        > div {
+            > img {
+                height: 4rem;
+            }
+        }
+
+        > div:last-child {
+            width: 100%;
+
+            > p {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+
+        > div {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        > div {
+            > p {
+                text-align: center;
+            }
+        }
+    }
 `
