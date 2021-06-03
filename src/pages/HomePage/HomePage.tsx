@@ -133,7 +133,6 @@ const HomePage = () => {
 export default HomePage
 
 const Container = styled.div `
-    overflow-x: hidden;  /* uncomment in end */
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
