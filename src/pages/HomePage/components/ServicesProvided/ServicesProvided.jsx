@@ -208,7 +208,7 @@ const Container = styled.div `
     }
 
     @media screen and (max-width: 950px) {
-        padding: 0vw 2rem 2rem;
+        padding: 0vw 2rem 2rem 2rem;
 
         > div > h2 {
             padding: 1rem;
@@ -236,6 +236,7 @@ const CardContainer = styled.div `
     @media screen and (max-width: 600px) {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 2rem;
     }    
 `
 

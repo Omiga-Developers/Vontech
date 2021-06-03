@@ -103,6 +103,7 @@ const LeftContainer = styled.div `
     > div {
         > p {
             font-family: Gilroy-Medium;
+            font-size: 1vw;
         }
 
         > a {
@@ -115,8 +116,8 @@ const LeftContainer = styled.div `
     }
 
     @media screen and (max-width: 1200px) {
-        p {
-            font-size: 0.8rem;
+        > div > p {
+            font-size: 1rem;
         }
 
         > div > a {

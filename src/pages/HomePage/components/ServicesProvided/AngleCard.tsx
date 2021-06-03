@@ -118,8 +118,8 @@ const Container = styled.div<ContainerProps> `
     clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
     color: white;
-    width: 21rem;
-    margin: 1rem;
+    width: 23vw;
+    margin: 2vw;
 
     > div:first-child {
         border-bottom: 1px solid #fff;
@@ -147,13 +147,13 @@ const Container = styled.div<ContainerProps> `
     ${({ isFirst }) => (
         isFirst && `
             clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-            height: 37rem;
+            height: 40vw;
         `
     )}
 
     ${({ isCommon }) => (
         isCommon && `
-            height: 22rem;
+            height: 25vw;
         `
     )}
 

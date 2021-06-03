@@ -128,6 +128,10 @@ const Container = styled.div<ContainerProps> `
 const RightTop = styled.div `
     padding: 1vw;
 
+    > p {
+        font-size: 1.2vw;
+    }
+
     > p:first-child {
         font-weight: bold;
         font-family: Gilroy-Bold;
@@ -138,12 +142,16 @@ const RightTop = styled.div `
     }
 
     > p:nth-child(2) {
-        font-size: 0.8vw;
+        font-size: 1vw;
         font-family: Gilroy-Medium;
         margin-top: 0.6vw;
     }
 
     @media screen and (max-width: 1200px) {
+        > p {
+            font-size: 1rem;
+        }
+
         > p:nth-child(2) {
             font-size: 0.7rem;
             margin-top: 0.6rem;

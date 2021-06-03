@@ -170,8 +170,8 @@ const MapContainer = styled.div `
     justify-content: flex-end;
 
     > div > iframe {
-        width: 30rem;
-        height: 20rem;
+        width: 45vw;
+        height: 20vw;
     }
 
     @media screen and (max-width: 800px) {
@@ -182,8 +182,8 @@ const MapContainer = styled.div `
         }
 
         > div > iframe {
-        width: 100%;
-        height: 20rem;
+            width: 100%;
+            height: 20rem;
         }
     }
 `

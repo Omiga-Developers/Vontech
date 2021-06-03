@@ -92,6 +92,7 @@ const Container = styled.div<ContainerProps> `
         > button {
             background: transparent;
             border: 1px solid #aaa;
+            font-size: 1vw;
             color: #aaa;
             padding: 0.5vw;
             font-family: Gilroy-Light;
@@ -135,6 +136,7 @@ const Container = styled.div<ContainerProps> `
 
         > div > button {
             padding: 0.5rem;
+            font-size: 1rem;
         }
     }
 `
