@@ -34,4 +34,11 @@ const Container = styled.div `
         height: 4vw;
         object-fit: contain;
     }
+
+    @media screen and (max-width: 768px) {
+        img {
+            height: 5rem;
+            width: 10rem;
+        }
+    }
 `

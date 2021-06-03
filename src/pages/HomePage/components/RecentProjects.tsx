@@ -74,4 +74,34 @@ const Container = styled.div `
             font-family: Gilroy-Bold;
         }
     }
+
+    @media screen and (max-width: 1200px) {
+        height: 17rem;
+
+        h2 {
+            font-size: 2rem
+        }
+
+        > div:last-child {
+            > p, > h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        height: 16rem;
+        background-image: none;
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        > div:last-child {
+            > p, > h2 {
+                font-size: 1.4rem;
+            }
+        }
+    }
 `
