@@ -70,6 +70,16 @@ const Container = styled.div `
         border-bottom: 1px solid white;
         margin-bottom: 3vw;
     }
+
+    @media screen and (max-width: 1200px) {
+        padding: 2rem;
+
+        > div > h2 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
 `
 
 const JobContainer = styled.div `
@@ -79,5 +89,9 @@ const JobContainer = styled.div `
 
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 0.7rem 0.4rem;
     }
 `

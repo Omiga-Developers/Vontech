@@ -45,6 +45,11 @@ const ShadowContainer = styled.div `
     filter: drop-shadow(2px 2px 8px #3E63EC);
     height: 22.5vw;
     margin-right: 5vw;
+
+    @media screen and (max-width: 1200px) {
+        height: 18rem;
+        margin-right: 3rem;
+    }
 `
 
 declare type ContainerProps = {
@@ -78,6 +83,10 @@ const Container = styled.div<ContainerProps> `
         transform: scale(1.02);
         `
     )}
+
+    @media screen and (max-width: 1200px) {
+        width: 16rem;
+    }
 `
 
 const TopHalf = styled.div `
@@ -96,11 +105,26 @@ const TopHalf = styled.div `
 
         > p:first-child {
             font-family: Gilroy-Light;
+            font-size: 2vw;
         }
 
         > p:last-child {
             font-family: Gilroy-Light;
             font-size: 1.5vw;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 1rem 1rem;
+
+        > div {
+            > p:first-child {
+                font-size: 1.5rem;
+            }
+
+            > p:last-child {
+                font-size: 1rem;
+            }
         }
     }
 `
@@ -148,6 +172,26 @@ const BottomHalf = styled.div `
                 border-color: #282828;
                 color: white;
                 cursor: pointer;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+
+        > div:first-child {
+            > p {
+                font-size: 0.7rem;
+            }
+
+            > p:last-child {
+                font-size: 0.6rem;
+            }
+        }
+
+        > div:last-child {
+            > button {
+                padding: 0.6rem;
             }
         }
     }
