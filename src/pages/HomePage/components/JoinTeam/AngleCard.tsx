@@ -166,6 +166,7 @@ const BottomHalf = styled.div `
             padding: 0.5vw;
             font-family: Gilroy-Light;
             transition: 0.2s ease;
+            font-size: 1vw;
 
             :hover {
                 background-color: #282828;
@@ -192,6 +193,7 @@ const BottomHalf = styled.div `
         > div:last-child {
             > button {
                 padding: 0.6rem;
+                font-size: 0.7rem;
             }
         }
     }
