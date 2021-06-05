@@ -13,7 +13,7 @@ const ContactUs = ({ width } : ContactUsProps) => {
     return (
         <Container id="contactUs">
             <Fade direction="left" triggerOnce duration={1500}>
-                <h2>{width > 600 ? "Contact us" :  "Get in touch with us now."}</h2>
+                <h2>Get in touch with us now.</h2>
             </Fade>
 
             {width < 800 &&
@@ -28,6 +28,14 @@ const ContactUs = ({ width } : ContactUsProps) => {
 
             <Content>
                 <div>
+                    {
+                        width > 800 &&
+                        <Fade direction="left" triggerOnce duration={1500}>
+                            <p>Every engagement at Vontech starts with a</p>
+                            <p>discovery call. We are a company that</p>
+                            <p>meets your construction needs. Always.</p>
+                        </Fade>        
+                    }
                     <Fade cascade direction="up" triggerOnce duration={2000}>
                         <ButtonContainer>
                             {
@@ -135,6 +143,12 @@ const Content = styled.div `
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+    }
+
+    > div > div > p {
+        color: #1C4193;
+        font-family: Gilroy-Medium;
+        line-height: 0.6rem;
     }
 
     @media screen and (max-width: 800px) {
