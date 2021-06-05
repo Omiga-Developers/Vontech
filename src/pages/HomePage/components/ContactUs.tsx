@@ -147,8 +147,9 @@ const Content = styled.div `
 
     > div > div > p {
         color: #1C4193;
-        font-family: Gilroy-Medium;
+        font-family: Gilroy-Bold;
         line-height: 0.6rem;
+        font-size: 1.2vw;
     }
 
     @media screen and (max-width: 800px) {
