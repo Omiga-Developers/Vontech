@@ -23,7 +23,7 @@ const Footer = ({ width } : FooterPros) => {
                 </LeftContainer>
                 <RightContainer>
                     <div>
-                        <img src="images/logo_2.png" alt="vontech-logo" />
+                        <img src="images/logo.png" alt="vontech-logo" />
                     </div>
                     <div></div>
                     <div>
@@ -126,14 +126,18 @@ const RightContainer = styled.div `
     justify-content: space-evenly;
 
     > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
         > img {
-            width: 9vw;
+            width: 14vw;
             object-fit: contain;
         }
     }
 
     > div:nth-child(2) {
-        background-color: white;
+        /* background-color: white; */
         width: 1px;
     }
 
