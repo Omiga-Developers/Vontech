@@ -5,13 +5,13 @@ const Sponsor = () => {
     return (
         <Container>
             <Marquee>
-                <img alt="sponsor" src="images/1.png" />
+                <img alt="sponsor" src="images/1.crop.png" />
                 <img alt="sponsor" src="images/2.png" />
                 <img alt="sponsor" src="images/3.png" />
                 <img alt="sponsor" src="images/4.png" />
                 <img alt="sponsor" src="images/5.png" />
                 <img alt="sponsor" src="images/6.png" />
-                <img alt="sponsor" src="images/7.png" />
+                <img alt="sponsor" src="images/7.crop.png" />
             </Marquee>
         </Container>
     )
@@ -40,5 +40,9 @@ const Container = styled.div `
             height: 5rem;
             width: 10rem;
         }
+    }
+
+    > div > div.marquee {
+        min-width: 92%;
     }
 `
