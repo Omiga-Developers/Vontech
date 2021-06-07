@@ -9,7 +9,7 @@ declare type TrustProps = {
 const Trust = ({ width } : TrustProps) => {
     return (
         <Container id="trust">
-            <Fade direction="left" triggerOnce duration={1500}>
+            <Fade direction="up" triggerOnce duration={1500}>
                 <h2>Why trust us with your project?</h2>
             </Fade>
 

@@ -222,7 +222,7 @@ const TextfieldInput = styled.textarea `
     padding: 1.2vw;
     color: white;
     resize: none;
-    clip-path: polygon(0 0, 96% 0, 100% 14%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+    clip-path: polygon(0 0, 96% 0, 100% 10%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
 
     @media screen and (max-width: 700px) {
         clip-path: polygon(0 0, 92% 0, 100% 12%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);

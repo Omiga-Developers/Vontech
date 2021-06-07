@@ -12,12 +12,12 @@ const ContactUs = ({ width } : ContactUsProps) => {
 
     return (
         <Container id="contactUs">
-            <Fade direction="left" triggerOnce duration={1500}>
+            <Fade direction="up" triggerOnce duration={1500}>
                 <h2>Get in touch with us now.</h2>
             </Fade>
 
             {width < 800 &&
-                <Fade direction="left" triggerOnce duration={1500}>
+                <Fade direction="up" triggerOnce duration={1500}>
                     <MobileParagraph>
                         Every engagement at Vontech starts with a
                         discovery call. We are a company that
@@ -30,7 +30,7 @@ const ContactUs = ({ width } : ContactUsProps) => {
                 <div>
                     {
                         width > 800 &&
-                        <Fade direction="left" triggerOnce duration={1500}>
+                        <Fade direction="up" triggerOnce duration={1500}>
                             <p>Every engagement at Vontech starts with a</p>
                             <p>discovery call. We are a company that</p>
                             <p>meets your construction needs. Always.</p>
@@ -76,7 +76,7 @@ const ContactUs = ({ width } : ContactUsProps) => {
                     </Fade>
                 </div>
                 <MapContainer>
-                    <Fade direction="right" triggerOnce duration={1500}>
+                    <Fade direction="up" triggerOnce duration={1500}>
                         <iframe
                             title="Location embed"
                             style={{ border:0 }}

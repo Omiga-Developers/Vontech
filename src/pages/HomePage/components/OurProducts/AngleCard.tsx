@@ -87,7 +87,8 @@ const Container = styled.div<ContainerProps> `
     > div {
         > img {
             height: 16vw;
-            width: 18vw;
+            width: 17vw;
+            object-fit: contain;
         }
     }
 

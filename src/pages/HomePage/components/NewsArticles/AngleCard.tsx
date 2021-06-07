@@ -39,7 +39,7 @@ declare type ContainerProps = {
 }
 
 const ShadowContainer = styled.div `
-    filter: drop-shadow(3px 4px 10px rgba(62, 99, 236, 0.5));
+    filter: drop-shadow(0.7vw 0.55vw 1vw rgba(62, 99, 236, 0.5));
     position: relative;
     margin-right: 7vw;
     height: 23vw;

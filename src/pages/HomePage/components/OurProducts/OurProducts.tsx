@@ -13,17 +13,17 @@ const OurProducts = ({ width } : OurProductsProps) => {
                 <h2>Our products</h2>
             </Fade>
 
-            <Fade direction="left" triggerOnce duration={2500}>
+            <Fade direction="up" triggerOnce duration={2500}>
                 <div>
                     <AngleCard 
-                        image="images/block.png"
+                        image="images/IMG_4237.png"
                         title="Cover block"
                         unit="in mm"
                         dimension="20mm/25mm"
                         isMobile={width < 768 ? true : false}
                     />
                     <AngleCard 
-                        image="images/block.png"
+                        image="images/IMG_4240.png"
                         title="Cover block"
                         unit="in mm"
                         dimension="20mm/25mm/40mm"

@@ -10,7 +10,7 @@ const ServicesProvided = ({ width } : ServicesProvidedProps) => {
 
     return (
         <Container id="services">
-            <Fade direction="left" triggerOnce duration={1500}>
+            <Fade direction="up" triggerOnce duration={1500}>
                 <h2>Services we provide</h2>
             </Fade>
             <Fade direction="up" triggerOnce duration={2000}>

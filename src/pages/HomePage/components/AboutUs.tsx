@@ -8,9 +8,11 @@ declare type AboutUsProps = {
 const AboutUs = ({ width } : AboutUsProps) => {
     return (
         <Container id="aboutUs">
-            <Fade direction="left" triggerOnce duration={1500}>
-                <h2>About us</h2>
-            </Fade>
+            {width < 600 &&
+                <Fade direction="up" triggerOnce duration={1500}>
+                    <h2>About us</h2>
+                </Fade>
+            }
 
             <Fade direction="up" triggerOnce duration={1500}>
                 <div>
