@@ -10,7 +10,7 @@ const Articles = () => {
             </Fade>
 
                 <ArticlesContainer>
-                    <Fade direction="up" triggerOnce duration={1500}>
+                    <Fade triggerOnce duration={1500}>
                     <AngleCard
                         image="images/concrete_structure.jpeg"
                         type="News"

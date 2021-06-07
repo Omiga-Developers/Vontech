@@ -10,7 +10,7 @@ const JoinTeam = () => {
             </Fade>
 
                 <JobContainer>
-                    <Fade direction="up" triggerOnce duration={1500}>
+                    <Fade triggerOnce duration={1500}>
                     <AngleCard
                         title="Sales Representative (trainee)"
                         age="18 to 24 years of age"
