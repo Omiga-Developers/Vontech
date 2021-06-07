@@ -4,13 +4,13 @@ import emailjs from "emailjs-com";
 import{ init } from 'emailjs-com';
 
 const RequestQuote = () => {
-    const [name, setName] = useState<string>();
-    const [email, setEmail] = useState<string>();
-    const [phone, setPhone] = useState<string>();
-    const [service, setService] = useState<string>();
-    const [budget, setBudget] = useState<string>();
-    const [location, setLocation] = useState<string>();
-    const [message, setMessage] = useState<string>();
+    const [name, setName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [phone, setPhone] = useState<string>("");
+    const [service, setService] = useState<string>("");
+    const [budget, setBudget] = useState<string>("");
+    const [location, setLocation] = useState<string>("");
+    const [message, setMessage] = useState<string>("");
 
     useEffect(() => {
         init("user_guvhQe6JcKughJlaIbWSi");
@@ -41,12 +41,12 @@ const RequestQuote = () => {
             <h2>Or request a quote</h2>
             <div>
                 <RowContainer>
-                    <TextInput name="from_name" onChange={e => setName(e.target.value)} value={name} placeholder="Your Name" />
-                    <TextInput name="email" onChange={e => setEmail(e.target.value)}  value={email} placeholder="Email Address" />
+                    <TextInput changeBg={name} name="from_name" onChange={e => setName(e.target.value)} value={name} placeholder="Your Name" />
+                    <TextInput changeBg={email}  name="email" onChange={e => setEmail(e.target.value)}  value={email} placeholder="Email Address" />
                 </RowContainer>
                 <RowContainer>
-                    <TextInput name="tel_num" onChange={e => setPhone(e.target.value)}  value={phone} placeholder="Phone Number" />
-                    <OptionInput name="service" value={service} onChange={e => setService(e.target.value)} defaultValue="Service">
+                    <TextInput changeBg={phone}  name="tel_num" onChange={e => setPhone(e.target.value)}  value={phone} placeholder="Phone Number" />
+                    <OptionInput changeBg={service} name="service" value={service} onChange={e => setService(e.target.value)} defaultValue="Service">
                         <option selected disabled hidden>Service</option>
                         <option disabled>&nbsp;</option>
                         <option value="Design and construction">Design and construction</option>
@@ -64,11 +64,11 @@ const RequestQuote = () => {
                     </OptionInput>
                 </RowContainer>
                 <RowContainer>
-                    <TextInput name="budget" onChange={e => setBudget(e.target.value)}  value={budget} placeholder="Your Budget" />
-                    <TextInput name="location" onChange={e => setLocation(e.target.value)}  value={location} placeholder="Location of site" />
+                    <TextInput changeBg={budget}  name="budget" onChange={e => setBudget(e.target.value)}  value={budget} placeholder="Your Budget" />
+                    <TextInput changeBg={location}  name="location" onChange={e => setLocation(e.target.value)}  value={location} placeholder="Location of site" />
                 </RowContainer>
                 <RowContainer>
-                    <TextfieldInput name="message" onChange={e => setMessage(e.target.value)}  value={message} rows={8} placeholder="Write a message" />
+                    <TextfieldInput changeBg={message} name="message" onChange={e => setMessage(e.target.value)}  value={message} rows={8} placeholder="Write a message" />
                 </RowContainer>
             </div>
             <div>
@@ -168,7 +168,11 @@ const RowContainer = styled.div `
     }
 `
 
-const TextInput = styled.input `
+declare type TextInputProps = {
+    changeBg: string;
+}
+
+const TextInput = styled.input<TextInputProps> `
     font-family: Gilroy-Medium;
     padding: 1.2vw 0.5vw;
     flex: 1;
@@ -177,6 +181,13 @@ const TextInput = styled.input `
     color: white;
     clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
 
+    ${({ changeBg }) => (
+        changeBg !== '' && `
+            color: #3E63EC;
+            background-color: white;
+        `
+    )}
+
     @media screen and (max-width: 700px) {
         max-width: 100%;
         padding: 0.7rem 0.4rem;
@@ -184,7 +195,11 @@ const TextInput = styled.input `
     }
 `
 
-const OptionInput = styled.select `
+declare type OptionProps = {
+    changeBg: string;
+}
+
+const OptionInput = styled.select<OptionProps> `
     background-image: url(images/down-arrow.png);
     clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-repeat: no-repeat;
@@ -208,6 +223,13 @@ const OptionInput = styled.select `
         }
     }
 
+    ${({ changeBg }) => (
+        changeBg !== '' && `
+            color: #3E63EC;
+            background-color: white;
+        `
+    )}
+
     @media screen and (max-width: 700px) {
         max-width: 100%;
         background-size: 4%;
@@ -215,7 +237,12 @@ const OptionInput = styled.select `
     }
 `
 
-const TextfieldInput = styled.textarea `
+
+declare type TextFieldInputProps = {
+    changeBg: string;
+}
+
+const TextfieldInput = styled.textarea<TextFieldInputProps> `
     font-family: Gilroy-Medium;
     background-color: #3E63EC;
     width: 100%;
@@ -223,6 +250,13 @@ const TextfieldInput = styled.textarea `
     color: white;
     resize: none;
     clip-path: polygon(0 0, 96% 0, 100% 10%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+
+    ${({ changeBg }) => (
+        changeBg !== '' && `
+            color: #3E63EC;
+            background-color: white;
+        `
+    )}
 
     @media screen and (max-width: 700px) {
         clip-path: polygon(0 0, 92% 0, 100% 12%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
