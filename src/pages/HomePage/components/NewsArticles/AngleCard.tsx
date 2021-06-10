@@ -45,6 +45,7 @@ const ShadowContainer = styled.div `
     height: 23vw;
 
     @media screen and (max-width: 768px) {
+        filter: drop-shadow(0.5rem 0.3rem 0.7rem rgba(62, 99, 236, 0.5));
         margin-right: 4rem;
         height: auto;
     }

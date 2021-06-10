@@ -191,7 +191,7 @@ const TextInput = styled.input<TextInputProps> `
     @media screen and (max-width: 700px) {
         max-width: 100%;
         padding: 0.7rem 0.4rem;
-        /* clip-path: polygon(0 0, 92% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%); */
+        clip-path: polygon(0 0, 93% 0, 100% 50%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     }
 `
 
@@ -234,6 +234,7 @@ const OptionInput = styled.select<OptionProps> `
         max-width: 100%;
         background-size: 4%;
         padding: 0.7rem 0.4rem;
+        clip-path: polygon(0 0, 92.5% 0, 100% 50%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     }
 `
 
@@ -259,7 +260,7 @@ const TextfieldInput = styled.textarea<TextFieldInputProps> `
     )}
 
     @media screen and (max-width: 700px) {
-        clip-path: polygon(0 0, 92% 0, 100% 12%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+        clip-path: polygon(0 0, 93% 0, 100% 14%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     }
 `
 

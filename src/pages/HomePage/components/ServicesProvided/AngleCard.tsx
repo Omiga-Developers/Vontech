@@ -133,6 +133,7 @@ const Container = styled.div<ContainerProps> `
         > h1 {
             font-family: Gilroy-Medium;
             font-weight: normal;
+            width: 75%;
         }
     }
 
@@ -153,7 +154,7 @@ const Container = styled.div<ContainerProps> `
 
     ${({ isCommon }) => (
         isCommon && `
-            height: 25vw;
+            height: 27vw;
         `
     )}
 
@@ -190,7 +191,7 @@ const Container = styled.div<ContainerProps> `
 
     @media screen and (max-width: 1250px) and (min-width: 800px) {
         clip-path: polygon(0 0, 73% 0, 100% 18%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        height: 22.5rem;
+        height: 24rem;
         margin-bottom: 2rem;
         min-width: 20rem;
         padding: 1.2rem;
@@ -253,36 +254,65 @@ const Container = styled.div<ContainerProps> `
     }
 
     @media screen and (max-width: 703px) {
-        clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
-        width: 21rem;
+        &&& {
+            clip-path: polygon(0 0, 75% 0, 100% 40%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+        }
+
+        width: 20rem;
         height: auto;
 
         h1 { 
             font-size: 2.2rem;
+            width: 75%;
         }
 
         > div:first-child {
             border: none;
         }
 
+        ${({ toggleDisplayContent }) => (
+            toggleDisplayContent && `
+                div:first-child {
+                    border-bottom: 1px solid #fff;
+                }
+            `
+            
+        )}
+
+        ${({ isFirst, toggleDisplayContent}) => (
+            !isFirst && toggleDisplayContent && `
+                &&& {
+                    clip-path: polygon(0 0, 75% 0, 100% 25%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+
+                    h1 {
+                        font-size: 2rem;
+                        width: 60%;
+                    }
+                }
+            `
+        )}
+
         ${({ isFirst, toggleDisplayContent }) => (
             isFirst ? toggleDisplayContent ? `
-                clip-path: polygon(0 0, 75% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+                &&& {
+                    clip-path: polygon(0 0, 75% 0, 100% 16%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+                }
             `
             : `
                 clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
             `
             : `
-                clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
+                // clip-path: polygon(0 0, 75% 0, 100% 27%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
             `
         )}
     }
 
     @media screen and (max-width: 380px) {
-        width: 80%;
+        width: 70%;
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            width: 75%;
         }
     }
 `
