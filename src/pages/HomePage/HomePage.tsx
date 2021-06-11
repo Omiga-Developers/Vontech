@@ -54,7 +54,7 @@ const HomePage = () => {
             };
             emailjs.send('service_ks24z68', 'template_5nqw5tb', templateParams)
             .then(response => alert("We have received your email!"))
-            .catch(e => alert("something went wrong!"));
+            // .catch(e => alert("something went wrong!"));
 
             setSubscribed(true);
             setOpen(false);

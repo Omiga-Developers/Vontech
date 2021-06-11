@@ -28,9 +28,9 @@ const RequestQuote = () => {
                 location,
                 message
             };
-            emailjs.send('service_ub8rd4d', 'template_f1l11pl', templateParams)
+            emailjs.send('service_k1kidx8', 'template_f1l11pl', templateParams)
                 .then(response => alert("We have received your email!"))
-                .catch(e => alert("something went wrong!"));
+                // .catch(e => alert("something went wrong!"));
         } else {
             alert("Please fill in all the fields")
         }
