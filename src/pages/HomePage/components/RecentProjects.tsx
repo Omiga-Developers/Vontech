@@ -42,23 +42,24 @@ const Container = styled.div `
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #282828;
-        opacity: 0.85;
+        background-color: #1C4193;
+        opacity: 0.55;
     }
 
     > h2 {
         z-index: 1;
+        flex: 0.2;  
         font-size: 2.2vw;
         font-family: Gilroy-Bold;
     }
 
     > div:last-child {
         z-index: 1;
-        flex: 1;
+        flex: 0.8;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
         > h2, > p {
             font-size: 2.7vw;
@@ -66,6 +67,7 @@ const Container = styled.div `
         }
 
         > p {
+            font-size: 2.5vw;
             color: white;
         }
 

@@ -45,7 +45,7 @@ const RequestQuote = () => {
                     <TextInput changeBg={email}  name="email" onChange={e => setEmail(e.target.value)}  value={email} placeholder="Email Address" />
                 </RowContainer>
                 <RowContainer>
-                    <TextInput changeBg={phone}  name="tel_num" onChange={e => setPhone(e.target.value)}  value={phone} placeholder="Phone Number" />
+                    <TextInput changeBg={phone} name="tel_num" onChange={e => setPhone(e.target.value)}  value={phone} placeholder="Phone Number" />
                     <OptionInput changeBg={service} name="service" value={service} onChange={e => setService(e.target.value)} defaultValue="Service">
                         <option selected disabled hidden>Service</option>
                         <option disabled>&nbsp;</option>

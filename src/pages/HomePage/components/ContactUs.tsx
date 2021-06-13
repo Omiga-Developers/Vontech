@@ -36,7 +36,7 @@ const ContactUs = ({ width } : ContactUsProps) => {
                             <p>meets your construction needs. Always.</p>
                         </Fade>        
                     }
-                    <Fade cascade direction="up" triggerOnce duration={2000}>
+                    <Fade style={{ marginTop: '1.2rem' }} cascade direction="up" triggerOnce duration={2000}>
                         <ButtonContainer>
                             {
                                 !toggleCall ? 
@@ -147,7 +147,7 @@ const Content = styled.div `
 
     > div > div > p {
         color: #1C4193;
-        font-family: Gilroy-Bold;
+        font-family: Gilroy-Medium;
         line-height: 0.6rem;
         font-size: 1.2vw;
     }
@@ -180,7 +180,7 @@ const MapContainer = styled.div `
 
     > div > iframe {
         width: 45vw;
-        height: 20vw;
+        height: 22vw;
     }
 
     @media screen and (max-width: 800px) {

@@ -24,26 +24,6 @@ const JoinTeam = () => {
                         title="Site Engineer (Full time)"
                         qualification="NDT or equivalent 2 years experience"
                     />
-                    <AngleCard
-                        title="Site Engineer (Full time)"
-                        qualification="NDT or equivalent 2 years experience"
-                    />
-                    <AngleCard
-                        title="Site Engineer (Full time)"
-                        qualification="NDT or equivalent 2 years experience"
-                    />
-                    <AngleCard
-                        title="Site Engineer (Full time)"
-                        qualification="NDT or equivalent 2 years experience"
-                    />
-                    <AngleCard
-                        title="Site Engineer (Full time)"
-                        qualification="NDT or equivalent 2 years experience"
-                    />
-                    <AngleCard
-                        title="Site Engineer (Full time)"
-                        qualification="NDT or equivalent 2 years experience"
-                    />
                     </Fade>
                 </JobContainer>
         </Container>

@@ -166,7 +166,7 @@ const RightButton = styled.button `
     background-color: #3E63EC;
     color: white;
     border: none;
-    padding: 1vw 7vw 1vw 1vw;
+    padding: 1vw 10vw 1vw 1vw;
     font-size: 1.2vw;
     margin-bottom: 1vw;
     transition: 0.2s ease;

@@ -43,8 +43,8 @@ export default AngleCard
 
 const ShadowContainer = styled.div `
     filter: drop-shadow(2px 2px 8px #3E63EC);
-    height: 22.5vw;
-    margin-right: 5vw;
+    height: 23vw;
+    margin-right: 9vw;
 
     @media screen and (max-width: 1200px) {
         height: 18rem;

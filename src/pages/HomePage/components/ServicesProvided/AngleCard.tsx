@@ -160,9 +160,9 @@ const Container = styled.div<ContainerProps> `
 
     ${({ isFourth }) => (
         isFourth && `
-            h1 {
-                padding-bottom: 2.7vw;
-            }
+            // h1 {
+            //     padding-bottom: 2.7vw;
+            // }
         `
     )}
 
