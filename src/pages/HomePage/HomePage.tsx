@@ -41,7 +41,7 @@ const HomePage = () => {
 
     useEffect(() => {
         setOpen(true);
-        init("user_Kjrv3nyR7yswbaw4aIWxg");
+        init("user_guvhQe6JcKughJlaIbWSi");
     }, [])
 
     const subscribe = () => {
@@ -52,7 +52,7 @@ const HomePage = () => {
                 city,
                 tel_num: telNum,
             };
-            emailjs.send('service_ks24z68', 'template_5nqw5tb', templateParams)
+            emailjs.send('service_5jn5kxc', 'template_b9posiq', templateParams)
             .then(response => alert("We have received your email!"))
             // .catch(e => alert("something went wrong!"));
 

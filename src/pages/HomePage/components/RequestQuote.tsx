@@ -28,7 +28,7 @@ const RequestQuote = () => {
                 location,
                 message
             };
-            emailjs.send('service_k1kidx8', 'template_f1l11pl', templateParams)
+            emailjs.send('service_jepz6ns', 'template_f1l11pl', templateParams)
                 .then(response => alert("We have received your email!"))
                 // .catch(e => alert("something went wrong!"));
         } else {
