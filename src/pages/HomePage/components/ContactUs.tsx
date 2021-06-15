@@ -120,11 +120,11 @@ const Container = styled.div `
     }
 
     @media screen and (max-width: 600px) {
-        padding: 1.5rem;
+        padding: 1.5rem 3.8rem;
 
         > div > h2 {
             margin-bottom: 1.5rem;
-            font-size: 2rem;
+            font-size: 1.8rem;
             width: 100%;
             text-align: center;
         }
@@ -171,6 +171,12 @@ const ButtonContainer = styled.div `
     @media screen and (max-width: 800px) {
         justify-content: center;
         display: flex;
+
+        > button {
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 `
 

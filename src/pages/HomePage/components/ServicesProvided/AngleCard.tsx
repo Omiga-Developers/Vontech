@@ -182,7 +182,7 @@ const Container = styled.div<ContainerProps> `
 
             :hover {
                 &&& {
-                    background-color: #262626;
+                    background-color: #faeded;
                     color: white;
                 }
             }
@@ -325,7 +325,14 @@ const ButtonContainer = styled.div `
         flex: 1;
         font-family: Gilroy-Medium !important;
         background-color: white;
+        border: 1px solid #3E63EC;
         color: #3E63EC;
+        text-transform: capitalize;
+
+        :hover {
+            border: 1px solid white;
+            color: white;
+        }
     }
 `
 

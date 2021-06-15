@@ -50,7 +50,7 @@ const AngleCard = ({ image, title, unit, dimension, isMobile } : AngleCardProps)
                         </RightTop>
                     </Top>
                     <Button
-                            style={{backgroundColor: '#ccc', fontFamily: 'Gilroy-Medium', borderRadius: 'none', padding: '1rem'}}
+                            style={{backgroundColor: '#efefef', fontFamily: 'Gilroy-Medium', borderRadius: 'none', padding: '1rem', textTransform: 'capitalize'}}
                             onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
                             onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
                         >
@@ -106,11 +106,12 @@ const Container = styled.div<ContainerProps> `
     )}
 
     @media screen and (max-width: 768px) {
+        clip-path: polygon(0 0, 85% 0%, 100% 19%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
         width: 21rem;
         margin-bottom: 2rem;
 
         div > img {
-            height: 10rem;
+            height: 9rem;
             width: 10rem;
         }
     }
@@ -150,12 +151,17 @@ const RightTop = styled.div `
 
     @media screen and (max-width: 1200px) {
         > p {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
         > p:nth-child(2) {
             font-size: 0.7rem;
             margin-top: 0.6rem;
+
+        }
+
+        >p:nth-child(3) {
+            font-size: 0.9rem;
         }
     }
 `

@@ -159,13 +159,13 @@ const RowContainer = styled.div `
     }
 
     @media screen and (max-width: 700px) {
-        width: 60%;
+        width: 80%;
         flex-direction: column;
     }
-
+/* 
     @media screen and (max-width: 450px) {
         width: 80%;
-    }
+    } */
 `
 
 declare type TextInputProps = {

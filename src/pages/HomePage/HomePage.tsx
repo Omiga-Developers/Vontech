@@ -135,7 +135,7 @@ const HomePage = () => {
                     <Trust width={width} />
                     <AboutUs width={width} />
                     <Sponsor />
-                    <RecentProjects />
+                    <RecentProjects width={width} />
                     <Articles />
                     <OurProducts width={width} />
                     <ContactUs width={width} />

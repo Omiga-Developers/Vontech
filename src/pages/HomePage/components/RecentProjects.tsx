@@ -1,8 +1,12 @@
 import styled from "styled-components"
 
-const RecentProjects = () => {
+declare type RPProps = {
+    width: number;
+}
+
+const RecentProjects = ({ width } : RPProps) => {
     return (
-        <Container id="projects">
+        <Container width={width} id="projects">
             <div></div>
             <h2>Recent Projects</h2>
             <div>
@@ -16,7 +20,11 @@ const RecentProjects = () => {
 
 export default RecentProjects
 
-const Container = styled.div `
+declare type ContainerProps = {
+    width: number;
+}
+
+const Container = styled.div<ContainerProps> `
     @font-face {
         font-family: Gilroy-Bold;
         src: url(fonts/Gilroy-Bold.ttf);
@@ -42,8 +50,11 @@ const Container = styled.div `
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #1C4193;
         opacity: 0.55;
+
+        ${({ width }) => (
+            width > 703 ? `background-color: #1C4193` : `background-color: #282828`
+        )}
     }
 
     > h2 {
@@ -91,6 +102,17 @@ const Container = styled.div `
         }
     }
 
+    @media screen and (max-width: 700px) {
+        h2 {
+            flex: 0;
+        }
+
+        > div:last-child {
+            flex: 1;
+            margin-top: 2.5rem;
+        }
+    }
+
     @media screen and (max-width: 600px) {
         height: 16rem;
         background-image: none;
@@ -98,12 +120,6 @@ const Container = styled.div `
         h2 {
             text-align: center;
             font-size: 2rem;
-        }
-
-        > div:last-child {
-            > p, > h2 {
-                font-size: 1.4rem;
-            }
         }
     }
 `
