@@ -74,7 +74,7 @@ const DrawableSidebar = ({ isDifferent } : DrawableSidebarProps) => {
             <div>
                 <React.Fragment key="top">
                     <Button onClick={toggleDrawer('top', true)}>
-                            <MenuIcon style={{ color: 'white' }} />
+                            <img style={{ height: '1.5rem', objectFit: 'contain' }}  src="images/Website-04.png" />
                     </Button>
                     <SwipeableDrawer onOpen={toggleDrawer('top', true)} anchor="top" open={state['top']} onClose={toggleDrawer('top', false)}>
                         {list('top')}
