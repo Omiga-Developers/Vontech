@@ -20,71 +20,71 @@ const Trust = ({ width } : TrustProps) => {
                             <RowContainerWrapper>
                                 <RowContainer>
                                     <IconContent
-                                        icon="images/Website-06.png"
+                                        icon="images/new/Website-04.png"
                                         sentenceOne="Qualified &"
                                         sentenceTwo="experienced engineers"
                                         isFirstColumn={true}
-                                        hoveredIcon="images/Website-06-1.png"
+                                        hoveredIcon="images/new/Website-04_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-07.png"
+                                        icon="images/new/Website-05.png"
                                         sentenceOne="Quality materials"
                                         isMiddle={true}
-                                        hoveredIcon="images/Website-07-1.png"
+                                        hoveredIcon="images/new/Website-05_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-08.png"
+                                        icon="images/new/Website-06.png"
                                         sentenceOne="Affordable"
                                         isLast={true}
-                                        hoveredIcon="images/Website-08-1.png"
+                                        hoveredIcon="images/new/Website-06_1.png"
                                     />
                                 </RowContainer>
                             </RowContainerWrapper>
                             <RowContainerWrapper>
                                 <RowContainer>
                                     <IconContent
-                                        icon="images/Website-09.png"
+                                        icon="images/new/Website-07.png"
                                         sentenceOne="Maintenance"
                                         isFirstColumn={true}
-                                        hoveredIcon="images/Website-09-1.png"
+                                        hoveredIcon="images/new/Website-07_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-10.png"
+                                        icon="images/new/Website-08.png"
                                         sentenceOne="Premium support"
                                         sentenceTwo="& consultation"
                                         isMiddle={true}
-                                        hoveredIcon="images/Website-10-1.png"
+                                        hoveredIcon="images/new/Website-08_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-11.png"
+                                        icon="images/new/Website-09.png"
                                         sentenceOne="Supervised"
                                         sentenceTwo="by professionals"
                                         isLast={true}
-                                        hoveredIcon="images/Website-11-1.png"
+                                        hoveredIcon="images/new/Website-09_1.png"
                                     />
                                 </RowContainer>
                             </RowContainerWrapper>
                             <RowContainerWrapper>
                                 <RowContainer isLast={true}>
                                     <IconContent
-                                        icon="images/Website-12.png"
+                                        icon="images/new/Website-10.png"
                                         sentenceOne="Statutory approvals"
                                         sentenceTwo="(local authority)"
                                         isFirstColumn={true}
-                                        hoveredIcon="images/Website-12-1.png"
+                                        hoveredIcon="images/new/Website-10_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-13.png"
+                                        icon="images/new/Website-11.png"
                                         sentenceOne="Bank loans"
                                         isMiddle={true}
-                                        hoveredIcon="images/Website-13-1.png"
+                                        hoveredIcon="images/new/Website-11_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-14.png"
+                                        icon="images/new/Website-12.png"
                                         sentenceOne="Sustainable &"
                                         sentenceTwo="long lasting"
                                         isLast={true}
-                                        hoveredIcon="images/Website-14-1.png"
+                                        hoveredIcon="images/new/Website-12_1.png"
                                     />
                                 </RowContainer>
                             </RowContainerWrapper>
@@ -94,67 +94,67 @@ const Trust = ({ width } : TrustProps) => {
                             <RowContainerWrapper>
                                 <RowContainer>
                                     <IconContent
-                                        icon="images/Website-06.png"
+                                        icon="images/new/Website-04.png"
                                         sentenceOne="Qualified &"
                                         sentenceTwo="experienced engineers"
                                         isFirstColumn={true}
-                                        hoveredIcon="images/Website-06-1.png"
+                                        hoveredIcon="images/new/Website-04_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-10.png"
+                                        icon="images/new/Website-08.png"
                                         sentenceOne="Premium support"
                                         sentenceTwo="& consultation"
                                         isMiddle={true}
-                                        hoveredIcon="images/Website-10-1.png"
+                                        hoveredIcon="images/new/Website-08_1.png"
                                     />
                                 </RowContainer>
                             </RowContainerWrapper>
                             <RowContainerWrapper>
                                 <RowContainer>
                                     <IconContent
-                                        icon="images/Website-09.png"
+                                        icon="images/new/Website-07.png"
                                         sentenceOne="Maintenance"
                                         isFirstColumn={true}
-                                        hoveredIcon="images/Website-09-1.png"
+                                        hoveredIcon="images/new/Website-07_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-07.png"
+                                        icon="images/new/Website-05.png"
                                         sentenceOne="Quality materials"
                                         isMiddle={true}
-                                        hoveredIcon="images/Website-07-1.png"
+                                        hoveredIcon="images/new/Website-05_1.png"
                                     />
                                 </RowContainer>
                             </RowContainerWrapper>
                             <RowContainerWrapper>
                                 <RowContainer isLast={true}>
                                     <IconContent
-                                        icon="images/Website-12.png"
+                                        icon="images/new/Website-10.png"
                                         sentenceOne="Statutory approvals"
                                         sentenceTwo="(local authority)"
                                         isFirstColumn={true}
-                                        hoveredIcon="images/Website-12-1.png"
+                                        hoveredIcon="images/new/Website-10_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-13.png"
+                                        icon="images/new/Website-11.png"
                                         sentenceOne="Bank loans"
                                         isMiddle={true}
-                                        hoveredIcon="images/Website-13-1.png"
+                                        hoveredIcon="images/new/Website-11_1.png"
                                     />
                                 </RowContainer>
                                 <RowContainer>
                                     <IconContent
-                                        icon="images/Website-14.png"
-                                        sentenceOne="Sustainable &"
+                                        icon="images/new/Website-06.png"
+                                        sentenceOne="Affordable &"
                                         sentenceTwo="long lasting"
                                         isLast={true}
-                                        hoveredIcon="images/Website-14-1.png"
+                                        hoveredIcon="images/new/Website-06_1.png"
                                     />
                                     <IconContent
-                                        icon="images/Website-11.png"
+                                        icon="images/new/Website-09.png"
                                         sentenceOne="Supervised"
                                         sentenceTwo="by professionals"
                                         isLast={true}
-                                        hoveredIcon="images/Website-11-1.png"
+                                        hoveredIcon="images/new/Website-09_1.png"
                                     />
                                 </RowContainer>
                             </RowContainerWrapper>
