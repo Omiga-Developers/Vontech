@@ -1,7 +1,6 @@
 import { Button, Divider, List, ListItem, ListItemText, makeStyles, SwipeableDrawer } from "@material-ui/core";
 import React, { useState } from "react";
 import clsx from 'clsx';
-import MenuIcon from '@material-ui/icons/Menu';
 import styled from "styled-components";
 
 const useStyles = makeStyles({
@@ -74,7 +73,7 @@ const DrawableSidebar = ({ isDifferent } : DrawableSidebarProps) => {
             <div>
                 <React.Fragment key="top">
                     <Button onClick={toggleDrawer('top', true)}>
-                            <img style={{ height: '1.5rem', objectFit: 'contain' }}  src="images/Website-04.png" />
+                            <img alt="menu" style={{ height: '1.5rem', objectFit: 'contain' }}  src="images/Website-04.png" />
                     </Button>
                     <SwipeableDrawer onOpen={toggleDrawer('top', true)} anchor="top" open={state['top']} onClose={toggleDrawer('top', false)}>
                         {list('top')}
