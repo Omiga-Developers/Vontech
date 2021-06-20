@@ -33,7 +33,7 @@ const AngleCard = ({ image, title, unit, dimension, isMobile } : AngleCardProps)
                             onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
                             onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
                         >
-                            Place order
+                            <a href="#requestQuote">Place order</a>
                         </RightButton>
                     </div>
                 </>
@@ -54,7 +54,7 @@ const AngleCard = ({ image, title, unit, dimension, isMobile } : AngleCardProps)
                             onMouseEnter={() => setIsHoveredOver(!isHoveredOver)}
                             onMouseLeave={() => setIsHoveredOver(!isHoveredOver)}
                         >
-                            Place order
+                            <a style={{ color: 'black' }} href="#requestQuote">Place order</a>
                     </Button>
                 </>
             }
@@ -76,6 +76,10 @@ const Container = styled.div<ContainerProps> `
     @font-face {
         font-family: Gilroy-Medium;
         src: url(fonts/Gilroy-Medium.ttf);
+    }
+
+    a {
+        text-decoration: none;
     }
 
     clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 0 100%, 0% 50%);
@@ -170,7 +174,12 @@ const RightButton = styled.button `
     font-family: Gilroy-Medium;
     clip-path: polygon(0 0, 92% 0, 100% 46%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0% 30%);
     background-color: #3E63EC;
-    color: white;
+
+    > a {
+        color: white;
+        text-decoration: none;
+    }
+
     border: none;
     padding: 1vw 10vw 1vw 1vw;
     font-size: 1.2vw;

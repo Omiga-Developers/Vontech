@@ -39,13 +39,14 @@ declare type ContainerProps = {
 }
 
 const ShadowContainer = styled.div `
-    filter: drop-shadow(0.7vw 0.55vw 1vw rgba(62, 99, 236, 0.5));
+/* filter: drop-shadow(0.3vw 0.3vw 0.4vw rgba(114, 105, 105, 0.3)); */
+    /* filter: drop-shadow(0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.3)); */
     position: relative;
     margin-right: 7vw;
     height: 23vw;
 
     @media screen and (max-width: 768px) {
-        filter: drop-shadow(0.3rem 0.3rem 0.7rem rgba(62, 99, 236, 0.5));
+        /* filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3)); */
         margin-right: 4rem;
         height: 18rem;
     }
@@ -68,7 +69,7 @@ const Container = styled.div<ContainerProps> `
     width: 23vw;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: #f1f1f1;
     transition: 0.4s ease;
 
     > p {
