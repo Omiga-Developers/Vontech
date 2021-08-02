@@ -83,7 +83,7 @@ const ContactUs = ({ width } : ContactUsProps) => {
                             loading="lazy"
                             allowFullScreen
                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCKn4wpIguXCpZ6fI3-aZl9D2bMaMW0gTg
-                                &q=215+Colombo+-+Kandy+Rd">
+                                &q=Vontech+Engineering+%26+Trading+(PVT)LTD">
                         </iframe>
                     </Fade>
                 </MapContainer>
