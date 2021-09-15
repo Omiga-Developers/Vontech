@@ -14,11 +14,11 @@ const Footer = ({ width } : FooterPros) => {
                         <p>All rights reserved.</p>
                     </div>
                     <div>
-                        <a style={{ paddingLeft: '0' }} href="https://google.lk">Instagram</a>
+                        <a style={{ paddingLeft: '0' }} href="https://instagram.com/vontech.co?utm_medium=copy_link">Instagram</a>
                         |
-                        <a href="https://google.lk">Facebook</a>
+                        <a href="https://www.facebook.com/vontech.co/">Facebook</a>
                         |
-                        <a href="https://google.lk">Linkedin</a>
+                        <a href="https://www.linkedin.com/company/vontech-engineering-trading-pvt-ltd">Linkedin</a>
                     </div>
                 </LeftContainer>
                 <RightContainer>
@@ -36,11 +36,11 @@ const Footer = ({ width } : FooterPros) => {
         :
         <MobileContainer>
             <div>
-                <a style={{ paddingLeft: '0' }} href="https://google.lk">Instagram</a>
+                <a style={{ paddingLeft: '0' }} href="https://instagram.com/vontech.co?utm_medium=copy_link">Instagram</a>
                 |
-                <a href="https://google.lk">Facebook</a>
+                <a href="https://www.facebook.com/vontech.co/">Facebook</a>
                 |
-                <a href="https://google.lk">Linkedin</a>
+                <a href="https://www.linkedin.com/company/vontech-engineering-trading-pvt-ltd">Linkedin</a>
             </div>
 
             <div>
