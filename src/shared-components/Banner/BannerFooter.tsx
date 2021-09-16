@@ -4,11 +4,11 @@ const BannerFooter = () => {
     return (
         <Container>
             <div>
-                <a href="https://google.lk">Instagram</a>
+                <a href="https://instagram.com/vontech.co?utm_medium=copy_link">Instagram</a>
                 |
-                <a href="https://google.lk">Facebook</a>
+                <a href="https://www.facebook.com/vontech.co/">Facebook</a>
                 |
-                <a href="https://google.lk">Linkedin</a>
+                <a href="https://www.linkedin.com/company/vontech-engineering-trading-pvt-ltd">Linkedin</a>
             </div>
             <div>
                 <img src="images/rics.png" alt="rics-logo" />
